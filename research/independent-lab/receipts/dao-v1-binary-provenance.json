@@ -176,7 +176,7 @@
     {
       "instruction": "migrate_bonding_to_meteora",
       "receipt": "analysis/daos_fun/dao-v1-migrate-bonding-current-dao-restored-replay.json",
-      "receipt_sha256": "0df677d8150179799953450c8aed71b9853148abe916970b5611f4fa692685ca",
+      "receipt_sha256": "f863695450830760ac8bf0283299d6a1c58116a52824c95a3751837fde5d856f",
       "dao_binary_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
       "current_binary_local_success": true,
       "source_era_only_local_success": false,

@@ -4,11 +4,13 @@ The current `dao_v1` ProgramData ELF captured by this lab is SHA-256
 `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d`,
 byte-identical to this repository's original capture and rebuilt binary.
 All 18 current site-IDL selectors have a bounded successful local path with
-the exact current DAO binary. `init_curve` succeeds when the reconstructed
-source-era CP DAMM dependency is loaded, but the tested current DAO + current
-CP DAMM combination fails downstream 6067. Other handlers also need an
-explicit CPI-dependency-version audit before a whole-current-stack count
-can be claimed. **0/18** are certified full behavior. The
+the exact current DAO binary. The [per-handler custom-stack audit](receipts/dao-v1-custom-stack-version-audit.json)
+finds **16/18** selected bounded paths using current custom CPI binaries.
+`init_curve` and `migrate_bonding_to_meteora` succeed locally with source-era
+CP DAMM, while their restored current-CP controls reject downstream 6067.
+These are compatibility controls on selected account prestates, not proof
+that every current account state reaches or fails the same CPI. **0/18** are
+certified full behavior. The
 [per-handler binary provenance](receipts/dao-v1-binary-provenance.json)
 pins the root ELF hash and receipt for each claim. The
 [InitCurve ABI comparison](receipts/dao-v1-init-curve-abi-compatibility.json)
@@ -17,6 +19,8 @@ current CP DAMM path; its source interpretation is not a byte-identical CP
 reconstruction. Exact source recovery materially improves
 review, but this lab has not closed all
 reachable account, authority, math, historical-version and error branches.
+The [MigrateBonding current-CP replay](receipts/dao-v1-migrate-bonding-current-stack-restored-replay.json)
+records the second 6067 control on a locally restored historical fixture.
 Original receipt filenames below are inside the
 [daos.fun evidence bundle](daosfun-lab-evidence.tar.zst).
 
@@ -99,6 +103,18 @@ Delegate/cosigner lifecycle, redemption, DBC fee claims, position-NFT
 transfer and arbitrary-CPI cases are recorded in
 `analysis/daos_fun/REPORT.md`. The live cosigner and closed-wallet exposure
 screen is summarized in [`VIRTUAL_XYK_AND_TR2_TR3.md`](VIRTUAL_XYK_AND_TR2_TR3.md).
+
+A separate [signed local Burn/Redeem Wallet receipt](receipts/dao-v1-signed-burn-redeem-wallet.json)
+uses a finalized closed/redeeming DAO State and mint with a disposable signer.
+The user's `100e15` raw DAO-token holding and a one-billion-lamport wrapped-SOL
+wallet donation are **local constructions**, not live holdings or treasury
+funds. Burn records `100e15` credit, a zero redemption creates a tracker,
+then two partial claims pay 27,281,802 and 63,657,540 raw funding units.
+Claiming one unit beyond the earned credit fails 6006 and leaves tracked
+balances unchanged; a wrong source authority fails 2015. This bounds one
+signed accounting path and does not establish outsider access or a live
+donation opportunity.
+
 Our findings are bounded by the pinned snapshots and explicit synthetic
 mutations; they neither replace this repository's source audit nor certify
 the reconstructed program as safe.

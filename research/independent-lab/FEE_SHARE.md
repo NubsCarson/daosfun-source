@@ -19,6 +19,23 @@ artifact; it is not an unpaid-fee
 finding. See the [Option-layout matrix](receipts/fee-share-redeem-option-layout-matrix.json)
 (`analysis/daos_fun/fee-share-redeem-option-layout-matrix.json`).
 
+The [signed payout lifecycle](receipts/fee-share-signed-payout-lifecycle.json)
+adds **27 validly signed, committed local sends** against the exact current
+FeeShare ELF. It uses the two captured State/vault layouts plus a locally
+distinct-referrer variant. Creator and referrer keys are replaced with
+disposable signing keys and canonical recipient ATAs; the exhausted
+no-referrer account receives 1,000 synthetic fee/vault units. The signed
+creator receives its exact 500-unit cap there and 8,922,753,598 units on
+each referrer layout; vault and `creator_distributed` deltas reconcile.
+A signed third-party fee payer then collects the no-referrer platform's
+remaining 500 units, leaving the original one-unit vault balance. Signed
+outsider/referrer and tested entity 1/2 redemption attempts fail 6001;
+over-cap and repeat claims fail 6002 without changing tracked protocol
+accounts. Pinned BPF instructions independently show the nonzero-entity
+authorization branch and 50/100 cap path. The distinct referrer and fee
+accrual are local constructions; no real referrer entitlement, live payout,
+or fund-loss finding follows.
+
 The tested `redeem` creator cap is `floor(total_fees/2) −
 creator_distributed`. Cap+1 and altered owner/program/account cases reject.
 `collect_platform_fees`, `claim_meteora_fees`, `claim_raydium_fees`, and
