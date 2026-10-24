@@ -11,8 +11,11 @@ Across the five programs, **52/52** selectors have a bounded local success
 with the exact current **target-program ELF** loaded. A downstream CPI
 dependency may be from an older deployment: DAO `init_curve`, for example,
 succeeds with the current DAO ELF and source-era CP DAMM, while the tested
-current DAO + current CP DAMM combination fails 6067. The full
-current-dependency-stack denominator is still being audited. These counts are an
+current DAO + current CP DAMM combination fails 6067. Selected local
+successes for Founder, FeeShare, Pump and VirtualXYK use current custom
+CPI binaries, but their restored or synthetic account states are not a live
+mainnet prestate. A DAO-wide current-dependency-stack count is not
+established. These counts are an
 entrypoint inventory, **not** full behavior coverage: untested
 authority, token, account-state, arithmetic, upgrade, and historical branches
 remain. `dao_v1` is the one program whose current binary also matches the
@@ -29,7 +32,9 @@ byte-identical reconstruction in this repository.
 The [DAO binary provenance](receipts/dao-v1-binary-provenance.json) and
 [other-program version audit](receipts/non-dao-current-elf-version-audit.json)
 pin the root handler ELF hash behind each bounded-success count. CPI
-dependency versions are recorded separately where known.
+dependency versions are recorded separately where known; the
+[virtual custom-stack audit](receipts/custom-stack-version-audit.json)
+checks its ten selected direct paths.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and

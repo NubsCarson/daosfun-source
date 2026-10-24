@@ -10,7 +10,11 @@ CP DAMM combination fails downstream 6067. Other handlers also need an
 explicit CPI-dependency-version audit before a whole-current-stack count
 can be claimed. **0/18** are certified full behavior. The
 [per-handler binary provenance](receipts/dao-v1-binary-provenance.json)
-pins the root ELF hash and receipt for each claim. Exact source recovery materially improves
+pins the root ELF hash and receipt for each claim. The
+[InitCurve ABI comparison](receipts/dao-v1-init-curve-abi-compatibility.json)
+ties the 6067 failure to a fee-parameter layout mismatch in the tested
+current CP DAMM path; its source interpretation is not a byte-identical CP
+reconstruction. Exact source recovery materially improves
 review, but this lab has not closed all
 reachable account, authority, math, historical-version and error branches.
 Original receipt filenames below are inside the

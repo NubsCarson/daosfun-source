@@ -4,6 +4,11 @@ This note records separate, bounded tests against pinned daos.fun Solana binarie
 
 The tested `virtual_xyk` ProgramData binary is SHA-256 `c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377`. The current DAO-v1 binary is SHA-256 `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d`, matching this repository's byte-identical reconstruction. The lab's combined offline verifier passed after these receipts were integrated. All **10/10** listed virtual-XYK handlers have at least one bounded local path; **0/10** are marked fully reversed (`analysis/root_virtual_xyk/behavior-coverage.json`).
 
+A [custom-stack version audit](receipts/custom-stack-version-audit.json)
+finds current virtual-XYK ELF for ten selected signed local paths, including
+the composed lifecycle and separate migration/LP withdrawal controls. That
+does not establish exact historical prestates or every reachable CPI branch.
+
 ## Bounded virtual-XYK behavior
 
 | Path | Independent observation | Main receipts |

@@ -54,6 +54,10 @@ wrong account owner and wrong Vest program controls reject. Resetting only
 the Vest start tag is synthetic, so these cases show a bounded permissionless
 trigger, not a reachable premature start or fund-loss claim. See the
 [signed authority matrix](receipts/founder-start-vest-authority-matrix.json).
+The [time-boundary receipt](receipts/founder-start-vest-time-boundary.json)
+adds static BPF and four local bisections: the first allowed timestamp is
+`Curve.timestamp + 86,401` seconds; equality at `+86,400` fails 6005.
+This limits the permissionless trigger to after the tested one-day guard.
 
 Key receipts: `analysis/daos_fun/founder-init-allocation-boundaries.json`,
 `founder-init-goal-thresholds.json`, `founder-presale-cpi-source-attribution.json`,

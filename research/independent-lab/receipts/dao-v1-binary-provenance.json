@@ -1,7 +1,7 @@
 {
   "current_dao_binary_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
   "exact_source_commit": "5837c6b34575841590d694f7d539918d193b6ba0",
-  "qualification": "All successes are bounded local executions on synthetic or later/restored account state. Current-ELF success is not a complete current-dependency lifecycle or full behavior proof.",
+  "qualification": "All successes are bounded local executions on synthetic or later/restored account state. InitCurve requires a source-era CP AMM dependency despite exact-current DAO success; no current-CP compatibility or full behavior proof is claimed.",
   "rows": [
     {
       "instruction": "add_delegate_authority",
@@ -165,11 +165,11 @@
     },
     {
       "instruction": "init_curve",
-      "receipt": "analysis/daos_fun/dao-v1-init-curve-source-era-binaries-replay.json",
-      "receipt_sha256": "b77786658dd0b94da8b93b68602b1d4b3dcb7d8dee1082d22acbe548b5cb3290",
-      "dao_binary_sha256": "113a5d4d1d8a95e67a8747ba2363c6e6e50e8a1577d9df343e26b0f0ccec65a0",
-      "current_binary_local_success": false,
-      "source_era_only_local_success": true,
+      "receipt": "analysis/daos_fun/dao-v1-init-curve-source-era-cp-replay.json",
+      "receipt_sha256": "d18c1a17578413af9029a20f6c5b969e002ba0b1f4d1b0d9d1ce8e98086b3382",
+      "dao_binary_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+      "current_binary_local_success": true,
+      "source_era_only_local_success": false,
       "prestate_kind": "synthetic_or_later_restored",
       "qualification": "Exact historical transaction bytes/metadata, later account bytes. DAO and CPMM binaries can be selected from pre-source Upgrade-buffer reconstructions; remaining account bytes may still differ from source-slot prestate. No live transaction."
     },
@@ -186,8 +186,10 @@
   ],
   "totals": {
     "current_catalog_handlers": 18,
-    "current_binary_local_success": 17,
-    "source_era_only_local_success": 1,
+    "current_binary_local_success": 18,
+    "source_era_only_local_success": 0,
+    "init_curve_current_cp_success": 0,
+    "init_curve_source_era_cp_success": 1,
     "exact_archival_prestate_replays": 0,
     "strict_full_behavior": 0
   },
