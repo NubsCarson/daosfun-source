@@ -46,7 +46,11 @@ Four [FeeShare](receipts/daos-fee-share-baseline.json),
 current file's section hashes, ELF extent, and zero-filled allocation
 padding. They explicitly record **no source-built candidate** for those
 programs. The native Rust slices below match bounded behavior only; they
-do not change that source-reconstruction status.
+do not change that source-reconstruction status. The
+[exact-build feasibility checkpoint](DAOS_EXACT_BUILD_FEASIBILITY.md) compares
+all four current ELF layouts with Shaw's `dao_v1` recipe and identifies
+FeeShare as the smallest next whole-program candidate, while recording that
+none of the four has a source-built byte match.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and
@@ -61,9 +65,9 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`769a3ce2f5bf90d79046d5aff748017ee73c85a9`, contains **1,002** scoped
-files (116,789,177 uncompressed bytes), and has archive SHA-256
-`a6c4f50d5c5d97852a1f25e68262419124d44525dd7ecbd2c55c3b32bfc0a499`.
+`40dfeb2e7bda56376d3a7378fd06682a3abb5a30`, contains **1,003** scoped
+files (116,792,344 uncompressed bytes), and has archive SHA-256
+`9ad4f8111eda5cf346e70b05a52867ad3f0ee279681c64480b5e6b74ec273c1b`.
 All **31** direct JSON receipts match bundled member size and
 SHA-256. The daos.fun offline gate passed **111** commands; strict full
 behavior remains **0/52**.

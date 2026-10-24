@@ -29,6 +29,7 @@ COMMON_HARNESS = frozenset({
     "summarize_daos_wrappers.py",
 })
 DAOS_SOURCE_MODEL_FILES = frozenset({
+    "analysis/source_reconstruction/daos-exact-build-feasibility.md",
     "analysis/source_reconstruction/daos-fee-share-baseline.json",
     "analysis/source_reconstruction/daos-founder-baseline.json",
     "analysis/source_reconstruction/daos-pump-baseline.json",
