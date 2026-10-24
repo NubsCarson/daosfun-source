@@ -39,22 +39,32 @@ and other-program audit; the
 [virtual custom-stack audit](receipts/custom-stack-version-audit.json)
 checks its ten selected direct paths.
 
+Four [FeeShare](receipts/daos-fee-share-baseline.json),
+[Founder](receipts/daos-founder-baseline.json),
+[Pump](receipts/daos-pump-baseline.json), and
+[VirtualXYK](receipts/daos-virtual-baseline.json) ELF baselines pin each
+current file's section hashes, ELF extent, and zero-filled allocation
+padding. They explicitly record **no source-built candidate** for those
+programs. The native Rust slices below match bounded behavior only; they
+do not change that source-reconstruction status.
+
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and
 SHA-256, as well as the upstream lab commit. The bundle retains the complete
 daos.fun analysis, virtual-XYK analysis, five current-program disassemblies,
 current and reconstructed program binary captures, read-only RPC receipts,
-local test scripts, and two narrow native Rust behavior models for PumpXYK
-`migrate_v2` and FeeShare payouts. The models are not original on-chain source
+local test scripts, and three narrow native Rust behavior models for PumpXYK
+`migrate_v2`, FeeShare payouts, and Founder presale pricing. The models are
+not original on-chain source
 or SBF rebuilds. The bundle excludes
 Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`ed2357f44d9a25ea1f12783164c0c62d7f4f744b`, contains **991** scoped
-files (116,608,715 uncompressed bytes), and has archive SHA-256
-`d3e2b07d39f06935baee60acd7b25ead430280126361670c3d6ab0126a1b1a11`.
-All **26** directly linked JSON receipts match bundled member size and
+`769a3ce2f5bf90d79046d5aff748017ee73c85a9`, contains **1,002** scoped
+files (116,789,177 uncompressed bytes), and has archive SHA-256
+`a6c4f50d5c5d97852a1f25e68262419124d44525dd7ecbd2c55c3b32bfc0a499`.
+All **31** direct JSON receipts match bundled member size and
 SHA-256. The daos.fun offline gate passed **111** commands; strict full
 behavior remains **0/52**.
 
@@ -65,8 +75,9 @@ A small selection of key JSON receipts is also available directly in
 - [`DAO_V1.md`](DAO_V1.md): source-era replays, DAO/DBC migration, issuance,
   delegation and redemption paths, and independent checks of the published
   BM-1 finding.
-- [`FOUNDER.md`](FOUNDER.md): exact tested presale-goal model, allocation and
-  vesting controls.
+- [`FOUNDER.md`](FOUNDER.md): tested presale-goal model, allocation and vesting
+  controls, plus a native Rust goal/amount slice with 120/120 local
+  differential matches.
 - [`FEE_SHARE.md`](FEE_SHARE.md): `Option<Pubkey>` decoding, fee conservation,
   signed payout and legacy fee-authority CPI, plus a bounded native Rust
   payout model with 96/96 local differential matches.

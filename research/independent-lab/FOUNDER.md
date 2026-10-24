@@ -39,6 +39,18 @@ used only to identify and vary the intermediate slope; final goal comparisons
 run on the original pinned binary. Decimal overflow, exact half-way
 rounding outside the tested domain, and other error branches remain open.
 
+The bundle now includes `reconstruction/founder-presale/`, an independently
+written **native Rust behavioral slice** of that goal, amount cap and
+seven-day Fundraise CPI argument. Its [fresh differential receipt](receipts/founder-presale-rust-differential.json)
+matches **120/120** local cases on the unmodified pinned Founder and
+Fundraise ELFs across two historical transaction account layouts: 118
+successful presales and two cap-6007 rejections. These fresh inputs have no
+overlap with the earlier 200-case holdout. Init creates State locally; other
+account bytes are later snapshots, and historical signer privileges are
+simulated with signature verification disabled. The Rust model is neither
+original source nor an SBF build and omits negative-slope, decimal overflow,
+account validation, downstream CPI errors, and other handler branches.
+
 `claim_team_allo` moves `3e15` raw DAO-token units to a vest schedule ATA
 and flips a one-time flag in a restored local prestate. An underfunded vault
 fails and all five watched protocol accounts roll back. Four `start_vest`
