@@ -41,6 +41,14 @@ contract TargetTokenTest {
         bytes memory expected = vm.readFileBinary("../evidence/contracts/target-token.user-runtime.bin");
         require(keccak256(address(token).code) == keccak256(expected), "runtime differs");
     }
+    function testCapturedCreate2AddressMatchesOriginalPayload() public view {
+        bytes memory original = vm.readFileBinary("../evidence/contracts/target-token.user-creation.bin");
+        bytes32 launchId = 0x5389eef4763e7643fbd938f7cb06fb367b302522a45a231811a35086ec98491a;
+        address launchDeployer = address(bytes20(hex"5748de42dd639919550523d7ffd52589f02727bf"));
+        bytes32 salt = keccak256(abi.encodePacked(launchId, "CLANK_TOKEN"));
+        address predicted = address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), launchDeployer, salt, keccak256(original))))));
+        require(predicted == address(bytes20(hex"fa31d04462746aaa24bc7e5626403e09e4b106ec")), "CREATE2 address differs");
+    }
     function testInitialSupplyAndMetadata() public view {
         require(token.totalSupply() == SUPPLY && token.balanceOf(curve) == SUPPLY, "initial supply");
         require(token.decimals() == 18, "decimals");

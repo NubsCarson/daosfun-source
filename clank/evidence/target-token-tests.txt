@@ -1,15 +1,16 @@
 Compiling 1 files with Solc 0.8.28
-Solc 0.8.28 finished in 128.06ms
+Solc 0.8.28 finished in 234.27ms
 Compiler run successful!
 
-Ran 7 tests for TargetToken.t.sol:TargetTokenTest
-[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81476)
-[PASS] testFuzzTransferConservesSupply(uint96) (runs: 256, μ: 46621, ~: 47065)
-[PASS] testInitialSupplyAndMetadata() (gas: 27699)
-[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16544)
-[PASS] testOriginalInitcodeProducesExactPastedRuntime() (gas: 12160)
-[PASS] testTransferHasNoTokenLevelTax() (gas: 73001)
-[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25348)
-Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 4.26ms (4.80ms CPU time)
+Ran 8 tests for TargetToken.t.sol:TargetTokenTest
+[PASS] testCapturedCreate2AddressMatchesOriginalPayload() (gas: 10522)
+[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81498)
+[PASS] testFuzzTransferConservesSupply(uint96) (runs: 256, μ: 46466, ~: 47087)
+[PASS] testInitialSupplyAndMetadata() (gas: 27721)
+[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16566)
+[PASS] testOriginalInitcodeProducesExactPastedRuntime() (gas: 12182)
+[PASS] testTransferHasNoTokenLevelTax() (gas: 72934)
+[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25370)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 7.05ms (7.45ms CPU time)
 
-Ran 1 test suite in 4.63ms (4.26ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)
+Ran 1 test suite in 16.79ms (7.05ms CPU time): 8 tests passed, 0 failed, 0 skipped (8 total tests)

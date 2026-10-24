@@ -23,7 +23,7 @@ At block **96,692,586** (2026-10-24 10:22:08 UTC), AGI's curve is already gradua
 | [RPC-captured runtime](evidence/contracts/target-token.runtime.bin) | 3,139 | `190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155` |
 | [Rebuilt runtime](binaries/target-token.runtime.bin) | 3,139 | `190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155` |
 
-The [supplied runtime](evidence/contracts/target-token.user-runtime.bin) also matches the independent RPC capture. The creation payload consists of **7,066 bytes compiled from source plus 992 bytes of original ABI constructor arguments**. Constructor arguments are inputs, not recovered source code. Deployment-specific immutable addresses are derived from those arguments. No executable instruction or metadata bytes are copied into the compiled output to force a match. A local EVM execution of the supplied creation payload independently produces the exact runtime.
+The [supplied runtime](evidence/contracts/target-token.user-runtime.bin) also matches the independent RPC capture. The creation payload consists of **7,066 bytes compiled from source plus 992 bytes of original ABI constructor arguments**. Constructor arguments are inputs, not recovered source code. Deployment-specific immutable addresses are derived from those arguments. No executable instruction or metadata bytes are copied into the compiled output to force a match. A local EVM execution of the supplied creation payload independently produces the exact runtime. The full payload also derives the exact target address under CREATE2 using the historical launch-deployer and on-chain launch ID ([proof](evidence/contracts/target-create2.json)).
 
 ## Read and reproduce
 
@@ -43,7 +43,7 @@ python3 clank/scripts/rebuild_target.py
 
 The build uses the exact official Solidity **0.8.26+commit.8a97fa7a** compiler, original source-unit paths, optimizer/IR/EVM settings, and archived dependency source contents. This is an EVM/Solidity project; Anchor is used only for the unrelated Solana reconstruction at the repository root.
 
-The security review confirms no critical or high exploit in the selected token. It records a burn-interface inconsistency and conditional surrounding-protocol risks with explicit applicability limits. Seven local tests pass, including 256 transfer-conservation fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
+The security review confirms no critical or high exploit in the selected token. It records a burn-interface inconsistency and conditional surrounding-protocol risks with explicit applicability limits. Eight local tests pass, including 256 transfer-conservation fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
 
 ## Evidence scope
 
