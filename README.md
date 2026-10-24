@@ -33,8 +33,9 @@ The packaged differential suite passed **410 cases across 15 suites**; all six
 security scripts passed. See [scope and limitations](docs/SECURITY_SCOPE.md).
 
 An [independent supplemental lab](research/independent-lab/README.md) pins all
-five daos.fun Solana programs, maps their 52 site-IDL entrypoints, and adds
-bounded historical replays and fund-safety controls. Its hash-checked evidence
+five daos.fun Solana programs, maps their 52 site-IDL entrypoints on current
+binaries, and adds bounded local paths across current and historical versions
+plus fund-safety controls. Its hash-checked evidence
 bundle is separate from the byte-identical `dao_v1` source claim above.
 
 After installing `requirements.txt` in a Python virtual environment:

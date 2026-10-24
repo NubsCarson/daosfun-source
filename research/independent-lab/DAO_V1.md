@@ -3,8 +3,10 @@
 The current `dao_v1` ProgramData ELF captured by this lab is SHA-256
 `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d`,
 byte-identical to this repository's original capture and rebuilt binary.
-The program's 18 site-IDL handlers each have a bounded local success. Exact
-source recovery materially improves review, but this lab has not closed all
+The program's 18 site-IDL selectors each have a bounded local success across
+current and reconstructed source-era versions; current-binary success has not
+been shown for every handler. Exact source recovery materially improves
+review, but this lab has not closed all
 reachable account, authority, math, historical-version and error branches.
 Original receipt filenames below are inside the
 [daos.fun evidence bundle](daosfun-lab-evidence.tar.zst).

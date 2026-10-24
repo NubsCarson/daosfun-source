@@ -7,13 +7,15 @@ source, claim a deployed fix, or include the unrelated Clank project.
 
 The lab first captured finalized ProgramData binaries and the site IDLs, then
 mapped all **52 declared selectors** to current-binary dispatcher wrappers.
-Each has at least one bounded local success against its pinned binary. That
-count is an entrypoint inventory, **not** full behavior coverage: untested
+Each has at least one bounded local success across pinned current or
+reconstructed source-era binaries. The table below combines those versions;
+it must not be read as current-binary handler coverage. That count is an
+entrypoint inventory, **not** full behavior coverage: untested
 authority, token, account-state, arithmetic, upgrade, and historical branches
 remain. `dao_v1` is the one program whose current binary also matches the
 byte-identical reconstruction in this repository.
 
-| Program | IDL entries with bounded local success | Full-behavior certification | Captured SHA-256 |
+| Program | IDL entries with a bounded local success across versions | Full-behavior certification | Current captured SHA-256 |
 | --- | ---: | ---: | --- |
 | `dao_v1` | 18/18 | 0/18 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
 | FeeShareTraderDAO | 9/9 | 0/9 | `88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8` |
