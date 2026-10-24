@@ -21,6 +21,12 @@ review, but this lab has not closed all
 reachable account, authority, math, historical-version and error branches.
 The [MigrateBonding current-CP replay](receipts/dao-v1-migrate-bonding-current-stack-restored-replay.json)
 records the second 6067 control on a locally restored historical fixture.
+An independent [offline Surfpool ABI matrix](receipts/dao-cp-abi-offline-surfpool.json)
+uses a valid disposable signature: `init_curve` and
+`migrate_bonding_to_meteora` each fail 6067 with current CP DAMM and
+succeed with the source-era CP binary on their restored fixtures. Later
+account bytes, flag resets and signer/ATA substitutions limit the result;
+it neither proves every live route fails nor establishes permanent lock.
 Original receipt filenames below are inside the
 [daos.fun evidence bundle](daosfun-lab-evidence.tar.zst).
 
@@ -54,6 +60,23 @@ network-wide census, found three migrated DBC pools still at migration-fee
 status zero paired with unfinalized DAO States; the same deployed DBC config
 had fee byte zero. See `dao-bm1-current-exposure-snapshot.json`. No mainnet
 transaction was sent.
+
+A later [finalized read-only account capture](receipts/bm1-mainnet-readonly-20261024.json)
+pins the current DAO/DBC binaries and both pool/State accounts in one RPC
+context at slot 460,995,695. A separate
+[public RPC simulation](receipts/bm1-mainnet-unsigned-atomic-success1-20261024.json)
+used `simulateTransaction` with **`sigVerify:false`** and a public payer
+whose key was not held. It simulated the missing wallet and ATA setup plus
+the cross-pool finalization in one transaction and returned no instruction
+error. Pre/post finalized reads stayed unchanged: the simulation did not
+broadcast, verify a real signature, create a live wallet, or move funds.
+The [validly signed offline Surfpool control](receipts/dao-bm1-cross-pool-surfpool.json)
+separately reproduces honest and cross-pool state/status transitions with
+the captured deployed fee byte **0**, so its token payout is zero. A
+positive 6.6-billion-raw-unit redirect again requires a locally edited fee
+byte **10**; one absent base-vault PDA is supplied only as a synthetic local
+placeholder. These receipts strengthen current-version mechanism evidence
+without proving a broadcastable outsider transaction or current token theft.
 
 ## Issuance and historical versions
 

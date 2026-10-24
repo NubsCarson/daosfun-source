@@ -45,12 +45,17 @@ Four [FeeShare](receipts/daos-fee-share-baseline.json),
 [VirtualXYK](receipts/daos-virtual-baseline.json) ELF baselines pin each
 current file's section hashes, ELF extent, and zero-filled allocation
 padding. They explicitly record **no source-built candidate** for those
-programs. The native Rust slices below match bounded behavior only; they
-do not change that source-reconstruction status. The
+programs at their capture checkpoint. Later
+[incomplete full-interface candidates](receipts/daos-full-candidate-status.json)
+expose the current selector surfaces but retain missing or failing handler
+bodies. Neither those SBF candidates nor the native Rust behavior slices
+match a deployed whole-program binary. The
 [exact-build feasibility checkpoint](DAOS_EXACT_BUILD_FEASIBILITY.md) compares
 all four current ELF layouts with Shaw's `dao_v1` recipe and identifies
 FeeShare as the smallest next whole-program candidate, while recording that
-none of the four has a source-built byte match.
+none of the four has a source-built byte match. The
+[FeeShare v1.41 compiler-format probe](receipts/daos-fee-share-v141-toolchain-probe.json)
+is a toolchain hypothesis, not an exact FeeShare rebuild.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and
@@ -59,17 +64,19 @@ daos.fun analysis, virtual-XYK analysis, five current-program disassemblies,
 current and reconstructed program binary captures, read-only RPC receipts,
 local test scripts, and three narrow native Rust behavior models for PumpXYK
 `migrate_v2`, FeeShare payouts, and Founder presale pricing. The models are
-not original on-chain source
-or SBF rebuilds. The bundle excludes
+not original on-chain source or SBF rebuilds. Four separate incomplete
+Anchor/SBF interface candidates and their non-secret status receipts are
+also included; **they are not matching or deployable replacements**. The
+bundle excludes
 Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`40dfeb2e7bda56376d3a7378fd06682a3abb5a30`, contains **1,003** scoped
-files (116,792,344 uncompressed bytes), and has archive SHA-256
-`9ad4f8111eda5cf346e70b05a52867ad3f0ee279681c64480b5e6b74ec273c1b`.
-All **31** direct JSON receipts match bundled member size and
-SHA-256. The daos.fun offline gate passed **111** commands; strict full
+`9eeb2a635332ca730252bc04ac245e997fd9af39`, contains **1,072** scoped
+files (117,578,988 uncompressed bytes), and has archive SHA-256
+`4f640c8a345bb67c0513afd0511628f4c316760e46f1d6dc4025de8d9db37cdf`.
+All **41** direct JSON receipts match bundled member size and
+SHA-256. The daos.fun offline gate passed **112** commands; strict full
 behavior remains **0/52**.
 
 The most reviewable distinct results are summarized in the adjacent notes.

@@ -1,0 +1,35 @@
+{
+  "targets": {
+    "fee_share_trader_dao": {
+      "deployed_sha256": "88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8",
+      "current_toolchain_candidate_sha256": "fc10f3a92541eb4c4510bd16bcdda30c4e4084abac53556f7944fd420b2ac71c",
+      "v1_41_candidate_sha256": "b3428ac9e54dacc3ec6ae9bf1c24f18d14e4858d6b1cc46c91c1e8de43f0b854",
+      "signed_payout_cases_matched": 27,
+      "external_cpi_handlers_stubbed": 4,
+      "whole_file_equal": false
+    },
+    "founder_dao": {
+      "deployed_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
+      "candidate_sha256": "6c008d06fedc68b605b02d38e506886d11188cf8ab7258289f9f592c2223f912",
+      "selectors_verified": 6,
+      "complete_handlers": 0,
+      "whole_file_equal": false
+    },
+    "pump_xyk": {
+      "deployed_sha256": "2238aa5b96fc29e7693174b20d75063df2e1dfba28c26c5346338c23732e2fb9",
+      "candidate_sha256": "9da202b2c2ce8542079082b50ee1b8ce7b3855733333b4347c3a0d419a345109",
+      "signed_migrate_cases_matched": 80,
+      "signed_collect_fee_cases_matched": 45,
+      "handlers_stubbed": 7,
+      "whole_file_equal": false
+    },
+    "virtual_xyk": {
+      "deployed_sha256": "c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377",
+      "candidate_sha256": "55b6ffc69b76a7c7facdebeaabf4e2dbc79604792755d2b7323401a21a16d690",
+      "selectors_verified": 10,
+      "complete_handlers": 0,
+      "whole_file_equal": false
+    }
+  },
+  "scope": "Saved receipt and current source hash integrity, not a fresh build; all candidates are incomplete and not deployable replacements."
+}
