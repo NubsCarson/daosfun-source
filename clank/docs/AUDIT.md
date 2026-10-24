@@ -1,156 +1,92 @@
 # Security audit — AGI / clank.trade
 
-Target: `0xfa31d04462746aaa24bc7e5626403e09e4b106ec` (Artificial Girlfriend Intelligence / AGI), chain ID **4663**. Snapshot: block **96,692,586**, hash `0xd2254f48f5922f7ff13223026dabe708729ed9e187eaf852e3a1343303201c10`, timestamp **2026-10-24 10:22:08 UTC**.
+## Scope
 
-A fresh read-only check at block **96,709,714** (2026-10-24T10:52:53+00:00, **03:52:53 PDT on October 24, 2026**) confirmed the token, curve and factory runtime hashes are unchanged, the curve remains `PoolCreated`, and the position NFT remains owned by its recorded locker. [Refresh evidence](../evidence/audit-state-refresh.json).
+**Target:** AGI (`0xfa31d04462746aaa24bc7e5626403e09e4b106ec`) on Robinhood Chain, chain ID **4663**, and its associated Clank launch contracts.
 
-## Result
+**Factory:** `0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1`. This is distinct from the factory currently advertised by clank.trade. The reviewed source reproduces AGI's creation payload and deployed runtime byte for byte. [Build evidence](BUILD.md).
 
-**No exploitable security vulnerability was confirmed in the selected AGI token in this review.** This is a bounded source review and local execution result, not a guarantee that the token, market, website, or dependencies are risk-free. The six items below are an intentional interface limitation, conditional protocol risks, and unresolved compiler applicability—not six confirmed exploits. In particular, the earlier low-severity label for disabled burning has been corrected to informational: the behavior is explicitly intentional. The Solana findings elsewhere in this repository do not apply to this EVM token.
+**State snapshot:** block **96,709,714**, hash `0x8544aa36fb7ae4fd24e8ba8257de59e66f4799fe81bc9621bd279581ac8b24d7`, **October 24, 2026, 03:52:53 PDT**. The token, curve and factory runtime hashes match the original captures. [State evidence](../evidence/audit-state-refresh.json).
 
-The token uses the **historical** Clank factory `0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1`. Its source differs from the current website factory: AGI explicitly disables burning. Importing the newer, burnable token source would give the wrong behavior and the wrong binary.
+The scope includes the historical token, OpenZeppelin ERC-20 implementation, bonding curve, launch factory, deployer, atomic launch router, fee escrow, liquidity locker, graduation executor, graduation guard, initialization hook, and curve/migration mathematics. Sources: [factory and dependencies](../verified/target-factory/sources/contracts/), [atomic launch router](../verified/target-launch-forwarder/sources/contracts/ClankLaunchAndBuy.sol).
 
-At the pinned block, its curve is already `PoolCreated` (enum value 3), the quote asset is native ETH, and the tracked curve reserves are zero. Position NFT **3,034,864** is recorded by and owned by locker `0xe3dc0e862c4eff876a1c40b10205844111da6ee7`. These facts establish the recorded ownership and lifecycle; they do not establish the current market value, depth, or absence of every possible external-protocol failure.
+AGI's curve is in `PoolCreated` state, uses native ETH as its quote asset, and has zero tracked reserves. Position NFT **3,034,864** is recorded by and owned by locker `0xe3dc0e862c4eff876a1c40b10205844111da6ee7`. These observations establish lifecycle and custody, not market value or liquidity depth.
 
-## Scope and method
+## Summary
 
-Reviewed the recovered historical `ClankLauncherToken`, OpenZeppelin ERC-20 implementation and burn extension, `ClankBondingCurve`, `ClankLaunchFactory`, `ClankLaunchDeployer`, `ClankLaunchAndBuy`, `ClankFeeEscrow`, `ClankLaunchLocker`, `ClankGraduationExecutor`, `ClankGraduationGuard`, initialization hook, and curve/migration mathematics. The factory source is [preserved verbatim](../verified/target-factory/sources/contracts/ClankLaunchFactory.sol); the [token](../verified/target-factory/sources/contracts/ClankLauncherToken.sol) and [atomic launch router](../verified/target-launch-forwarder/sources/contracts/ClankLaunchAndBuy.sol) have separate source links.
+**No CRITICAL or HIGH finding was confirmed.** Two findings meet the reporting threshold: one **MEDIUM** conditional custody risk and one **LOW** execution risk. Neither provides an active exploitation path against AGI's already-graduated curve in the captured state.
 
-The first review traced access control, ERC-20 accounting, immutable references, and source/runtime identity. The second review traced lifecycle transitions, custody, rescue, refunds, fee routing, quote assets, and stale trade execution. Both are consolidated here; the second review was not a separate independent auditor's assessment.
+| Severity | Count |
+| --- | ---: |
+| CRITICAL | 0 |
+| HIGH | 0 |
+| MEDIUM | 1 |
+| LOW | 1 |
 
-Local tests execute the **actual supplied creation bytecode**, not a mocked token. They check the CREATE2 target address, exact deployed runtime, constructor metadata and supply, transfer conservation, no token-level transfer tax, unauthorized transfer/burn rejection, authorized burn rejection, failed-call rollback, and absence of the tested mint/upgrade selectors. The expanded suite passes **17 tests: 13 token tests and 4 native-fee-escrow tests**. Four token properties each run 1,024 cases (**4,096 fuzz cases**); the sequence property performs 32 transfers per case (**32,768 modeled transfer steps**). [Token test source](../tests/TargetToken.t.sol), [escrow test source](../tests/FeeEscrowAudit.t.sol), [complete output](../evidence/security-audit-tests.txt), [build proof](BUILD.md). These use fresh local deployments of captured creation bytecode; they are not a fork replay of every historical transaction.
-
-No transactions were sent to Robinhood Chain. Public calls were read-only and pinned. Uniswap V4/Permit2 implementation security, the Safe implementation/modules, frontend signing flows, bridges, private backend code, oracle/market integrity, and all historical launches were not comprehensively audited. A byte-identical rebuild is an identity proof, not a security certification.
-
-## Additional critical-severity review
-
-**No additional critical vulnerability was confirmed.** This pass specifically examined loss of token balances, theft of the locked liquidity position, unauthorized reserve sweeps, post-graduation owner recovery, repeated graduation, and bypasses through externally callable helper functions. The earlier conditional risks remain conditional; they have not been promoted to critical findings without a working, applicable path to critical impact.
-
-Unlike the fresh-deployment tests above, the new [critical-path suite](../critical-tests/CriticalPaths.t.sol) uses an **offline replay of code and storage captured from a Robinhood Chain fork at block 96,709,714**. It checks the token, factory, curve, locker, graduation executor and hook runtime bytes against the captured artifacts before testing. Impersonation and the one-year time advance occur only inside the local EVM. No transaction is broadcast.
-
-| Critical hypothesis | Focused check | Outcome and scope |
-| --- | --- | --- |
-| An arbitrary caller sweeps curve reserves or rewires the curve | Direct `graduate`, `initialize`, `markRescued` calls plus seven explicit caller roles | Expected `NotFactory` authorization guard. |
-| An arbitrary caller uses delayed recovery or changes the fee recipient | Direct calls and eight explicit non-owner caller roles | Expected `OwnableUnauthorizedAccount` authorization guard. |
-| Even the legitimate owner can extract AGI's already-locked principal through recovery | Impersonate owner locally, advance one year, call both rescue and force-sweep | Both reject AGI's `PoolCreated` lifecycle state; elapsed time does not bypass the state check. |
-| Public retry helper functions bypass the outer authorization checks | Direct `attemptRescueMigration` and `attemptForceGraduation` calls | Expected `OnlySelf` guard. |
-| The existing curve can be reset or swept by replaying legitimate factory calls | Impersonate factory locally and repeat initialization/sweep | `AlreadyInitialized` or the expected lifecycle error. |
-| An outsider invokes the graduation executor to move balances | Direct `mintFullRangePosition` call | Expected `NotFactory` guard before reserve movement. |
-| An attacker reassigns the locker record, approves a spender, or transfers the LP NFT directly | Locker calls and direct PositionManager `transferFrom` | Locker authorization/no-entrypoint rejection and PositionManager `NOT_AUTHORIZED`; NFT ownership checked after each attempt. |
-| Repeated permissionless graduation creates a second claim | Repeat factory sweep and pool-creation calls | Both reject the completed lifecycle state. |
-| A forged hook callback authorizes pool initialization | Call hook as outsider, then as PoolManager with an unauthorized sender | Expected `NotPoolManager` / `NotFactory` guards. |
-
-The source trace also checked reserve changes before external transfers, reentrancy guards, the factory's scoped native receiver, fee-escrow beneficiary ownership, approval clearing after migration, and the separation between fee collection and LP principal. No new critical fund-loss path was established from these paths.
-
-These checks do **not** establish that the entire external swap system is free of critical bugs. PoolManager/PositionManager internals, post-graduation routing, bridges and frontend transaction construction have not received a complete implementation audit here. The direct NFT-transfer check covers only that tested authorization path in PositionManager. A compromised authorized signer set, future malicious quote asset, or the unresolved compiler advisory is a different threat model from the unauthorized attacks tested here.
-
-All **11 additional tests passed**. The broader randomized fork run was interrupted by public RPC HTTP 429 limits and is not counted as passing. The completed suite instead checks explicit caller roles.
-
-Reproduce the completed critical-path checks without RPC access:
-
-```sh
-forge test --root clank/critical-tests --use 0.8.26 -vv
-```
-
-The [snapshot](../evidence/critical-snapshot/snapshot.json) contains nine accounts and ten captured storage slots. After each tested action, storage-read instrumentation rejects reads of uncaptured slots in those accounts, rather than silently treating missing captured state as zero. This is a partial replay, not a full state dump or a Merkle-proof verification. External paths beyond the tested calls remain outside this evidence. Both the existing 17-test suite and the 11-test critical suite are included in CI. [Additional results](../evidence/critical-pass-tests.txt).
-
-## Findings and protocol risks
-
-| ID | Classification | Observation | Applicability to selected AGI |
+| ID | Severity | Finding | Applicability to AGI |
 | --- | --- | --- | --- |
-| CL-01 | Informational — intentional interface limitation | Inherited burn selectors always revert because the token enforces a fixed supply. | Confirmed in the selected token and tested locally. |
-| CL-02 | Medium — conditional custody/design risk | Failed swept-launch recovery can send remaining reserves to the factory owner, not token holders. | Not reachable for AGI in its observed `PoolCreated` state. |
-| CL-03 | Low — integration risk | Direct curve buy/sell entrypoints have no transaction deadline. | AGI curve trading is already closed; relevant to still-trading launches from this implementation. |
-| CL-04 | Informational — governance trust | Fee routing and future-launch settings remain administratively controlled. | Fee-routing authority remains relevant; it is not authority to mint AGI or withdraw its locked position. |
-| CL-05 | Informational — external asset assumption | ERC-20 quote-token administration can invalidate accounting/liveness assumptions after approval. | AGI uses native ETH, so this quote-token risk is not present for AGI. |
-| CL-06 | Informational — compiler risk, unresolved applicability | Historical solc has published advisories, including an optimized-IR issue. | No target miscompilation reproduced; exact-byte reproduction alone does not rule one out. |
+| CL-02 | MEDIUM | Failed-launch recovery transfers reserves to the owner without a holder refund mechanism | Recovery requires `Swept`; AGI is already `PoolCreated`. |
+| CL-03 | LOW | Direct curve orders have no execution deadline | AGI's curve is closed; relevant to still-trading launches using this implementation. |
 
-### CL-01 — burn selectors intentionally reject supply changes
+## CL-02 — MEDIUM: Failed-launch recovery transfers reserves to the owner
 
-**Evidence:** `ClankLauncherToken` inherits `ERC20Burnable` but overrides `_update` to revert `FixedSupply()` whenever `to == address(0)`. Consequently both `burn` and `burnFrom` fail even for the holder or an allowance-authorized spender. A revert also restores the allowance spent earlier by `burnFrom`. The local test `testFixedSupplyRejectsEvenAuthorizedBurn` confirms the exact runtime's behavior and rollback.
+**Location:** [ClankLaunchFactory.sol:855](../verified/target-factory/sources/contracts/ClankLaunchFactory.sol#L855), `rescueSweptGraduation`.
 
-**Impact:** Integrations that infer burn support from the ABI or parent type can fail at runtime, including workflows that assume supply can be retired. This is not an unauthorized mint, theft path, or hidden transfer tax. Fixed supply appears intentional from the source comments.
+**Preconditions:** The caller is the factory owner, the launch is in `Swept` state, at least seven days have elapsed since sweeping, and the migration retry fails.
 
-**Recommendation:** Describe this deployed token explicitly as fixed-supply and non-burnable in public integrations. For a future deployment, omit the burn extension or expose/document the intentional reversion clearly. Changing the selected source would break faithful reconstruction; no remediation was applied to its recovered code.
+**Evidence:** The function attempts migration with a fixed 5,000,000 gas budget. It catches any failure, including out-of-gas, marks the launch `Rescued`, and transfers the remaining quote assets and tokens to `owner()`. The `recipient` argument is checked for nonzero but does not select the actual recipient. PoolManager/PositionManager callback-state checks and EIP-150 gas-headroom guards are present.
 
-### CL-02 — delayed recovery trusts the owner with failed-launch reserves
+**Impact:** Recovery gives governance custody of failed-launch reserves without an on-chain mechanism to reimburse token holders. A permanent migration failure—or migration that exceeds the fixed retry budget—can leave holders dependent on the owner's subsequent disposition of those assets. The MEDIUM rating reflects this conditional custody risk; it is not a confirmed permissionless drain or proof that ordinary migration exceeds the gas cap.
 
-**Evidence:** `rescueSweptGraduation` requires `onlyOwner`, `Swept` state and seven days since sweeping. It first tries migration with a fixed 5,000,000 gas budget and catches any failure, including out-of-gas. If the retry fails, it marks the launch `Rescued` and sends quote assets and remaining tokens to `owner()`. Its `recipient` argument is only checked for nonzero and does not choose the actual recipient. PoolManager/PositionManager active-callback checks and EIP-150 gas headroom guards are present.
+**AGI applicability:** The captured AGI state is `PoolCreated`, which fails the recovery precondition. A local replay impersonating the legitimate owner and advancing time by one year confirms that both rescue and force-sweep reject that state. The reviewed locker exposes no withdrawal, approval, transfer, or arbitrary-call entrypoint for its position NFT.
 
-**Impact:** Recovery is not a holder refund mechanism. A legitimate permanent migration failure, or a legitimate migration exceeding the fixed retry budget, leaves reserve disposition dependent on governance. This review did not demonstrate a way for an arbitrary caller to trigger unauthorized recovery, or prove that the normal native migration exceeds the gas cap. Do not describe this as a confirmed permissionless drain.
+**Recommendation:** Define and implement a holder-compensation mechanism for failed launches. Separate permanent migration failures from insufficient execution gas, test retry budgets against supported dependencies, and make reserve disposition explicit in governance policy and events.
 
-**Selected-token boundary:** AGI is already `PoolCreated`. The recovery precondition rejects that state, and the locker has no position-transfer, approval, withdrawal, or arbitrary-call entrypoint. The recovery path therefore does not provide a route to AGI's already-locked position under the reviewed code.
+## CL-03 — LOW: Direct curve orders have no execution deadline
 
-**Recommendation:** For future designs, specify holder compensation and treasury custody policy, distinguish permanent failures from insufficient gas, and test the retry gas budget against supported quote assets and external protocol versions. Prefer explicit governance approval and transparent recovery events over an implied holder refund promise.
+**Locations:** [ClankBondingCurve.sol:324](../verified/target-factory/sources/contracts/ClankBondingCurve.sol#L324), `buy`; [ClankBondingCurve.sol:374](../verified/target-factory/sources/contracts/ClankBondingCurve.sol#L374), `sell`.
 
-### CL-03 — direct curve orders have no expiry
+**Preconditions:** The curve remains in `Trading` state and an older signed transaction is still valid and satisfies the supplied minimum-output condition.
 
-**Evidence:** `buy(uint256,uint256,address)` and `sell(uint256,uint256,address)` check minimum output but accept no deadline. An old, still-valid signed transaction may execute later if the state and slippage conditions permit it. The proportional minimum on a terminal partial buy is intentional: the implementation scales the minimum by the gross input actually used.
+**Evidence:** Both entrypoints enforce minimum output but accept no deadline. The terminal partial-buy path scales the minimum proportionally to the gross input actually consumed.
 
-**Impact:** Minimum output bounds price, not time. Direct callers cannot make an order expire at the curve layer. No bypass of the supplied slippage bound was confirmed. For AGI, the closed curve rejects new curve trades; this finding is not a claim about the separate post-graduation swap router.
+**Impact:** An order can execute after the user's intended time window. Slippage protection bounds output relative to the submitted order; it does not provide expiration. No bypass of the supplied slippage bound was confirmed.
 
-**Recommendation:** A future curve entrypoint or trusted execution wrapper should enforce a caller-specified deadline. Integration documentation should distinguish minimum-output protection from expiry and explain terminal partial-fill semantics.
+**AGI applicability:** AGI's completed curve rejects further curve trades. This finding does not assess the separate post-graduation swap router.
 
-### CL-04 — governance controls persist, with a 3-of-5 owner observed
+**Recommendation:** Add a caller-specified deadline to future curve entrypoints or an execution wrapper that enforces it. Document expiration and terminal partial-fill semantics separately from minimum-output protection.
 
-**Evidence:** The owner can change fee destination, launch gate, configurations for future launches, snipe-tax settings for future launches, trusted launch forwarder, and pair-token authority. Existing curves snapshot economic terms. Already accrued but uncollected factory fee credits follow the current fee destination; the locker also sends collected LP fees to that destination. These powers are separate from user token balances and locked LP principal.
+## Verification
 
-At the pinned block, the owner address `0x77cb92c232137739452446c5712fb0055a344c3d` has proxy code, reports **five owners and threshold three**, and returns implementation `0x29fcb43b46531bca003ddc8fcb67ffe91900c762`. The original owner/threshold getter results alone did not establish all execution paths; guards and fallback-handler state were not exhaustively assessed. A follow-up `getModulesPaginated(0x01,100)` query returned an empty module list and the end sentinel at the refresh block, so no enabled modules were reported by that getter. This does not replace an implementation-level wallet review. Calling it an EOA or asserting every action requires three signatures would be unsupported.
+**28 tests passed:** 13 token tests, four native fee-escrow tests, and 11 captured-state authorization/lifecycle tests. Four token properties each run 1,024 cases (**4,096 fuzz cases**); the transfer-sequence property performs **32,768 modeled transfer steps**.
 
-**Recommendation:** Publish authority and fee-destination policy, monitor configuration changes, and independently review the governance wallet's modules/guards and signer security. Do not market the entire protocol as administratively immutable merely because the token cannot mint and the liquidity NFT cannot be withdrawn through the locker.
-
-### CL-05 — approved ERC-20 quote assets require continuing trust
-
-**Evidence:** Pair-token onboarding checks code, decimals and configured economics. Inbound curve transfers and escrow credits require exact balance deltas. That rejects many fee-on-transfer behaviors, but cannot stop an upgradeable/rebasing/freezable quote asset from changing behavior or disabling transfers later. Outbound transfers use `SafeERC20`, which does not itself guarantee an exact recipient balance delta.
-
-**Impact:** For affected ERC-20-quoted launches, a future asset behavior change could impair trades, migration, recovery or claims. This is a conditional dependency risk, not proof that any currently approved asset is malicious or that AGI loses backing; AGI's quote asset is native ETH.
-
-**Recommendation:** Limit supported quote assets to documented transfer semantics, assess upgrade/freeze/rebase powers, monitor changes, and test transfer rejection and recovery behavior. Removing approval only stops new launches; it does not rewrite existing curve snapshots.
-
-### CL-06 — historical compiler has published bug advisories
-
-The [Solidity bug registry](https://raw.githubusercontent.com/ethereum/solidity/develop/docs/bugs.json), captured on 2026-10-24 in [this evidence file](../evidence/solidity-known-bugs.json), lists six advisories spanning version 0.8.26. SOL-2026-5 requires the non-IR pipeline, which this build does not use. SOL-2026-6 requires named custom-error arguments inside `require`; none were found in the reviewed first-party source. SOL-2026-2 and SOL-2026-4 concern mutual recursion; no such first-party internal call cycle was identified. SOL-2025-1 concerns storage-array slot overflow, not ordinary bounded metadata storage.
-
-**Open applicability:** SOL-2026-7 concerns optimizer bookkeeping and can affect optimized IR even without inline assembly. The target uses that pipeline. No miscompilation was reproduced here, but the local tests do not exclude it. This remains a compiler risk requiring targeted IR analysis/differential testing before a compiler-level assurance claim. Exact reproduction intentionally retains the historical compiler; future remediated deployments should separately assess a fixed compiler and rerun tests. This is not counted as a confirmed exploitable defect in AGI.
-
-## Negative results and retained protections
-
-- The selected token has no owner role, external mint entrypoint, pause/blacklist logic, fee-taking transfer hook, delegatecall proxy fallback, or upgrade entrypoint in its recovered implementation. Immutable `deployer`, `curve` and `launchFactory` references are informational; they do not grant token mint or confiscation powers.
-- All initial tokens are minted to the constructor-specified curve. ERC-20 transfers consume balances and finite allowances; unauthorized movement and supply conservation are tested. The fixed-supply hook disallows burns after deployment.
-- Curve pricing uses tracked reserves rather than raw ETH balances. Forced ETH and direct token donations do not change those pricing variables. State-changing trade entrypoints are reentrancy guarded; the factory-only curve sweep uses state-before-transfer transitions.
-- Token/curve initialization and lifecycle calls are restricted; CREATE2 inputs bind creator, metadata and economics. Zero `expectedEconomics` deliberately waives the commitment in the compatibility entrypoint, so clients wanting pinned terms must supply a nonzero expected hash.
-- The initialization-only hook requires the configured PoolManager and wired factory, preventing ordinary third-party pre-initialization of that hook's pool. It does not run on swaps or impose a swap tax.
-- Graduation mints the position to the permanent locker, verifies NFT ownership and clears temporary approvals. The locker removes zero liquidity when collecting fees and has no withdrawal path in the reviewed source.
-- Fee claims debit the caller's own credit before external transfer and use reentrancy guards. Four local tests on the exact native escrow runtime confirm beneficiary isolation, rejection of nested double-claims, credit restoration after a rejected payment, and exclusion of forced surplus from claimable credit. The beneficiary, not an arbitrary caller, selects a claim recipient. The atomic launch router forwards the original caller's identity and measures refunds relative to a pre-call balance baseline.
-
-These observations are source-level checks unless a local test or pinned-state call is explicitly cited. They are not a claim that every interleaving or external dependency was exhaustively tested.
-
-
-## Evidence by attack surface
-
-| Surface | Checks and evidence | Result / boundary |
+| Area | Checks | Result |
 | --- | --- | --- |
-| Supply and privileged token control | [Token `_update`, line 63](../verified/target-factory/sources/contracts/ClankLauncherToken.sol#L63); mint/upgrade-selector and authorized-burn tests | No post-constructor mint entrypoint, arbitrary confiscation, or token upgrade path found. Burn rejection is intentional. |
-| Balances and approvals | Delegated-spend fuzzing, self-transfer fuzzing, finite/infinite allowance tests, zero-recipient rollback, 32-step reference-model sequences | No excess spending, supply inflation, or balance divergence reproduced. |
-| Native fee custody | [Escrow claims, line 45](../verified/target-factory/sources/contracts/ClankFeeEscrow.sol#L45); exact-initcode escrow tests | Tested cross-beneficiary theft, nested claims and failed-payment accounting hypotheses were rejected. ERC-20 escrow behavior remains source-reviewed, not covered by these four native tests. |
-| Migration and permanent custody | [Rescue, line 855](../verified/target-factory/sources/contracts/ClankLaunchFactory.sol#L855), [locker, line 79](../verified/target-factory/sources/contracts/ClankLaunchLocker.sol#L79), fresh state reads | Owner recovery requires a different lifecycle state from AGI. Existing position remains in locker. No proof of external PositionManager correctness is implied. |
-| Order execution | [Buy, line 324](../verified/target-factory/sources/contracts/ClankBondingCurve.sol#L324), [sell, line 374](../verified/target-factory/sources/contracts/ClankBondingCurve.sol#L374) | Minimum output exists; deadline does not. AGI's curve is closed. |
-| Administrative controls | [Fee destination, line 443](../verified/target-factory/sources/contracts/ClankLaunchFactory.sol#L443), fresh owner/module reads | Governance can redirect protocol fees; no corresponding authority over token balances or locker NFT transfer found in these sources. |
-| Compiler and external dependencies | Exact-source reproduction and published compiler-advisory assessment below | Matching bytecode does not exclude compiler bugs. Full swap-router, bridge and governance-wallet implementation audits remain outside this report. |
+| Source and deployment identity | Entire creation payload, deployed runtime, constructor values and CREATE2 address | Matched captured AGI evidence. |
+| Token balances and supply | Transfers, self-transfers, finite/infinite allowances, overspending, zero-recipient rollback and transfer sequences | No unauthorized movement, supply inflation or model divergence reproduced. |
+| Token authority | Mint/upgrade selectors and burn behavior | No external mint or upgrade path found; fixed-supply burn rejection confirmed. |
+| Native fee escrow | Cross-beneficiary claims, reentrant claims, rejected-payment rollback and forced-surplus accounting | Tested theft and accounting-failure hypotheses rejected. |
+| Curve and factory authorization | Direct sweeps, reinitialization, lifecycle changes and owner-only rescue across explicit caller roles | Expected authorization guards enforced. |
+| Completed-launch recovery | Owner rescue and force-sweep after a one-year local time advance | Completed lifecycle state rejected. |
+| Helper functions and repeated graduation | Direct retry-helper calls, repeat sweep and pool creation | Self-call and lifecycle guards enforced. |
+| Graduation executor | Unauthorized migration call | Rejected before reserve movement. |
+| Liquidity custody | Locker reassignment, approval attempt and direct NFT transfer | Rejected; NFT ownership remained with the locker. |
+| Initialization hook | Forged caller and forged factory sender | PoolManager and factory checks enforced. |
 
-## Reproduce the security checks
+[Token tests](../tests/TargetToken.t.sol), [escrow tests](../tests/FeeEscrowAudit.t.sol), [authorization/lifecycle tests](../critical-tests/CriticalPaths.t.sol), [token and escrow results](../evidence/security-audit-tests.txt), [captured-state results](../evidence/critical-pass-tests.txt).
+
+The token and escrow tests deploy captured original initcode. The authorization/lifecycle tests replay a partial snapshot of **nine accounts and ten storage slots** and verify six contract runtimes against their captures. After each tested action, storage-read instrumentation rejects uncaptured-slot reads in the included accounts. This is not a full chain-state dump or a Merkle-proof verification. [Snapshot](../evidence/critical-snapshot/snapshot.json).
 
 ```sh
 forge test --root clank/tests --use 0.8.26 --fuzz-runs 1024 -vv
+forge test --root clank/critical-tests --use 0.8.26 -vv
 python3 clank/scripts/verify_package.py
 ```
 
-The recorded local run uses native solc 0.8.28 for the test harness. Production token and escrow code comes from the captured original initcode; it is not compiled with that harness compiler. CI uses 0.8.26 for the harness. Tests make no chain writes. Original contract source and existing binaries were not changed.
+Recorded local runs use solc 0.8.28 for test harnesses; CI uses 0.8.26. The production bytecode executed by the tests remains the captured original code. No live transactions or deployments were performed.
 
-## Recommended priorities
+## Limitations
 
-1. Publish the exact historical AGI source and its fixed-supply/non-burnable behavior alongside the bytecode evidence.
-2. Keep the target token, its historical factory, and the site's newer factory separate in monitoring and documentation.
-3. Document the failed-launch custody policy and continuing fee/governance authority.
-4. Add deadline enforcement to future direct-curve execution interfaces and test supported quote assets and migration gas limits.
-5. Extend a separate review to the post-graduation swap path, Uniswap/Permit2 deployments, frontend signing and governance wallet configuration before claiming a full-system audit.
+This audit does not establish the absence of all vulnerabilities. Full implementation audits of Uniswap V4/Permit2, the governance wallet, post-graduation swap routing, bridges, frontend signing flows and private backend code are outside scope. ERC-20 quote-asset behavior is source-reviewed rather than covered by the native-escrow tests. Compiler-advisory applicability has not been exhaustively resolved; byte-identical reproduction does not exclude miscompilation.
+
+The randomized network-backed fork run was rate-limited and is excluded from successful test counts. The completed captured-state tests use explicit caller roles. Results apply to the identified implementation and captured state, not future configurations or every historical launch.

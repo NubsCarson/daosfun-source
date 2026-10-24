@@ -43,12 +43,10 @@ python3 clank/scripts/rebuild_target.py
 
 The build uses the exact official Solidity **0.8.26+commit.8a97fa7a** compiler, original source-unit paths, optimizer/IR/EVM settings, and archived dependency source contents. This is an EVM/Solidity project; Anchor is used only for the unrelated Solana reconstruction at the repository root.
 
-The security review confirms no critical or high exploit in the selected token. It records an intentional burn-interface limitation and conditional surrounding-protocol risks with explicit applicability limits. Seventeen local security tests pass, including 4,096 fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
+The [security audit](docs/AUDIT.md) reports one **MEDIUM** conditional custody finding and one **LOW** execution finding, with explicit applicability limits for AGI's graduated state. No **CRITICAL** or **HIGH** finding was confirmed. All 28 local security tests pass, including 4,096 fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
 
 ## Evidence scope
 
 Public reads are pinned to block hash `0xd2254f48f5922f7ff13223026dabe708729ed9e187eaf852e3a1343303201c10`. The web configuration is a separate contemporaneous capture, not historical chain state. All runtime matches refer to this captured block; future configuration changes are outside the snapshot.
 
 `verified/` preserves contract-specific source inputs, including third-party SPDX notices. Repeated paths across those directories are intentional: different verification units and historical versions can have different contents. `evidence/contracts/` contains public RPC/source records and raw original bytecode; `binaries/` contains reconstructed comparison outputs. Downloaded compiler and intermediate build caches are ignored.
-
-The additional [critical-severity pass](docs/AUDIT.md#additional-critical-severity-review) adds 11 passing captured-state replay tests for unauthorized sweeps, owner recovery after graduation, helper bypasses, LP NFT theft and hook spoofing. No additional critical vulnerability was confirmed.

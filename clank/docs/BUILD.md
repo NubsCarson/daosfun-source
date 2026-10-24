@@ -92,4 +92,4 @@ forge test --root clank/tests --use 0.8.26 -vv
 
 The harness deploys the original supplied initcode and compares its result with the captured runtime. It does not rebuild the production contract with the harness compiler. The recorded local run used `--use /opt/miniconda3/bin/solc` (0.8.28); CI uses 0.8.26. The expanded security suite passes 17 tests (13 token, four escrow) and 4,096 fuzz cases with `--fuzz-runs 1024`. See [results](../evidence/security-audit-tests.txt).
 
-The historical compiler is retained for faithful reproduction, not recommended as a security baseline for a new deployment. See the [compiler advisory assessment](AUDIT.md#cl-06--historical-compiler-has-published-bug-advisories).
+The historical compiler is retained for faithful reproduction, not recommended as a security baseline for a new deployment. See the [audit limitations](AUDIT.md#limitations).
