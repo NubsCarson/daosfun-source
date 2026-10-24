@@ -73,11 +73,11 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`a24e968bf5242726fdbc10d6fa6ebc3d7d78e8fe`, contains **1,110** scoped
-files (118,681,383 uncompressed bytes), and has archive SHA-256
-`4168dfcb1a12da95494b33056e1b51cea430b8f919322e49c1ea68dc997e57b7`.
-All **54** direct JSON receipts match bundled member size and
-SHA-256. The daos.fun offline gate passed **112** commands; strict full
+`57653544af2a5164ec72ee6c26aa937ab2cd1be4`, contains **1,115** scoped
+files (118,848,292 uncompressed bytes), and has archive SHA-256
+`3708d44b394f3998eb273ea0fa2ccb900438a4746ca960d07490cbee0ef145ae`.
+All **56** direct JSON receipts match bundled member size and
+SHA-256. The daos.fun offline gate passed **113** commands; strict full
 behavior remains **0/52**.
 
 The most reviewable distinct results are summarized in the adjacent notes.
@@ -92,8 +92,9 @@ A small selection of key JSON receipts is also available directly in
   matches, and a fresh signed Founder-to-Pump lifecycle.
 - [`FEE_SHARE.md`](FEE_SHARE.md): `Option<Pubkey>` decoding, fee conservation,
   signed offline Surfpool external-fee claim, payout and counter reachability
-  checks, legacy fee-authority CPI, and a bounded native Rust payout model
-  with 96/96 creator cases plus 49/49 referrer/error-order matches, and a
+  checks, a 78-case platform-fee branch probe, legacy fee-authority CPI,
+  and a bounded native Rust payout model with 96/96 creator cases, 49/49
+  referrer/error-order matches and nine platform-arithmetic cases, plus a
   separate 15-case post-CP-claim accounting slice.
 - [`PUMP_XYK.md`](PUMP_XYK.md): source-era migration transfer formula and
   failure rollback, current `migrate_v2` native Rust data model with 72

@@ -94,6 +94,7 @@ DAOS_SOURCE_MODEL_FILES = frozenset({
     "analysis/source_reconstruction/fee-share-redeem-rust-differential.json",
     "analysis/source_reconstruction/fee-share-referrer-order-rust-differential.json",
     "analysis/source_reconstruction/fee-share-meteora-claim-rust-differential.json",
+    "analysis/source_reconstruction/fee-share-platform-arithmetic-rust-differential.json",
     "reconstruction/fee-share-meteora-claim/Cargo.lock",
     "reconstruction/fee-share-meteora-claim/Cargo.toml",
     "reconstruction/fee-share-meteora-claim/README.md",

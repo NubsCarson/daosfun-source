@@ -1,7 +1,7 @@
 {
   "program": "Fee33nMZNbbC7Zm6Yx7tiHa9KH2Ao8fWTH3HNMkLMzWk",
   "pinned_elf_sha256": "88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8",
-  "rust_source_sha256": "f49d267c8822f97af759ae01c87b2e8d14392018c6e835a87e0620370d5da3b7",
+  "rust_source_sha256": "bc6b7a6bd8ad8086f395b3fa375f659ac9f6cf3536ca4814e3d1de9fa5823124",
   "signature_verification_enabled": true,
   "snapshot_sources": {
     "no_referrer": {

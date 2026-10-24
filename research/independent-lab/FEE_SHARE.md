@@ -107,6 +107,27 @@ whole program or rule out another authorized referrer route. Captured
 accounts are later snapshots with disposable signer and ATA substitutions;
 no live fund exposure is established.
 
+An expanded [78-case signed `collect_platform_fees` probe](receipts/fee-share-platform-full-branch-probe.json)
+tests amount decoding, both State layouts, canonical recipient constraints,
+Token CPI failures, error order, and atomic rollback, with 24 fresh payout
+holdouts and selected BPF instruction checks. For ordinary totals, the
+observed cap is `floor(total_fees * 50 / 100) - platform_distributed`.
+Multiplication occurs before division: a **synthetic** `u64::MAX` total-fee
+prestate panics even for a zero payout, while a **synthetically corrupted**
+platform counter above cap panics on subtraction. Neither state was shown
+reachable through legitimate instructions. A changed State `token_mint`
+field was accepted in one locally mutated fixture; no legitimate route to
+that mutation or cross-pool diversion was found. The scoped report
+`analysis/daos_fun/fee-share-platform-full-branch-probe.md` records the
+remaining parser, token-extension, account-alias and CPI gaps.
+
+The same bounded native payout crate now models that platform arithmetic.
+Its [nine-case signed Rust differential](receipts/fee-share-platform-arithmetic-rust-differential.json)
+matches the pinned ELF at safe and first-overflow multiplication inputs,
+counter underflow, and a synthetic State `token_mint` mismatch. The crate
+still omits full Anchor account parsing, Token CPI, and other handler
+branches; this is neither full behavior reversal nor exact SBF source.
+
 The tested `redeem` creator cap is `floor(total_fees/2) −
 creator_distributed`. Cap+1 and altered owner/program/account cases reject.
 `collect_platform_fees`, `claim_meteora_fees`, `claim_raydium_fees`, and
