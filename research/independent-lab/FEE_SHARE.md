@@ -44,6 +44,19 @@ over-cap, and repeat controls leave tracked protocol accounts unchanged.
 Creator/referrer keys, recipient ATAs, and fee accrual are explicitly local
 substitutions, so this is a stateful payout check rather than a live claim.
 
+The [external-fee claim and payout receipt](receipts/fee-share-external-claim-signed-surfpool.json)
+adds **nine validly signed, submitted offline Surfpool transactions** on
+pinned current FeeShare and Meteora CP AMM ELFs. A third party triggers
+`claim_meteora_fees`, moving **79,828,645 raw WSOL units** from the CP pool
+vault into FeeShare's vault and `total_fees`; creator and platform then
+receive **39,914,323 units each**. The two payouts total one unit more than
+the new claim because the captured FeeShare vault and undistributed counter
+already held **one raw unit**. Redirect, outsider payout, overclaim, and
+repeat controls reject without tracked-account mutation. The pool and
+FeeShare accounts are later captured states, while creator and recipient
+identities are local substitutions. This is a positive bounded CPI path,
+not an exact historical prestate or proof that every fee-claim route works.
+
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
 tested creator `redeem(entity=0)` and `collect_platform_fees` accounting
@@ -52,8 +65,19 @@ matches **96/96** validly signed local calls against the unmodified current
 FeeShare ELF: 59 successes and 37 expected failures across captured account
 layouts with explicit synthetic creator/referrer keys, ATAs, and positive
 accrual. The model omits Anchor account constraints, vault/ATA checks, SPL
-Token CPI, other entity semantics, and fee accrual. It is not original source,
-an SBF build, byte-identical reconstruction, or a full handler proof.
+Token CPI, unobserved alternative claim routes, and fee accrual. It is not
+original source, an SBF build, byte-identical reconstruction, or a full
+handler proof.
+
+An added [49/49 fresh signed Rust differential](receipts/fee-share-referrer-order-rust-differential.json)
+compares `None`, self-referrer `Some`, and distinct-referrer `Some` layouts.
+The tested nonzero `redeem` entities, including entity 1 signed by the
+configured referrer, reject 6001 before payout-cap evaluation; this does
+**not** exclude other authorized referrer routes. A deliberately corrupted
+`creator_distributed` counter above the half-fee cap causes the pinned ELF
+to panic on subtraction, which the bounded model also predicts. Reachability
+of that **synthetic** over-cap state on a deployed account is unproven; no
+live denial-of-service finding or whole-program source match follows.
 
 The tested `redeem` creator cap is `floor(total_fees/2) −
 creator_distributed`. Cap+1 and altered owner/program/account cases reject.

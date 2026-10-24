@@ -92,6 +92,7 @@ DAOS_SOURCE_MODEL_FILES = frozenset({
     "analysis/source_reconstruction/daos-pump-baseline.json",
     "analysis/source_reconstruction/daos-virtual-baseline.json",
     "analysis/source_reconstruction/fee-share-redeem-rust-differential.json",
+    "analysis/source_reconstruction/fee-share-referrer-order-rust-differential.json",
     "analysis/source_reconstruction/founder-presale-rust-differential.json",
     "reconstruction/fee-share-redeem/Cargo.lock",
     "reconstruction/fee-share-redeem/Cargo.toml",

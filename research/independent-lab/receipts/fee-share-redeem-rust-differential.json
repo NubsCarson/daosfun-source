@@ -1,7 +1,7 @@
 {
   "program": "Fee33nMZNbbC7Zm6Yx7tiHa9KH2Ao8fWTH3HNMkLMzWk",
   "pinned_elf_sha256": "88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8",
-  "rust_source_sha256": "f99e96bb2866150193a0c37b0c96a7ada1203c11665bfda461dd4f742325c8e5",
+  "rust_source_sha256": "f49d267c8822f97af759ae01c87b2e8d14392018c6e835a87e0620370d5da3b7",
   "model_dir": "reconstruction/fee-share-redeem",
   "snapshot_sources": [
     "analysis/daos_fun/fee_share_trader_dao-redeem-snapshot.json",
