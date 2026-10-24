@@ -71,6 +71,23 @@ adds static BPF and four local bisections: the first allowed timestamp is
 `Curve.timestamp + 86,401` seconds; equality at `+86,400` fails 6005.
 This limits the permissionless trigger to after the tested one-day guard.
 
+A [fresh writable Surfpool Founder lifecycle](receipts/founder-surfpool-stateful.json)
+commits signed `Init` and `StartPresale` with new program-created
+State/vaults under the pinned Founder and Fundraise ELFs. Immediate
+`ClaimTeamAllo` rejects because `curve_started` is false; a later successful
+claim uses an explicit **synthetic** `curve_started=true` edit, not an
+observed `StartCurve`. Wrong-authority, over-cap, and repeat controls roll
+back tracked protocol accounts. The historical presale whitelist signer was
+not available in this local run.
+
+A separate [Founder-to-Pump Surfpool lifecycle](receipts/founder-pump-fresh-signed-surfpool.json)
+does commit fresh signed Founder `Init`, Founder `StartCurve` and its Pump
+`Init` CPI, followed by a buy and sell against that newly created Pump
+Curve. Wrong-Founder, high-minimum sell, and repeat-start controls reject
+with protocol-account rollback. It reuses public historical instruction
+arguments but creates all state and signing keys locally; no mainnet state
+or funds moved.
+
 Key receipts: `analysis/daos_fun/founder-init-allocation-boundaries.json`,
 `founder-init-goal-thresholds.json`, `founder-presale-cpi-source-attribution.json`,
 the [static trace](receipts/founder-presale-static-trace.json),

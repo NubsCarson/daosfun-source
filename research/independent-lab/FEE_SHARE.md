@@ -36,6 +36,14 @@ authorization branch and 50/100 cap path. The distinct referrer and fee
 accrual are local constructions; no real referrer entitlement, live payout,
 or fund-loss finding follows.
 
+The [writable offline Surfpool lifecycle](receipts/fee-share-signed-surfpool-stateful.json)
+commits **24 validly signed local transactions** against the pinned current
+ELF across `None` and `Some` referrer layouts. Creator and platform payouts
+reconcile with vault and distributed-counter deltas; wrong-signer,
+over-cap, and repeat controls leave tracked protocol accounts unchanged.
+Creator/referrer keys, recipient ATAs, and fee accrual are explicitly local
+substitutions, so this is a stateful payout check rather than a live claim.
+
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
 tested creator `redeem(entity=0)` and `collect_platform_fees` accounting

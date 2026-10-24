@@ -40,6 +40,18 @@ On **synthetic** transfer-fee traded mints, a signed buy accepted a gross token 
 
 The finalized 133-Curve mint census found **no** traded mint with Token-2022 `TransferFeeConfig`, and every observed Curve used classic wrapped SOL as funding mint (`analysis/root_virtual_xyk/risk-current-inventory.json`). These local incompatibilities identify neither an affected present pool nor present user loss. Token-2022 [transfer-fee configuration must precede mint initialization](https://solana.com/docs/tokens/extensions/transfer-fees); a new eligible mint/pool or an exceptional reinitialization route would need separate proof.
 
+The [stateful signed Surfpool fee matrix](receipts/fee-surfpool-stateful.json)
+repeats the gross-minimum versus spendable-balance result with a fresh
+synthetic transfer-fee mint. A zero-fee control conserves balances; at
+100 bps, the buy accepts a gross minimum above the buyer's spendable
+receipt, and the reserve shortfall can stop migration until a precisely
+measured local top-up. The [LP-exit fee matrix](receipts/lp-exit-fee-surfpool.json)
+shows a full LP withdrawal failing on a 10-million-raw-unit spendable-vault
+shortfall at 100 bps, then succeeding after a signed local top-up while a
+larger stored reserve remains unbacked. Its minimum-token check also uses
+gross output. Both are conditional compatibility and exit-liquidity risks
+on synthetic mints, not current live exposure.
+
 ## Active traded-mint authority
 
 All 48 captured active Curve traded mints retained a mint authority derived

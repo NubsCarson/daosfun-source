@@ -72,10 +72,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`9eeb2a635332ca730252bc04ac245e997fd9af39`, contains **1,072** scoped
-files (117,578,988 uncompressed bytes), and has archive SHA-256
-`4f640c8a345bb67c0513afd0511628f4c316760e46f1d6dc4025de8d9db37cdf`.
-All **41** direct JSON receipts match bundled member size and
+`b72b5ddcb06c22e8d92024942c46b60cb3df0ce0`, contains **1,091** scoped
+files (118,174,888 uncompressed bytes), and has archive SHA-256
+`b5ad427ae605a176452ac8f7eca0575002a729227593199e640e606ca30cae9f`.
+All **49** direct JSON receipts match bundled member size and
 SHA-256. The daos.fun offline gate passed **112** commands; strict full
 behavior remains **0/52**.
 
@@ -84,20 +84,22 @@ A small selection of key JSON receipts is also available directly in
 [`receipts/`](receipts/), without unpacking the full bundle:
 
 - [`DAO_V1.md`](DAO_V1.md): source-era replays, DAO/DBC migration, issuance,
-  delegation and redemption paths, and independent checks of the published
-  BM-1 finding.
+  delegation and redemption paths, and signed offline checks of BM-1,
+  TR-1 expiry, and TR-5 redemption timing.
 - [`FOUNDER.md`](FOUNDER.md): tested presale-goal model, allocation and vesting
-  controls, plus a native Rust goal/amount slice with 120/120 local
-  differential matches.
+  controls, a native Rust goal/amount slice with 120/120 local differential
+  matches, and a fresh signed Founder-to-Pump lifecycle.
 - [`FEE_SHARE.md`](FEE_SHARE.md): `Option<Pubkey>` decoding, fee conservation,
-  signed payout and legacy fee-authority CPI, plus a bounded native Rust
-  payout model with 96/96 local differential matches.
+  signed offline Surfpool payouts and legacy fee-authority CPI, plus a bounded
+  native Rust payout model with 96/96 local differential matches.
 - [`PUMP_XYK.md`](PUMP_XYK.md): source-era migration transfer formula and
-  failure rollback, plus a distinct current `migrate_v2` native Rust data
-  model with 72 full-data matches and eight parser-rejection matches.
+  failure rollback, current `migrate_v2` native Rust data model with 72
+  full-data matches and eight parser-rejection matches, and signed trade
+  lifecycles on restored and fresh Curves.
 - [`VIRTUAL_XYK_AND_TR2_TR3.md`](VIRTUAL_XYK_AND_TR2_TR3.md): swap/liquidity
-  and fee-authority controls, current Curve census, and bounded exposure
-  checks for the DAO cosigner and redemption findings.
+  and fee-authority controls, current Curve census, conditional synthetic
+  Token-2022 transfer-fee and LP-exit checks, and bounded exposure checks
+  for the DAO cosigner and redemption findings.
 
 Constructed test transactions execute in LiteSVM or offline Surfpool; one
 saved historical transaction was also resimulated with public RPC's

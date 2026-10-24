@@ -49,3 +49,17 @@ synthetic, not recovered historical legacy accounts. The native crate does
 not model Solana owner, signer, rent, or CPI validation and cannot reproduce
 the full SBF handler or binary. This `migrate_v2` state-layout path is
 distinct from the source-era `migrate_to_daos` reserve transfer above.
+
+## Writable offline Surfpool lifecycles
+
+The [restored-Curve lifecycle](receipts/pump-surfpool-stateful-lifecycle.json)
+loads a captured current Pump Curve/mint/vault into a fresh offline ledger.
+Valid local signatures commit a buy, a sell, and a fee collection; a
+high-minimum sell rejects and rolls back tracked accounts. That fixture
+does not itself prove a fresh Curve can be initialized.
+
+The separate [fresh Founder-to-Pump lifecycle](receipts/founder-pump-fresh-signed-surfpool.json)
+commits Founder `Init` and `StartCurve` with a Pump `Init` CPI, then buys
+and sells on the newly created Curve under pinned current ELFs. Its local
+signer substitutions and funded trader wallet are controlled test inputs.
+These paths have not produced a new live fund-risk finding.

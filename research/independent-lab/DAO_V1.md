@@ -78,6 +78,27 @@ byte **10**; one absent base-vault PDA is supplied only as a synthetic local
 placeholder. These receipts strengthen current-version mechanism evidence
 without proving a broadcastable outsider transaction or current token theft.
 
+## Signed offline expiry and redemption timing
+
+The [TR-1 Surfpool receipt](receipts/dao-tr1-expiry-signed-surfpool.json)
+commits a validly signed local admin-and-cosigner `execute_invoke` wallet
+transfer after the copied State's expiration. An ordinary signed holder
+cannot `close_fund` or `init_redemption` while that State remains open;
+locally setting the closed flag allows redemption. The admin and cosigner
+identities were replaced with disposable local keys, so this demonstrates
+the missing holder-enforceable expiry gate in the tested current-binary path,
+not the real platform's cosigning policy, a live locked fund, or an outsider
+drain.
+
+The separate [TR-5 redemption-timing receipt](receipts/dao-redemption-timing-signed-surfpool.json)
+uses two isolated writable Surfpool ledgers with the same signed holder
+burns and signed one-SOL wallet deposit. A zero-value holder `redeem_sol`
+fixes the shared payout basis. When the deposit comes after that first call,
+neither holder's later redemption includes it and the SOL remains in the
+wallet; depositing before the snapshot includes it. The holders, balances,
+and deposit timing are controlled local fixtures. This is a conditional
+late-arrival holder-access risk, not evidence of a currently affected fund.
+
 ## Issuance and historical versions
 
 One sampled DAO mint initially received exactly `1e18` raw units at
