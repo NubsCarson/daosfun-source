@@ -79,6 +79,23 @@ to panic on subtraction, which the bounded model also predicts. Reachability
 of that **synthetic** over-cap state on a deployed account is unproven; no
 live denial-of-service finding or whole-program source match follows.
 
+The [counter and referrer reachability receipt](receipts/fee-share-counter-reachability-signed-surfpool.json)
+adds **16 validly signed, committed transactions** across four independent
+writable offline Surfpool ledgers. `Initialize` and `InitWithLegacy` create
+zero counters, a positive CP claim increases `total_fees`, and partial then
+remainder creator/platform payouts conserve tokens while keeping the
+creator's distributed counter at or below `floor(total_fees/2)`. A
+**synthetic near-`u64`** total-fee prestate overflows on addition and rolls
+back, rather than reaching the subtraction panic above. In the tested
+distinct-referrer fixture, configured-referrer redemption and payout
+redirection reject, while authorized creator/platform accounting exhausts
+the remaining vault without a separate referrer allocation. The nine
+documented IDL selectors contain no standalone referrer payout instruction.
+These paths do **not** prove the over-cap state unreachable through the
+whole program or rule out another authorized referrer route. Captured
+accounts are later snapshots with disposable signer and ATA substitutions;
+no live fund exposure is established.
+
 The tested `redeem` creator cap is `floor(total_fees/2) −
 creator_distributed`. Cap+1 and altered owner/program/account cases reject.
 `collect_platform_fees`, `claim_meteora_fees`, `claim_raydium_fees`, and
