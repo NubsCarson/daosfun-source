@@ -47,6 +47,14 @@ their captured later accounts; this is a hypothetical prestate. A synthetic
 143-byte legacy `migrate_v2` account grows to 155 bytes and maps the old
 allocation fields as observed, but exact historical input bytes are absent.
 
+A separate 56-case `start_vest` authority matrix uses real local signatures
+on four restored schedules. A distinct correctly signed payer succeeds in
+all four, while unsigned payer, already-started schedule, empty Curve,
+wrong account owner and wrong Vest program controls reject. Resetting only
+the Vest start tag is synthetic, so these cases show a bounded permissionless
+trigger, not a reachable premature start or fund-loss claim. See the
+[signed authority matrix](receipts/founder-start-vest-authority-matrix.json).
+
 Key receipts: `analysis/daos_fun/founder-init-allocation-boundaries.json`,
 `founder-init-goal-thresholds.json`, `founder-presale-cpi-source-attribution.json`,
 the [static trace](receipts/founder-presale-static-trace.json),
