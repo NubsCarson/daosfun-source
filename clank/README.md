@@ -25,7 +25,7 @@ At block **96,692,586** (2026-10-24 10:22:08 UTC), AGI's curve is already gradua
 
 The [supplied runtime](evidence/contracts/target-token.user-runtime.bin) also matches the independent RPC capture. The creation payload consists of **7,066 bytes compiled from source plus 992 bytes of original ABI constructor arguments**. Constructor arguments are inputs, not recovered source code. Deployment-specific immutable addresses are derived from those arguments. No executable instruction or metadata bytes are copied into the compiled output to force a match. A local EVM execution of the supplied creation payload independently produces the exact runtime. The full payload also derives the exact target address under CREATE2 using the historical launch-deployer and on-chain launch ID ([proof](evidence/contracts/target-create2.json)).
 
-## Read and reproduce
+## Reproduce and verify
 
 - [Exact historical token source](verified/target-factory/sources/contracts/ClankLauncherToken.sol)
 - [Historical factory and related sources](verified/target-factory/sources/contracts/)
@@ -33,7 +33,8 @@ The [supplied runtime](evidence/contracts/target-token.user-runtime.bin) also ma
 - [Compiler, dependency and reproduction details](docs/BUILD.md)
 - [Target token comparison proof](evidence/build/target-token.json)
 - [Target state](evidence/contracts/target-state.json), [liquidity ownership and governance evidence](evidence/contracts/target-context.json)
-- [Local runtime tests](tests/TargetToken.t.sol) and [results](evidence/target-token-tests.txt)
+- [Validated runtime tests](tests/TargetToken.t.sol), [security results](evidence/security-audit-tests.txt), and [captured-state tests](critical-tests/)
+- [Experimental research harnesses and unresolved observations](research/local-harnesses/README.md) (outside the validated suite)
 
 Sources were recovered from the historical factory's public [Sourcify record](https://sourcify.dev/server/v2/contract/4663/0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1?fields=all), then compiled and compared. The direct token Sourcify lookup was unavailable; the successful bytecode match establishes that the historical factory's token source is the right implementation. The [explorer token page](https://robinhoodchain.blockscout.com/token/0xfa31d04462746aaa24bc7e5626403e09e4b106ec?tab=contract_code) identifies the user's target.
 
@@ -47,6 +48,6 @@ The [security audit](docs/AUDIT.md) reports one **MEDIUM** conditional custody f
 
 ## Evidence scope
 
-Public reads are pinned to block hash `0xd2254f48f5922f7ff13223026dabe708729ed9e187eaf852e3a1343303201c10`. The web configuration is a separate contemporaneous capture, not historical chain state. All runtime matches refer to this captured block; future configuration changes are outside the snapshot.
+The initial contract captures are pinned to block hash `0xd2254f48f5922f7ff13223026dabe708729ed9e187eaf852e3a1343303201c10`. The web configuration is a separate contemporaneous capture, not historical chain state. Runtime comparisons refer to the captured contract bytes; future configuration changes are outside the snapshot. The audit also uses a later captured-state snapshot at block **96,709,714**; its scope and limitations are recorded in the [audit](docs/AUDIT.md).
 
 `verified/` preserves contract-specific source inputs, including third-party SPDX notices. Repeated paths across those directories are intentional: different verification units and historical versions can have different contents. `evidence/contracts/` contains public RPC/source records and raw original bytecode; `binaries/` contains reconstructed comparison outputs. Downloaded compiler and intermediate build caches are ignored.

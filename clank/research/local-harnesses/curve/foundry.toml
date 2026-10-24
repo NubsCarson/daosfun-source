@@ -1,0 +1,22 @@
+[profile.default]
+src = "."
+test = "."
+libs = []
+out = "../../../.build/research-curve-out"
+cache_path = "../../../.build/research-curve-cache"
+solc_version = "0.8.26"
+evm_version = "cancun"
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+offline = true
+allow_paths = ["../../../verified"]
+remappings = [
+  "hist/=../../../verified/target-factory/sources/contracts/",
+  "curr/=../../../verified/factory/sources/contracts/",
+  "@openzeppelin/=../../../verified/target-factory/sources/node_modules/@openzeppelin/",
+  "@uniswap/=../../../verified/target-factory/sources/node_modules/@uniswap/",
+  "permit2/=../../../verified/target-factory/sources/node_modules/permit2/",
+]
+[fuzz]
+runs = 1024

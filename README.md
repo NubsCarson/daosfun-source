@@ -1,79 +1,76 @@
 # daosfun-source
 
-Faithful Anchor/Rust reconstruction of Solana program
-`4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM`, with the captured original,
-byte-identical rebuilt binary, reproduction tooling and security findings.
+Recovered source, original binaries, reproducible builds and security audits for
+two independent projects: the Solana DAO program and Clank / AGI on Robinhood Chain.
 
-**This source preserves the original vulnerabilities. It is for recovery,
-comparison and review, not a remediated deployment.**
+The recovered source preserves the deployed behavior, including known vulnerabilities.
+It is not a remediated release.
 
-See the [publication and hosted verification record](docs/DELIVERY.md) for the
-verified source commit, successful clean build, test results and security summary.
+| Project | Source and build instructions | Audit |
+| --- | --- | --- |
+| Solana DAO | [`programs/`](programs/) · [reproduce the build](docs/BUILD.md) | [Solana audit](audit/AUDIT.md) |
+| Clank / AGI | [recovery overview](clank/README.md) · [reproduce the build](clank/docs/BUILD.md) | [Clank audit](clank/docs/AUDIT.md) |
 
-## Binary comparison
+## Solana DAO
+
+Program: `4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM`
+
+The Anchor/Rust reconstruction produces the complete captured binary byte for byte,
+including 79,056 zero-padding bytes from the deployed account allocation.
 
 | Artifact | Bytes | SHA-256 |
 | --- | ---: | --- |
 | [Original capture](evidence/mainnet.so) | 1,120,784 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
 | [Rebuilt binary](binaries/dao_v1.deployed.so) | 1,120,784 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
 
-The rebuilt binary is identical byte for byte, including 79,056 generated zero
-padding bytes matching the captured account allocation. Only the complete
-account-padded artifact is retained in `binaries/`. The reconstruction uses a pinned
-lockfile, official platform-tools v1.41 and explicit recovered linker section
-ordering. All code/data comes from source compilation; no original executable
-bytes are inserted into the build. Original comments, identifiers and historical
-build settings cannot be uniquely recovered from a binary.
+The build uses a pinned lockfile, official platform-tools v1.41 and recovered linker
+section ordering. Executable bytes are compiled from source. Original comments and
+identifiers cannot be uniquely recovered from a binary. See the
+[comparison proof](repro/final-proof.json) and [verification record](docs/DELIVERY.md).
 
-See [build and verification instructions](docs/BUILD.md) and
-[the recorded comparison proof](repro/final-proof.json).
+The [audit](audit/AUDIT.md) records **1 CRITICAL, 4 MEDIUM and 1 LOW** finding.
+The packaged differential suite passed **410 cases across 15 suites**; all six
+security scripts passed. See [scope and limitations](docs/SECURITY_SCOPE.md).
 
-## Repository layout
-
-- [`programs/`](programs/): reconstructed DAO source and supporting CPI/account crates.
-- [`Cargo.lock`](Cargo.lock), [`Anchor.toml`](Anchor.toml): pinned dependency and Anchor configuration.
-- [`binaries/`](binaries/) and [`evidence/`](evidence/): compiled comparison artifacts and public/synthetic test fixtures.
-- [`scripts/`](scripts/): reproduction, comparison and local test tooling.
-- [`repro/`](repro/): linker layout and verification records.
-- [`audit/`](audit/): findings, local PoCs and their results.
-
-Do not run a formatter over span-sensitive Rust when reproducing the exact build:
-panic source locations affect the emitted bytes.
-
-## Security review
-
-The [security audit](audit/AUDIT.md) contains **six confirmed findings: one
-critical, four medium, and one low**. These cover cross-pool migration fee diversion
-and state corruption, missing expiry enforcement, cosigner privilege forwarding,
-external token authorities surviving closure, Token-2022 redemption incompatibility,
-and zero-credit snapshot creation that can strand later deposits.
-
-The audit also preserves negative results and limitations. The SOL rent-remainder
-failure hypothesis was not reproduced and is not counted as a vulnerability. Read
-the [scope notes](docs/SECURITY_SCOPE.md) and
-[review of the earlier patch experiment](audit/PRIOR_PATCH_REVIEW.md); a tested
-patch case is not a claim that every vulnerability has been fixed.
-
-The packaged-repository differential suite passed **410 cases across 15 suites**
-([results](repro/differential-test-summary.json)); all six security scripts passed
-([results](audit/results/second-pass-rerun/summary.json)). To run the
-local tests after installing `requirements.txt` in a Python virtual environment:
+After installing `requirements.txt` in a Python virtual environment:
 
 ```sh
+python scripts/verify_release.py
 python scripts/security_tests.py
 python scripts/test_variant.py binaries/dao_v1.deployed.so .build/differential
 ```
 
-The differential output directory must be new. Tests use local LiteSVM only;
-no mainnet transactions are required. See [SECURITY.md](SECURITY.md) for reporting
-additional findings without posting sensitive live-exploitation details publicly.
+Use a new directory for differential output. Tests run locally in LiteSVM.
+Do not format span-sensitive Rust source when reproducing the exact binary:
+panic source locations affect the emitted bytes.
 
-## Clank / AGI on Robinhood Chain
+## Clank / AGI
 
-The separate [Clank recovery](clank/README.md) covers AGI token
-`0xfa31d04462746aaa24bc7e5626403e09e4b106ec` on Robinhood Chain (4663), its
-historical factory and surrounding contracts. Its Solidity source reproduces
-both the supplied creation payload and deployed runtime byte for byte. It is a
-different program from this repository's Solana DAO, and its historical factory
-also differs from the current Clank website factory. See the
-[Clank security review](clank/docs/AUDIT.md) and [build proof](clank/docs/BUILD.md).
+Token: `0xfa31d04462746aaa24bc7e5626403e09e4b106ec`
+
+Network: Robinhood Chain, chain ID **4663**
+
+The recovered Solidity source reproduces AGI's supplied creation payload and runtime
+byte for byte. The package also verifies **17 runtime pairs** across the surrounding
+contracts. AGI belongs to a historical Clank factory that differs from the website
+factory captured during this review.
+
+The [audit](clank/docs/AUDIT.md) records **1 MEDIUM and 1 LOW** finding, with no
+confirmed CRITICAL or HIGH findings. Both findings have explicit applicability
+limits for AGI's already-graduated curve. The validated suites passed **28 tests**.
+
+See the [Clank README](clank/README.md) for binary hashes, contract addresses and
+reproduction commands. Separate [research harnesses](clank/research/local-harnesses/README.md)
+are retained with unresolved observations and are not counted as validated tests.
+
+## Repository contents
+
+| Path | Contents |
+| --- | --- |
+| [`programs/`](programs/) | Reconstructed Solana source and supporting crates |
+| [`binaries/`](binaries/), [`evidence/`](evidence/) | Solana rebuilt artifact, original capture and test fixtures |
+| [`scripts/`](scripts/), [`repro/`](repro/) | Solana reproduction tooling and verification records |
+| [`audit/`](audit/) | Solana findings and local test evidence |
+| [`clank/`](clank/) | EVM source, original and rebuilt bytecode, tooling and audit |
+
+See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
