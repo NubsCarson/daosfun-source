@@ -1,0 +1,3 @@
+solders==0.27.1
+requests==2.33.1
+pyelftools==0.32

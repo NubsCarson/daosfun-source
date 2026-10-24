@@ -1,0 +1,241 @@
+{
+  "root": "experiments/toolchains/linux-v1.41",
+  "components": [
+    {
+      "path": "llvm/bin/clang",
+      "size": 139061896,
+      "sha256": "1d76712d20ce908fd797ec71ec60f717210f14d2bf5c97b7fcc0d37864c873fb"
+    },
+    {
+      "path": "llvm/bin/llvm-objcopy",
+      "size": 6718472,
+      "sha256": "5705dfae9c1ca3efb19df5ba9786569091e4faa98b6ad46e1aed90b5cb2b2fb0"
+    },
+    {
+      "path": "rust/bin/cargo",
+      "size": 37602504,
+      "sha256": "8d5c522f0c875b6dcb8e96d69eb5b3c5fbad20a102a59ef4c603da9be3ce9184"
+    },
+    {
+      "path": "rust/bin/rustc",
+      "size": 17152,
+      "sha256": "56ac25cdde064989441afb1deba210070fde83f6755a9cdd1725c5d088ea37fe"
+    },
+    {
+      "path": "rust/lib/librustc_driver-278a6e01e221f788.so",
+      "size": 191269824,
+      "sha256": "3f5160c90540b3a3fbfebac3aecfd459ed564acdf5167c27203fe903baf37b77"
+    },
+    {
+      "path": "rust/lib/libstd-981b620305df2684.so",
+      "size": 10239992,
+      "sha256": "1bc9c13907f3eec61d0032c066daf16822c10ef9b151a1322309326ecd3b4f90"
+    },
+    {
+      "path": "rust/lib/libtest-066117ef92aca750.so",
+      "size": 1750832,
+      "sha256": "8b8c3c03861af65727387bfb8f95668d2b8a5b002f85f1589deb4dab16d0774c"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libaddr2line-75130ccb572d0a3d.rlib",
+      "size": 465404,
+      "sha256": "e560bfac7334183e66cf96e06c7da9203610162c9f122ff9e4da8da7483c2600"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libadler-a71d2c44f8ec0df3.rlib",
+      "size": 35804,
+      "sha256": "a23119fc36c409910512d41f81320b64ea58448c0f51b0e0706d3834cbf3182d"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/liballoc-d6ee37e0c7e2de69.rlib",
+      "size": 6240266,
+      "sha256": "552841de80cb803325f7632fe41e7880ae29fc3b8ac3a03b45306c2be8a09a1d"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libcfg_if-f098c1937f30efcf.rlib",
+      "size": 10006,
+      "sha256": "ab13880d1bda99164b926e75bd34a88208f3ec091eb9f1738b611d8b653973ac"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libcompiler_builtins-d07037ef20b63aeb.rlib",
+      "size": 2582014,
+      "sha256": "78e500d554f18267fea6c9c782e2328e8dd3fc6e38c578620e7571dbc8c922dc"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libcore-4ebad060312885b4.rlib",
+      "size": 33174166,
+      "sha256": "cb3d49c218829b1d886e80eda20753762e6b221be7ec87dcbe27fdb6c56674c5"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libgetopts-6f9bd9320628e95f.rlib",
+      "size": 394560,
+      "sha256": "c8f0949611c7088bb792f1eedac0cf265ae18daf9da92e0610c04ba7379d1a3a"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libgimli-2c37ef21d4dd1a4f.rlib",
+      "size": 6153246,
+      "sha256": "8973a66f0aab97c2a9899ed4da172b6d4d17932864596ead00fcae97980327dc"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libhashbrown-a824762c8d305e7c.rlib",
+      "size": 1623538,
+      "sha256": "a566e24c009fd41b0bd1e38a89ad3b901100dc06c50ebebbe841b5b7bb7bcecd"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/liblibc-4b04f4806be08931.rlib",
+      "size": 41242,
+      "sha256": "e5c7cb800285bf61f62f749415f2e0fbd039a862932736b42c3225a39b1bb124"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libmemchr-84410ff61ac59cf2.rlib",
+      "size": 428708,
+      "sha256": "fe1d401404d1f5281772b743e82e2d646b9186a199179eeae5da7a7b9a82a089"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libminiz_oxide-ba718cbadf6dcf77.rlib",
+      "size": 343958,
+      "sha256": "53462da7ee0ee0a0a7baea3d1e0ae041b413a7507479fa8c6dd2aa002a0e768d"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libobject-f5643e02e788da3c.rlib",
+      "size": 7979634,
+      "sha256": "e2f70412214f03e997d109e714330d321fe309f275d53c40d7f3eec612751820"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libpanic_abort-93f7c5fcb7e7910b.rlib",
+      "size": 9108,
+      "sha256": "0143c5b1073006ea52c1391d6904334feeb956cc97071330a739813de1675f3a"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libpanic_unwind-ad66a38e9720aace.rlib",
+      "size": 12518,
+      "sha256": "3824853250b04e85316fecb6a113404517fcd161cb20059b0484f87358aee1d7"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libproc_macro-d0e42efb51436975.rlib",
+      "size": 1624058,
+      "sha256": "de4a663f6e2a89cfbea97a11ab2a148f33d69d26160d62010b3f0794244d9f1f"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/librustc_std_workspace_alloc-27ca3272fe7192c5.rlib",
+      "size": 5388,
+      "sha256": "857c48db896c3ba54f4209cc8a82a04c7835820c0d437499d18497735178f46c"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/librustc_std_workspace_core-4cde10820501d27d.rlib",
+      "size": 8130,
+      "sha256": "fefb3c2c183fcc4283752895115e708c169efd79a0ded7cc894f951268d23c8b"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/librustc_std_workspace_std-4a01a02e70bedc2d.rlib",
+      "size": 9544,
+      "sha256": "2ebdd57b0e6561e1b244ba3f9f9e6a80ab7688dce10dfce79eaaca1bb2381b9d"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libstd-0118a20949475fe4.rlib",
+      "size": 6693348,
+      "sha256": "70dbfa2a2cc4fd0fe76c27528f755066165e0d75321f342c6768cc6554a07d5a"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libstd_detect-9f0cac620b272c94.rlib",
+      "size": 124454,
+      "sha256": "4676be1bc3455ad5e3c245be75ffb8767ec009ad9c508928afe8c96a7a72ea00"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libsysroot-f64eb840498d6ecc.rlib",
+      "size": 4920,
+      "sha256": "50a547d94eed5ef69685c571ebc045bab1e7c830e20981db697c4456b66f4ac9"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libtest-47c67992bb38a022.rlib",
+      "size": 2402018,
+      "sha256": "cc6ed316e20cab4d8c951a49e32dd0000a7c3751a231f68f13fb7f616914b209"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libunicode_width-6ee3f476f0c75a59.rlib",
+      "size": 149880,
+      "sha256": "d84483d4ab4f9563b991d14555a2911d3fb9668e1c2d6c586b24d1de10952534"
+    },
+    {
+      "path": "rust/lib/rustlib/sbf-solana-solana/lib/libunwind-56ceb93b1a854ba9.rlib",
+      "size": 8918,
+      "sha256": "bbb8e75449dcbc2585100899c7baaee2dcca52ffd0468475c0138239d4c891e4"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llc",
+      "size": 58457704,
+      "sha256": "c27f34fe9b995cbea1d35acb74a15a4a7d9e04d6f776bd921f72406231a9982f"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-ar",
+      "size": 13228384,
+      "sha256": "377f95934d7b3852050af40a02658ef6b21e7d6021b1765ccda12e8d2fcd43e6"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-as",
+      "size": 5183752,
+      "sha256": "7002b894ad90f6c1e5fd9207939b7daac0a9a2e8ac1893e6dea6ec573ccd9da4"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-cov",
+      "size": 6742360,
+      "sha256": "f4223e599ff38d5752ff317b7c83ed561563879dad8897ba74a847874e098ba9"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-dis",
+      "size": 4007488,
+      "sha256": "df79b5fb676b074e705c0e3ccc11b6909aa900568d8e4cbe4d31142ccfc7c6c9"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-nm",
+      "size": 13329520,
+      "sha256": "4cbdd2df0ab23223d0da2c511960f605b7f62d189547e1aa2bed48cf53247cae"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-objcopy",
+      "size": 6718472,
+      "sha256": "5705dfae9c1ca3efb19df5ba9786569091e4faa98b6ad46e1aed90b5cb2b2fb0"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-objdump",
+      "size": 16312712,
+      "sha256": "abf28271266afa1dba3f78bf5467446f6164282111d91959fdd53fa8a099dff4"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-profdata",
+      "size": 7846216,
+      "sha256": "a1115cfe059b4448ab8d0f6aa253fb279dfd596d56a95b1f396707e5de57b54b"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-readobj",
+      "size": 9707248,
+      "sha256": "faec68d4f8d2e88fd2a56f05a36e3ad5910cb6d007ff9a0348f73acad8415061"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-size",
+      "size": 5717048,
+      "sha256": "515d4ae506bfc086adb6d59945faea307f554c1189222e294f4e8c7e9be54dff"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-strip",
+      "size": 6718472,
+      "sha256": "5705dfae9c1ca3efb19df5ba9786569091e4faa98b6ad46e1aed90b5cb2b2fb0"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/opt",
+      "size": 73120256,
+      "sha256": "c352602cceaf593cbd01fabccc94243f9f12eb7bb6f60502f31e4dc9164223e3"
+    },
+    {
+      "path": "rust/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld",
+      "size": 80281336,
+      "sha256": "5fba9760f2c72466f181d1e50d00a0d949dea1d31d6cbfd3316959823ae9db7a"
+    },
+    {
+      "path": "version.md",
+      "size": 240,
+      "sha256": "b5b4de528fbd750c1c625e0c47ae4ad013270e822ba814247c4952a8e9f799d6"
+    }
+  ],
+  "scope": "Compiler executable and driver, Cargo, host shared libraries, target runtime libraries, host linker tools and object-copy/clang executables; not a full distribution manifest"
+}

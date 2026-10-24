@@ -1,0 +1,16 @@
+[toolchain]
+anchor_version = "0.30.1"
+
+[features]
+resolution = true
+skip-lint = false
+
+[workspace]
+members = ["programs/dao-v1"]
+
+[programs.localnet]
+dao_v1 = "4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM"
+
+[provider]
+cluster = "Localnet"
+wallet = "target/local-only-wallet.json"

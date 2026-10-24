@@ -1,0 +1,6 @@
+=== TR-4 against ORIGINAL evidence/mainnet.so ===
+legacy Token funding mint   -> err: None
+Token-2022 funding mint     -> err: {'InstructionError': [0, {'Custom': 3008}]}
+=> With a Token-2022 funding mint, init_redemption is unreachable.
+   After close_fund (irreversible) the treasury can never be redeemed.
+TR-4 CONFIRMED on original.

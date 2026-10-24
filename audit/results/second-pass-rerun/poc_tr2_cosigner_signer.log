@@ -1,0 +1,6 @@
+=== TR-2 against ORIGINAL evidence/mainnet.so ===
+attack  (authority = cosigner, a forced outer signer): None victim_balance: 0 attacker_balance: 1000
+control (authority = fresh key that signed nothing)  : {'InstructionError': [0, 'MissingRequiredSignature']} victim_balance: 1000
+=> The cosigner's own tokens were moved by the admin, using the cosigner's
+   forwarded outer signature as the Token transfer authority.
+TR-2 mechanism CONFIRMED on original.

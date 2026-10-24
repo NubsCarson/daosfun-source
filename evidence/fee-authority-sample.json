@@ -1,0 +1,18 @@
+{
+  "pubkey": "BnjjTPNceTi95kZ6ye4ejuroJeR9JUge6TtUpHumH5UY",
+  "context": {
+    "apiVersion": "4.3.2",
+    "slot": 460721537
+  },
+  "value": {
+    "data": [
+      "JsNUz8CPBUQAAAAAAAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABQ9HxypZuMTBGZnBZG1r/dao7dhqoALfUt3QigXwPREKHCvQoCRbEkMM6+BcNsD7yPzlw++aE5hGhPKrV31+SwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "base64"
+    ],
+    "executable": false,
+    "lamports": 2067120,
+    "owner": "Fee33nMZNbbC7Zm6Yx7tiHa9KH2Ao8fWTH3HNMkLMzWk",
+    "rentEpoch": 18446744073709551615,
+    "space": 169
+  }
+}

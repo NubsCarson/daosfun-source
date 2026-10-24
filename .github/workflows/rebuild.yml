@@ -1,0 +1,34 @@
+name: Rebuild exact source
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native build prerequisites
+        run: sudo apt-get update && sudo apt-get install -y build-essential pkg-config libssl-dev
+      - name: Download and verify pinned compiler and dependencies
+        run: python scripts/setup_repro.py
+      - name: Clean source rebuild and byte comparison
+        run: python scripts/build_exact.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rebuild-evidence
+          include-hidden-files: true
+          path: |
+            .build/exact/verification.json
+            .build/exact/source-manifest.json
+            .build/exact/toolchain-verification.json
+            .build/exact/command.json
+            .build/exact/build.log
+            .build/exact/linked/dao_v1.so
+            .build/exact/linked/dao_v1.deployed.so
+            .build/exact/linked/link.log

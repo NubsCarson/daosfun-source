@@ -1,0 +1,4 @@
+Y wallet before 100 Y curve_initialized (0, 1234)
+attacker finalize(Y state, X pool) err = None
+Y wallet after 1100 Y curve_initialized (1, 10000)
+honest finalize(X state, X pool) err = {'InstructionError': [0, {'Custom': 6040}]} X curve_initialized (0, 1234) X wallet 100

@@ -1,0 +1,116 @@
+{
+  "original": {
+    "sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "zero_snapshot_grief": {
+      "zero_holder_credit": 0,
+      "holder_tokens_received": 0,
+      "treasury_tokens_remaining": 1000000,
+      "treasury_lamports_remaining": 1000000000,
+      "snapshot_tokens": 0,
+      "holder_credit_consumed": 1000,
+      "duplicate_claim_error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6006
+          }
+        ]
+      }
+    },
+    "no_early_snapshot_control": {
+      "zero_holder_credit": 0,
+      "holder_tokens_received": 1000000,
+      "treasury_tokens_remaining": 0,
+      "treasury_lamports_remaining": 0,
+      "snapshot_tokens": 1000000,
+      "holder_credit_consumed": 1000,
+      "duplicate_claim_error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6006
+          }
+        ]
+      }
+    },
+    "rent_remainder": {
+      "partial_claim_error": null,
+      "partial_claim_logs": [
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM invoke [1]",
+        "Program log: Instruction: RedeemSol",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM consumed 29450 of 200000 compute units",
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM success"
+      ],
+      "wallet_balance_before": 900000,
+      "partial_payout": 90000,
+      "remaining_after_partial": 810000,
+      "reported_rent_exemption_minimum": 890880,
+      "credited_partial_claim": 100,
+      "remaining_claim_error": null,
+      "full_claim_remaining": 0
+    }
+  },
+  "rebuilt": {
+    "sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "zero_snapshot_grief": {
+      "zero_holder_credit": 0,
+      "holder_tokens_received": 0,
+      "treasury_tokens_remaining": 1000000,
+      "treasury_lamports_remaining": 1000000000,
+      "snapshot_tokens": 0,
+      "holder_credit_consumed": 1000,
+      "duplicate_claim_error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6006
+          }
+        ]
+      }
+    },
+    "no_early_snapshot_control": {
+      "zero_holder_credit": 0,
+      "holder_tokens_received": 1000000,
+      "treasury_tokens_remaining": 0,
+      "treasury_lamports_remaining": 0,
+      "snapshot_tokens": 1000000,
+      "holder_credit_consumed": 1000,
+      "duplicate_claim_error": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6006
+          }
+        ]
+      }
+    },
+    "rent_remainder": {
+      "partial_claim_error": null,
+      "partial_claim_logs": [
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM invoke [1]",
+        "Program log: Instruction: RedeemSol",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM consumed 29450 of 200000 compute units",
+        "Program 4FqThZWv3QKWkSyXCDmATpWkpEiCHq5yhkdGWpSEDAZM success"
+      ],
+      "wallet_balance_before": 900000,
+      "partial_payout": 90000,
+      "remaining_after_partial": 810000,
+      "reported_rent_exemption_minimum": 890880,
+      "credited_partial_claim": 100,
+      "remaining_claim_error": null,
+      "full_claim_remaining": 0
+    }
+  }
+}

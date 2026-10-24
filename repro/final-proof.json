@@ -1,0 +1,12 @@
+{
+  "cmp_exit_code": 0,
+  "original_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+  "rebuilt_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+  "bytes": 1120784,
+  "elf_bytes": 1041728,
+  "generated_zero_padding_bytes": 79056,
+  "clean_rebuild_identical": true,
+  "differential_cases_passed": 410,
+  "differential_suites_passed": 15,
+  "original_historical_configuration_uniquely_established": false
+}

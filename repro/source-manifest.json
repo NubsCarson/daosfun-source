@@ -1,0 +1,286 @@
+{
+  "files": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "0257610526125ce53f444fa3cd13a7cb5dcee347ae09652dec1c8fe5c422b501"
+    },
+    {
+      "path": "Anchor.toml",
+      "sha256": "b40192aad0cc29f859b171501d9d8d48b800c867f6c5be4d82ebc909d55a33fc"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "af8ce76c9dedcb16a3997ec06e728b8c01b946c38b78d37e8ea453bf1adbbd5e"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "0a3f3ac96523ebd22f3db29a66a398c293ea30705da2d61f9fe9ea37347cb6b7"
+    },
+    {
+      "path": "programs/dao-v1/Cargo.toml",
+      "sha256": "7f3b5001d671931a35c61e084c2ab95f8d751fae6f9ac3c6e552ec3870113505"
+    },
+    {
+      "path": "programs/dao-v1/examples/pool_math.rs",
+      "sha256": "8b338f0fc1699dae965d276539f9724438314c6030bd1360cc0691c8baf7e21f"
+    },
+    {
+      "path": "programs/dao-v1/idls/cp_amm.json",
+      "sha256": "d95c1af464094fb491f8a80582135651195a07915071f7700406f9ac6e5b5fc1"
+    },
+    {
+      "path": "programs/dao-v1/idls/dbc.json",
+      "sha256": "90b3a367f3146db84a8c8f04c6008f11c62f593c48ce281dab5df744fd44c6cc"
+    },
+    {
+      "path": "programs/dao-v1/src/bonding_handlers.rs",
+      "sha256": "ce5942ec6a67bdc1dee09c9f6aef24cacfafb41750c5f291b145c5de5be55c32"
+    },
+    {
+      "path": "programs/dao-v1/src/cosign_instructions/cosign_init.rs",
+      "sha256": "9a66678cca9fbcfa8223e317edc833eba0cab601877ad55aa49f3dcac983dad5"
+    },
+    {
+      "path": "programs/dao-v1/src/cosign_instructions/cosign_update_signer.rs",
+      "sha256": "be240cdc47090d15d7295da3d56522dbb238d4ce82d14dd81d2504c9bcabc297"
+    },
+    {
+      "path": "programs/dao-v1/src/cosign_instructions/mod.rs",
+      "sha256": "8e338f9fbd96be1d6f76783ce0864e5da45da02e5c9675b9444d4a186d931e5b"
+    },
+    {
+      "path": "programs/dao-v1/src/curve_accounts.rs",
+      "sha256": "1a2d09e1aab00fe0b3755a40a1c341dcc4e7543932ac436e76cd49e6b43e5453"
+    },
+    {
+      "path": "programs/dao-v1/src/damm_cpi.rs",
+      "sha256": "6e1f7cd70b63ab5510f6b057ff206a5b2eb5391f091a2f57e6f6f5f8e80f65b5"
+    },
+    {
+      "path": "programs/dao-v1/src/dbc_cpi.rs",
+      "sha256": "3ded8f9f4312105155eb9897887d97cea490e98a8fea438a89cd73dbac2dc9ba"
+    },
+    {
+      "path": "programs/dao-v1/src/errors.rs",
+      "sha256": "c51edf9fc11929fe179e657c1ba06d23f72a255560784b2167675a23d8adb81f"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/add_delegate_authority.rs",
+      "sha256": "6b2bcf38daf5755c8fb27b06b72ac41381e259c4ed411622ff98bf4282baefa7"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/bonding/claim_dbc_trading_fees.rs",
+      "sha256": "0224cb4e79f0cc20730e4fbbde5f72c79e6382058864b39c1bb88edb05a3a77a"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/bonding/finalize_meteora_bonding.rs",
+      "sha256": "6b94b953194c0a3e9f89e982332c7a29c26ee4083a3f6cd1c79649d48544e691"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/bonding/init_bonding_on_meteora.rs",
+      "sha256": "dc249df761897f2fa0a23e479559bbc2c0f6bd36e61b6b9cb548330f6bd07570"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/bonding/mod.rs",
+      "sha256": "9778ec9ea77a653172902d280c188fd751aaa158a29c0a696c2651fdc6f33d55"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/bonding/transfer_position_nft_to_fee_share.rs",
+      "sha256": "3e2da21c588f44105610d748467bb6b878cdb82cef2523d55f12e57d1f7b6acd"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/burn_dao_tokens.rs",
+      "sha256": "55c8251736e5d4c7975222091002f640b4ec671113cd554db2a73dba4e289454"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/close_fund.rs",
+      "sha256": "403bb8adca875dec209b8235b4b7eb6057e86bec226e82d5232b8310c58969a8"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/execute_invoke.rs",
+      "sha256": "efee8500074f925ab42c7bdcc15f1c33eb3db28d9786bb2165ca06dac881daf5"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/init.rs",
+      "sha256": "ac327b253486583b85f0adcd6dd4e1d57fd932d7dca8d7c595c9a99819f49336"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/init_curve.rs",
+      "sha256": "17bd1559e3e8df11cb05de0e09c4a91597777106a976b2212671e130b4098ca9"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/init_redemption.rs",
+      "sha256": "840901a8afc960627ba97a44374ddd9f34514e8ee28e4279d34e8327ff247fad"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/mod.rs",
+      "sha256": "8ebc36d44662e2f99e0dc0846247a189cde209c7bd456cfe918a9bb418d9d8b7"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/redeem_sol.rs",
+      "sha256": "7abc061a238b1e0d0dc059eef8d6871512ccb21c6eefe19131dbfe5c86912956"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/redeem_tokens.rs",
+      "sha256": "e5a2f9a7a8f31c0cb0e4b37d832036571d13eee30be48dea93a51d46c6bbbb46"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/revoke_delegate_authority.rs",
+      "sha256": "3b395e7039356e68b8cf18211c9116229bacfd9f3681ec8099fc632e3deb15a6"
+    },
+    {
+      "path": "programs/dao-v1/src/instructions/start_raise.rs",
+      "sha256": "99542a9c0ed2f5d97884b0aa6b65e74a953c93bb42dbbcecaa014a15b302b7ab"
+    },
+    {
+      "path": "programs/dao-v1/src/lib.rs",
+      "sha256": "ae191cc202241e2a823278d96fd31ad1106195c52f20450eaa33c557fbaee461"
+    },
+    {
+      "path": "programs/dao-v1/src/math/migration_math.rs",
+      "sha256": "1964fe34b64b9353e8fecacb9d88036f9ab5a72338b75d33ab2e86c651b765a1"
+    },
+    {
+      "path": "programs/dao-v1/src/math/mod.rs",
+      "sha256": "c65ceefbf117723ac188040090f0d49d9c17c405befba119b1d8afd9bbddc683"
+    },
+    {
+      "path": "programs/dao-v1/src/migration_accounts.rs",
+      "sha256": "ce083ce5a2b303a7c14e1958ca2d92af9469a92744a2e10aaf681767f7d41577"
+    },
+    {
+      "path": "programs/dao-v1/src/migration_handler.rs",
+      "sha256": "cdb645724bf3220979857142ed732971cf8083e981be63e3349521a895ec5531"
+    },
+    {
+      "path": "programs/dao-v1/src/pool_math.rs",
+      "sha256": "7526d8e7ced347464759b57ebf93cfeca4a505fb607faa570e97a245f9527aaf"
+    },
+    {
+      "path": "programs/dao-v1/src/state/cosign.rs",
+      "sha256": "5f2c92e6772cbce57a7ac301859757466ddc3d38230abcdd82da790a0fe70ef6"
+    },
+    {
+      "path": "programs/dao-v1/src/state/dao.rs",
+      "sha256": "a99a129b94b784d58d1319e2a21474a6a2d9f330d46a67010e7460ff5e263f92"
+    },
+    {
+      "path": "programs/dao-v1/src/state/mod.rs",
+      "sha256": "25ff2b845bb60db0373f4d8ba13b903c6867db13800fd4227bba9bb983e38583"
+    },
+    {
+      "path": "programs/dao-v1/src/state/redeem.rs",
+      "sha256": "4efacda0b059f33e4026eef39ae36ba6cbdc4accf44c03fc514fb94715f23a15"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/Cargo.toml",
+      "sha256": "63837ce91ccfae12eae463646c0884aeef32da97a1d9dd3f476421b19f9d46c6"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/change_creator.rs",
+      "sha256": "08abdd0ba044f85cb4f1990ce5ce758a896afd1807a4b1157b2e55b833c3459b"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/init_with_legacy.rs",
+      "sha256": "75c0cadb9ab36376dca92fae0115c8026a43c792c1847b10d54988ee459db56d"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/initialize.rs",
+      "sha256": "046cc48049bcde82767b9c4b71b004d824bf5e3939d821447fe222c2f489a042"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/instruction.rs",
+      "sha256": "8d1d786e1c25c602b2447eb1c7210e1a9e4c65780bc1e37d8cb80b3211e9993d"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/lib.rs",
+      "sha256": "659a0474c26f4c039e2aa1da3aad7b45579c038e404b945bca914795908f9651"
+    },
+    {
+      "path": "programs/fee_share_trader_dao/src/state.rs",
+      "sha256": "ab3830c7af5744aa90621a7a6cd31045c5e1bb6333ac6a8b22fc5cbb343a682a"
+    },
+    {
+      "path": "programs/fundraise/Cargo.toml",
+      "sha256": "646761da7b918000fb9c05bfba36394c44b95718b70a0c0151d9c825cf4a2c79"
+    },
+    {
+      "path": "programs/fundraise/src/__cpi_client_accounts_commit_funds.rs",
+      "sha256": "5c5e39fea0a72693a6825acb0a55ed0998b9cb7797224eef677697ca1e524a4a"
+    },
+    {
+      "path": "programs/fundraise/src/__cpi_client_accounts_initialize.rs",
+      "sha256": "8b9282576c692951534ea562d935a3765b3c00f5d257b19f409e2abebcddc45a"
+    },
+    {
+      "path": "programs/fundraise/src/cpi.rs",
+      "sha256": "55d0df44abc1fd40623cba8a5c663e17f08202c91dcdcc2d3139d9afcf98458e"
+    },
+    {
+      "path": "programs/fundraise/src/instruction.rs",
+      "sha256": "498189fbdd63f3e46ef8a690741126a31708bed39c16ab438a833839375ba0c5"
+    },
+    {
+      "path": "programs/fundraise/src/lib.rs",
+      "sha256": "cd5e5e83328fd544c58a78f9e3ad9fabc83578fd627b26d8dc119f0fd9b2e2be"
+    },
+    {
+      "path": "programs/fundraise/src/make_public.rs",
+      "sha256": "67bfc7a9fe01a1a2a43f2f2a06bab434fd580267cb98ee3d541564bc6f2a56f3"
+    },
+    {
+      "path": "programs/fundraise/src/state/fundraise.rs",
+      "sha256": "692a0e3bbe2db176b42cef104634b8694abefe932fb6ef13a36b68ca4c5548b9"
+    },
+    {
+      "path": "programs/fundraise/src/state/mod.rs",
+      "sha256": "7497d2d292c429f9935b7fe5cfe4a1ebfb32ffd72ecd8ec055979a0a1897173c"
+    },
+    {
+      "path": "programs/hedgefun_curve/Cargo.toml",
+      "sha256": "a4ef9ed21b6c47e54d9dfc4ed14652e725a02e5b29e8b6dafd61cfba8e551492"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/__cpi_client_accounts_buy_token.rs",
+      "sha256": "b9e9d5827e4d3c77ca90d30dba84302982460ac9dcd8bd504a9332123230ac8e"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/__cpi_client_accounts_collect_fee.rs",
+      "sha256": "857c76f9943af333731f12ffdf6fa47d3bec7f4e5abc96d0c7dfd7009def1536"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/__cpi_client_accounts_migrate_liquidity.rs",
+      "sha256": "ebb639c80ec376e67993e1fdbde4b8278441606e2a1757cd4c64063e79744381"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/__cpi_client_accounts_sell_token.rs",
+      "sha256": "2883591c2cf572f20554130dddbda520f78ec46cf7c3ba92f83f3a678ff531b5"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/cpi.rs",
+      "sha256": "662fd6e6ec96bb679715735d1fb22ef09c8962a8b8623bfdb3b05d6096041446"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/instruction.rs",
+      "sha256": "bef71c47ef7a86261dc03f822f079cfe6299453760d937ed05c0c15e5faa17c6"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/lib.rs",
+      "sha256": "367966cac6975458a1b8f22c84fb6a8153b3308b5d1915ccf5d586dd2ee07699"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/migrate_liquidity.rs",
+      "sha256": "53a093089ba4bb8846b030c0e49d24187c67cc7dea38780031fd9669137dc808"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/state/curve.rs",
+      "sha256": "05152b14877f849d826e8d341ade8aeb9d045c3bb117edf1aad4078e6e02a0d3"
+    },
+    {
+      "path": "programs/hedgefun_curve/src/state/mod.rs",
+      "sha256": "1496274c0a49c0a28ffda2738bf7f8524b329baf75eff21531057fb6a72d108a"
+    }
+  ],
+  "packaging_note": "All recovered source files match the exact-build snapshot. Only .cargo/config.toml changes the vendor directory to repo-relative vendor; verify_release.py separately checks 69 unchanged files.",
+  "matches_clean_build_snapshot_except_vendor_config": true
+}

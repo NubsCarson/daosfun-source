@@ -1,0 +1,31 @@
+{
+  "original_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+  "results": [
+    {
+      "test": "audit/poc_finalize_cross_pool.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "test": "audit/pocs/poc_tr1_expiry.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "test": "audit/pocs/poc_tr2_cosigner_signer.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "test": "audit/pocs/poc_tr3_delegate_snapshot.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "test": "audit/pocs/poc_tr4_token2022_lock.py",
+      "passed": true,
+      "exit_code": 0
+    }
+  ],
+  "passed": true
+}

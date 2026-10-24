@@ -1,0 +1,10 @@
+=== TR-1 against ORIGINAL evidence/mainnet.so ===
+expiry=1 (1970)  err: None wallet_lamports_after: 999500000
+expiry=-1        err: None wallet_lamports_after: 999500000
+=> execute_invoke moved treasury lamports AFTER expiration. No Clock/expiry check.
+future expiry + closed err: {'InstructionError': [0, {'Custom': 6013}]}
+init_redemption closed=0 err: {'InstructionError': [0, {'Custom': 6007}]}
+init_redemption closed=1 err: None
+=> Holders cannot open redemption at expiry; it requires admin_closed_fund,
+   which only CLOSE_AUTHORITY sets. Expiry alone opens nothing.
+TR-1 CONFIRMED on original.

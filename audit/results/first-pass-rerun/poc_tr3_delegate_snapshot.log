@@ -1,0 +1,8 @@
+=== TR-3 against ORIGINAL evidence/mainnet.so ===
+A: execute_invoke SPL Approve err: None
+B: direct delegate drain err: None treasury_after: 0 attacker_after: 1000000
+C1: redeem against delegated+close-authority treasury acct err: None
+C2: redeem with stale snapshot (snapshot=1e6, live=1) err: {'InstructionError': [0, {'Custom': 1}]}
+=> close_fund cannot revoke a pre-armed delegate (A+B); redeem_tokens
+   neither rejects delegated/close-authority treasury accounts nor caps
+   payouts at the live balance (C). TR-3 CONFIRMED on original.

@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "evidence/curve-state-accounts.json",
+      "sha256": "26f8e363a94974614833f2e63d2bb246b4eb645d9e6dd75acda393ce350883cc",
+      "bytes": 44154
+    },
+    {
+      "path": "evidence/damm-config.json",
+      "sha256": "3c1152fc6382e09ec5c076ea81ae42c6cebef0552b4c6b4f0490e16639045ea1",
+      "bytes": 741
+    },
+    {
+      "path": "evidence/dbc-config.json",
+      "sha256": "ae8156476dad8ee1fc22c26e2af0ad8f62da54412eec4198cc0936789586de54",
+      "bytes": 1702
+    },
+    {
+      "path": "evidence/fee-authority-sample.json",
+      "sha256": "59747089370fb100192d094800e3de367a3e0a0780c5b2c1276bf8913ff53204",
+      "bytes": 590
+    },
+    {
+      "path": "evidence/full-account-samples.json",
+      "sha256": "59a563a69e455ee7b989c6d9ca051216f99059c66c360da94a9fd5821d6f1542",
+      "bytes": 8877
+    },
+    {
+      "path": "evidence/fundraise.so",
+      "sha256": "00bdbee1546f2087bfa845cb4144561ebaaf00a2af231399fa3269d82c30af28",
+      "bytes": 528208
+    },
+    {
+      "path": "evidence/hedgefun-sample.json",
+      "sha256": "1a643982370e6551d9b537d4386ca7919cf4a78febdd9c860855f3ba2239ecc7",
+      "bytes": 173
+    },
+    {
+      "path": "evidence/hedgefun-samples.json",
+      "sha256": "84f4f464b96642386294d226926ae8a70bdc681fc86fa5e910c2313f13127b38",
+      "bytes": 8769
+    },
+    {
+      "path": "evidence/hedgefun.so",
+      "sha256": "17ebadd438fae8bc6c9ea2a2731953225ba3f269a2c62c9ab380a853495e99b0",
+      "bytes": 337888
+    },
+    {
+      "path": "evidence/mainnet.so",
+      "sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+      "bytes": 1120784
+    },
+    {
+      "path": "evidence/meteora-damm-v2-0.1.3.so",
+      "sha256": "19c4569520ae6e5e99caa908d72b34423b9139c8bd6bfa871429f095b9f492c2",
+      "bytes": 1335640
+    },
+    {
+      "path": "evidence/meteora-damm-v2.so",
+      "sha256": "967ff9fb161eec2e62f66d2c899100739fb747c445f697b8625c86b31b9a2022",
+      "bytes": 2174352
+    },
+    {
+      "path": "evidence/meteora-dbc.so",
+      "sha256": "e2bfc853c1a1778dd8ee40ea9a0f3edf5587442360c57c685e7e3024ad0cad47",
+      "bytes": 2326577
+    },
+    {
+      "path": "evidence/related-accounts.json",
+      "sha256": "c081dca90ef57d08870a135c29935eac9cd23d33bf96849be73dc6a7524348c7",
+      "bytes": 3052
+    },
+    {
+      "path": "evidence/token-2022.so",
+      "sha256": "15a2e615a42e20f31714bbaaee43002ae6f1cda2e8d7118243117ab3c1342e2d",
+      "bytes": 1382016
+    }
+  ]
+}
