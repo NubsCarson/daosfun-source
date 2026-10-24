@@ -60,7 +60,7 @@ for privileges already installed before an upgrade and for mint-level authoritie
   redemption denial of service.
 - Lazy per-asset snapshots remain unchanged in the earlier patch. Later deposits,
   depletions, rounding and SOL rent must have explicit settlement rules. See
-  [the second-pass report](SECOND_PASS.md).
+  [the security audit](AUDIT.md).
 - A live-balance cap by itself is not a fairness solution: it can pay early
   redeemers in full and leave later redeemers with the loss.
 - Blocking arbitrary approvals can break legitimate DeFi integrations. The

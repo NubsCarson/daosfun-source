@@ -14,13 +14,11 @@ alone does not prove a security claim or validate assumptions about other actors
 
 ## Findings and confidence
 
-- [First pass](../audit/FIRST_PASS.md): five findings reproduced against the captured
-  original; the cross-pool finalization issue is critical. The original authorization
-  and lifecycle defects are intentionally retained in this source tree.
-- [Second pass](../audit/SECOND_PASS.md): one additional confirmed low-severity
-  snapshot-timing finding (TR-5), supported by signed local transactions and a
-  control. The SOL rent-remainder failure hypothesis was not reproduced in the
-  tested VM and is not counted as a finding.
+- [Security audit](../audit/AUDIT.md): six findings reproduced against the captured
+  original—one critical, four medium, and one low. The low-severity snapshot finding
+  is supported by signed local transactions and a control. The SOL rent-remainder
+  failure hypothesis was not reproduced in the tested VM and is not counted as a
+  finding. The original vulnerabilities are intentionally retained in this source.
 - [Prior remediation review](../audit/PRIOR_PATCH_REVIEW.md): a historical patch
   experiment is not part of this faithful build. Its direct token-opcode filter
   does not establish protection against nested CPI effects.
@@ -28,14 +26,13 @@ alone does not prove a security claim or validate assumptions about other actors
 `CONFIRMED_ON_ORIGINAL` means a bounded local execution reproduced the stated
 behavior using the captured original program. It does not mean a real-world attack
 occurred. `Source-level concern` means code reasoning without a dedicated runtime
-reproduction in this pass. An unconfirmed concern is not counted as a confirmed
+reproduction in this review. An unconfirmed concern is not counted as a confirmed
 vulnerability. A refuted hypothesis is not a low-severity vulnerability.
 
-## Second source pass: all 18 entrypoints
+## Source review: all 18 entrypoints
 
-This matrix records a fresh source pass over the creation, authorization and
-migration surfaces, with redemption runtime cases described separately in the
-second-pass report. A checked constraint is not an assertion of universal safety.
+This matrix records source review of the creation, authorization and migration
+surfaces, with redemption runtime cases described in the unified security audit. A checked constraint is not an assertion of universal safety.
 
 | Entrypoint | Checks and effects reviewed | Result / remaining boundary |
 | --- | --- | --- |
@@ -54,9 +51,9 @@ second-pass report. A checked constraint is not an assertion of universal safety
 | `cosign_init` | Hard-coded admin; fresh `[cosigner, id]` PDA. | No unprivileged initialization identified. Execution specifically uses id zero. |
 | `cosign_update_signer` | Hard-coded admin; typed, program-owned state. | No unprivileged signer update identified. Missing PDA validation here does not let an outsider choose execution's cosigner, because execution pins the canonical id-zero PDA. |
 | `init_redemption` | Matching state/mints; curve-initialized gate; one-time activation; privileged-close condition; capped carry to state admin. | TR-1/4 remain. Activation does not snapshot all treasury assets or revoke delegates. |
-| `burn_dao_tokens` | Redemption-started state; signer-owned ATA and state ATA; checked accumulation. | This escrows tokens rather than burning mint supply. Zero amount can establish a zero-credit metadata account, relevant to second-pass snapshot tests. |
-| `redeem_sol` | User metadata and wallet PDA; per-user claim accumulator; lazy global SOL snapshot; payout formula. | See second-pass snapshot and rent behavior. There is no direct clock gate here; credit provenance supplies the lifecycle dependency. |
-| `redeem_tokens` | Mint/owner/program checks; signer ATA; per-source snapshot and per-user accumulator. | TR-3 remains. See second-pass zero-amount and later-deposit behavior. Token-2022 extension semantics are not fully covered. |
+| `burn_dao_tokens` | Redemption-started state; signer-owned ATA and state ATA; checked accumulation. | This escrows tokens rather than burning mint supply. Zero amount can establish a zero-credit metadata account, relevant to TR-5 snapshot tests. |
+| `redeem_sol` | User metadata and wallet PDA; per-user claim accumulator; lazy global SOL snapshot; payout formula. | See TR-5 and the negative rent-remainder result in the audit. There is no direct clock gate here; credit provenance supplies the lifecycle dependency. |
+| `redeem_tokens` | Mint/owner/program checks; signer ATA; per-source snapshot and per-user accumulator. | TR-3 remains. See TR-5 zero-amount and later-deposit behavior. Token-2022 extension semantics are not fully covered. |
 
 ## Unconfirmed and integration concerns
 

@@ -2,7 +2,7 @@
 
 This is a faithful reconstruction and research repository, not a secured fork.
 The source and byte-identical binaries intentionally retain the findings documented
-in [the first pass](audit/FIRST_PASS.md) and [the second pass](audit/SECOND_PASS.md).
+in [the security audit](audit/AUDIT.md).
 Do not treat a successful reproduction or test run as approval to deploy.
 
 ## Reporting another finding

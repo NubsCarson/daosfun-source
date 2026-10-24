@@ -14,12 +14,13 @@ record does not claim a separate hosted run against the follow-up commit.
 ## Delivered
 
 - [Recovered Anchor/Rust source](../programs/) and [pinned dependencies](../Cargo.lock).
-- [Original captured binary](../evidence/mainnet.so), [rebuilt ELF](../binaries/dao_v1.so),
-  and [rebuilt account-padded binary](../binaries/dao_v1.deployed.so).
+- [Original captured binary](../evidence/mainnet.so) and
+  [rebuilt account-padded binary](../binaries/dao_v1.deployed.so). The ELF without
+  allocation padding is an internal build intermediate, not a retained deliverable.
 - [Portable build instructions](BUILD.md), [fixture provenance](../evidence/README.md),
   and [verification evidence](../repro/).
-- [First-pass findings](../audit/FIRST_PASS.md), [second-pass findings](../audit/SECOND_PASS.md),
-  [review scope](SECURITY_SCOPE.md), and [prior patch review](../audit/PRIOR_PATCH_REVIEW.md).
+- [Unified security audit](../audit/AUDIT.md), [review scope](SECURITY_SCOPE.md),
+  and [prior patch review](../audit/PRIOR_PATCH_REVIEW.md).
 
 ## Hosted verification
 
@@ -27,7 +28,7 @@ record does not claim a separate hosted run against the follow-up commit.
 | --- | --- | --- |
 | Artifact checks, differential suite and security reproductions | Passed; **410/410 differential cases** across 15 suites and **6/6 security scripts** | [GitHub Actions run](https://github.com/lalalune/daosfun-source/actions/runs/40084470193), [record](../repro/hosted-verification.json) |
 | Clean source build on Ubuntu 24.04 | Passed, using a freshly downloaded official toolchain and all 264 dependency crates, with an initially absent build target | [GitHub Actions run](https://github.com/lalalune/daosfun-source/actions/runs/40084472477), [record](../repro/hosted-rebuild.json) |
-| Downloaded hosted artifacts | Independently compared; both binaries match exactly and the source manifest matches the repository | [Rebuild evidence](../repro/hosted-rebuild.json) |
+| Downloaded hosted artifacts | Independently compared; ELF contents and full account allocation match exactly, and the source manifest matches the tested source | [Rebuild evidence](../repro/hosted-rebuild.json) |
 
 The full 1,120,784-byte original and rebuilt account-padded binary share SHA-256:
 
@@ -43,11 +44,10 @@ original author's source identifiers, comments or historical build configuration
 
 ## Security outcome
 
-The first pass contains five confirmed findings: one critical and four medium.
-The second pass confirms **TR-5, low severity**: a zero-credit caller can fix a
-redemption snapshot before later deposits and strand those later funds. This
-formalizes an earlier snapshot observation with signed local reproduction and a
-control. The SOL rent-remainder failure hypothesis was **not reproduced** in the
+The unified audit contains **six confirmed findings: one critical, four medium,
+and one low**. The low-severity finding, TR-5, shows that a zero-credit caller can
+fix a redemption snapshot before later deposits and strand those later funds. It
+is supported by signed local reproduction and a control. The SOL rent-remainder failure hypothesis was **not reproduced** in the
 tested VM and is not counted as a vulnerability. The earlier patch's nested-CPI
 filtering gap remains a source-level concern, not a runtime-confirmed new finding.
 

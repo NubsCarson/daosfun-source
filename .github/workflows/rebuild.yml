@@ -29,6 +29,5 @@ jobs:
             .build/exact/toolchain-verification.json
             .build/exact/command.json
             .build/exact/build.log
-            .build/exact/linked/dao_v1.so
             .build/exact/linked/dao_v1.deployed.so
             .build/exact/linked/link.log

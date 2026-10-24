@@ -15,11 +15,11 @@ verified source commit, successful clean build, test results and security summar
 | Artifact | Bytes | SHA-256 |
 | --- | ---: | --- |
 | [Original capture](evidence/mainnet.so) | 1,120,784 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
-| [Rebuilt ELF](binaries/dao_v1.so) | 1,041,728 | `145716b96a30edc81413a77caea1c06c8aaf6adf3ad65b1576d6b9469f226e07` |
-| [Rebuilt with allocation padding](binaries/dao_v1.deployed.so) | 1,120,784 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
+| [Rebuilt binary](binaries/dao_v1.deployed.so) | 1,120,784 | `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d` |
 
-The ELF is identical byte for byte. The final artifact adds 79,056 generated zero
-bytes to match the captured account allocation. The reconstruction uses a pinned
+The rebuilt binary is identical byte for byte, including 79,056 generated zero
+padding bytes matching the captured account allocation. Only the complete
+account-padded artifact is retained in `binaries/`. The reconstruction uses a pinned
 lockfile, official platform-tools v1.41 and explicit recovered linker section
 ordering. All code/data comes from source compilation; no original executable
 bytes are inserted into the build. Original comments, identifiers and historical
@@ -42,15 +42,15 @@ panic source locations affect the emitted bytes.
 
 ## Security review
 
-The [first pass](audit/FIRST_PASS.md) confirms five findings: cross-pool migration
-fee diversion/state corruption, missing expiry enforcement, cosigner privilege
-forwarding, token authorities surviving closure, and a Token-2022 redemption
-mismatch. The [second pass](audit/SECOND_PASS.md) confirms one additional **low**
-finding: a zero-credit caller can fix an asset snapshot before later deposits,
-stranding those later funds. This promotes a previously noted snapshot concern
-into a signed local reproduction. The tested SOL rent-remainder hypothesis was
-not reproduced and is not counted as a vulnerability. Read the
-[scope and limitations](docs/SECURITY_SCOPE.md) and
+The [security audit](audit/AUDIT.md) contains **six confirmed findings: one
+critical, four medium, and one low**. These cover cross-pool migration fee diversion
+and state corruption, missing expiry enforcement, cosigner privilege forwarding,
+external token authorities surviving closure, Token-2022 redemption incompatibility,
+and zero-credit snapshot creation that can strand later deposits.
+
+The audit also preserves negative results and limitations. The SOL rent-remainder
+failure hypothesis was not reproduced and is not counted as a vulnerability. Read
+the [scope notes](docs/SECURITY_SCOPE.md) and
 [review of the earlier patch experiment](audit/PRIOR_PATCH_REVIEW.md); a tested
 patch case is not a claim that every vulnerability has been fixed.
 

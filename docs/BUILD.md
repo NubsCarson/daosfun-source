@@ -27,7 +27,6 @@ The default output is `.build/exact/`:
 
 | File | Meaning |
 | --- | --- |
-| `linked/dao_v1.so` | Exactly matching 1,041,728-byte ELF |
 | `linked/dao_v1.deployed.so` | ELF plus 79,056 newly generated zero bytes; exactly matches the entire 1,120,784-byte captured account payload |
 | `verification.json` | Whole-file equality and SHA-256 results |
 | `source-manifest.json` | Hashes of source/configuration inputs |
@@ -35,7 +34,7 @@ The default output is `.build/exact/`:
 | `build.log`, `command.json` | Compiler output and invocation |
 | `capture/`, `linked/link.map` | Fresh linker inputs, hashes, script, and layout evidence |
 
-Expected ELF SHA-256:
+The linker uses an unpadded ELF internally. It is not a separately published comparison artifact. The ELF portion of the padded output has SHA-256:
 
 ```text
 145716b96a30edc81413a77caea1c06c8aaf6adf3ad65b1576d6b9469f226e07
