@@ -27,6 +27,15 @@ uses a valid disposable signature: `init_curve` and
 succeed with the source-era CP binary on their restored fixtures. Later
 account bytes, flag resets and signer/ATA substitutions limit the result;
 it neither proves every live route fails nor establishes permanent lock.
+The [six-case current-CP variant matrix](receipts/dao-cp-current-variant-surfpool.json)
+uses signed, committed offline Surfpool calls against the pinned current
+DAO and CP binaries. Both handlers return CP 6067 and roll back tracked
+application accounts across the two restored fixture families, including
+locally transplanted alternate fee bytes and State variations. The DAO
+source fixes the CP config address; the alternate bytes are a **synthetic
+edit at that address**, not a selectable live config. These six failures
+extend the bounded compatibility evidence, but do not prove a universal
+live fund lock, all-route failure, or lack of other exits.
 Original receipt filenames below are inside the
 [daos.fun evidence bundle](daosfun-lab-evidence.tar.zst).
 

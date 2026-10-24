@@ -57,6 +57,17 @@ FeeShare accounts are later captured states, while creator and recipient
 identities are local substitutions. This is a positive bounded CPI path,
 not an exact historical prestate or proof that every fee-claim route works.
 
+The [15-case FeeShare/CP Rust differential](receipts/fee-share-meteora-claim-rust-differential.json)
+adds a native model of FeeShare's **post-CPI claim accounting**. Seven fresh
+signed local claims succeed, including a zero-repeat path; eight guard or
+overflow cases fail with rollback. The model takes the amount actually
+claimed by CP as an **input** and compares FeeShare State and funding-vault
+deltas. It does not derive CP position fees, reconstruct the Anchor account
+parser or CPI instruction builder, or reproduce the whole SBF handler. Its
+synthetic near-`u64` addition overflow rolls back in the current ELF; it is
+not evidence of a reachable live-account overflow. The native source and
+test instructions are bundled in `reconstruction/fee-share-meteora-claim/`.
+
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
 tested creator `redeem(entity=0)` and `collect_platform_fees` accounting

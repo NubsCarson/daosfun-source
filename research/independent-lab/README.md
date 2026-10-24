@@ -62,8 +62,9 @@ The original research files are in a compressed [evidence bundle](daosfun-lab-ev
 SHA-256, as well as the upstream lab commit. The bundle retains the complete
 daos.fun analysis, virtual-XYK analysis, five current-program disassemblies,
 current and reconstructed program binary captures, read-only RPC receipts,
-local test scripts, and three narrow native Rust behavior models for PumpXYK
-`migrate_v2`, FeeShare payouts, and Founder presale pricing. The models are
+local test scripts, and four narrow native Rust behavior models for PumpXYK
+`migrate_v2`, FeeShare payouts and post-CP-claim accounting, and Founder
+presale pricing. The models are
 not original on-chain source or SBF rebuilds. Four separate incomplete
 Anchor/SBF interface candidates and their non-secret status receipts are
 also included; **they are not matching or deployable replacements**. The
@@ -72,10 +73,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`ed76ddeceaee8f4f2ef0cf3ddd4c0b433838a57f`, contains **1,099** scoped
-files (118,448,842 uncompressed bytes), and has archive SHA-256
-`7d8c2f5e4cf0ea80616bf5493294ff53362bb618876051a138f026f2b7e50a6a`.
-All **52** direct JSON receipts match bundled member size and
+`a24e968bf5242726fdbc10d6fa6ebc3d7d78e8fe`, contains **1,110** scoped
+files (118,681,383 uncompressed bytes), and has archive SHA-256
+`4168dfcb1a12da95494b33056e1b51cea430b8f919322e49c1ea68dc997e57b7`.
+All **54** direct JSON receipts match bundled member size and
 SHA-256. The daos.fun offline gate passed **112** commands; strict full
 behavior remains **0/52**.
 
@@ -85,14 +86,15 @@ A small selection of key JSON receipts is also available directly in
 
 - [`DAO_V1.md`](DAO_V1.md): source-era replays, DAO/DBC migration, issuance,
   delegation and redemption paths, and signed offline checks of BM-1,
-  TR-1 expiry, and TR-5 redemption timing.
+  TR-1 expiry, TR-5 redemption timing, and six current-CP variants.
 - [`FOUNDER.md`](FOUNDER.md): tested presale-goal model, allocation and vesting
   controls, a native Rust goal/amount slice with 120/120 local differential
   matches, and a fresh signed Founder-to-Pump lifecycle.
 - [`FEE_SHARE.md`](FEE_SHARE.md): `Option<Pubkey>` decoding, fee conservation,
   signed offline Surfpool external-fee claim, payout and counter reachability
   checks, legacy fee-authority CPI, and a bounded native Rust payout model
-  with 96/96 creator cases plus 49/49 referrer/error-order matches.
+  with 96/96 creator cases plus 49/49 referrer/error-order matches, and a
+  separate 15-case post-CP-claim accounting slice.
 - [`PUMP_XYK.md`](PUMP_XYK.md): source-era migration transfer formula and
   failure rollback, current `migrate_v2` native Rust data model with 72
   full-data matches and eight parser-rejection matches, and signed trade
