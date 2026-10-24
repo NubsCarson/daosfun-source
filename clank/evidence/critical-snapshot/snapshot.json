@@ -1,0 +1,83 @@
+{
+  "block": 96709714,
+  "blockHash": "0x8544aa36fb7ae4fd24e8ba8257de59e66f4799fe81bc9621bd279581ac8b24d7",
+  "source": "Foundry read-only RPC cache from rpc.mainnet.chain.robinhood.com",
+  "cacheSha256": "835b43d4476d24658a8b312bca15b4320228bdd6f5033e00e2d975ef91d83412",
+  "blockEnvironment": {
+    "number": "0x5c3ac52",
+    "beneficiary": "0xa4b000000000000000000073657175656e636572",
+    "timestamp": "0x6adc8e05",
+    "gas_limit": 1125899906842624,
+    "basefee": 20002000,
+    "difficulty": "0x1",
+    "prevrandao": "0x0000000000000d4e000000000190ba0b000000000000003d0000000000000000",
+    "blob_excess_gas_and_price": {
+      "excess_blob_gas": 0,
+      "blob_gasprice": 1
+    },
+    "slot_num": 0
+  },
+  "accounts": {
+    "0xa042794f670cfe57209438cbe63dbdf4424b6dff": {
+      "balance": "0x0",
+      "codeSha256": "aeab07d54092e288ba40023f0edba6c981250e65c4d805845f0102338ba9a860",
+      "storage": {
+        "0x0": "0x6ab0edc403fa31d04462746aaa24bc7e5626403e09e4b106ec"
+      }
+    },
+    "0xd405e0dff2d0cc7eaa48b3aec2e3f2456c072000": {
+      "balance": "0x0",
+      "codeSha256": "51be7d04e8cf575afb0a26e029edd6059705ef9df24ac40c77c84c95515dc178",
+      "storage": {
+        "0x2": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+      }
+    },
+    "0x58daec3116aae6d93017baaea7749052e8a04fa7": {
+      "balance": "0x0",
+      "codeSha256": "711c3ab6c4d7465f2c2f5cf91ab12b4fbb263677be40352013b7ebd85534954e",
+      "storage": {
+        "0xb05530ecfa06b63e74e1cd5710de73e0f0be4ff52cc2be862e0f8c97b4f294fe": "0xe3dc0e862c4eff876a1c40b10205844111da6ee7",
+        "0xc8e1cc8613babc4cb6189112559673ad5bb70762bd1fe6f73ce61284d6a4e1c6": "0x0",
+        "0xe98aa011b4b4b901150c2c95002856b25da3aaa98b984be60633c85fceb2ad31": "0x0"
+      }
+    },
+    "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1": {
+      "balance": "0x0",
+      "codeSha256": "5d8656bf73f4e4dbd656bdc9be353b6db6556acece4936dc5b42d5db9f941bfb",
+      "storage": {
+        "0xea3a6ea6484cf617e543a5d0f2c2a0c47b5e65dedfee489df1c0d1f2d8220a24": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+        "0xea3a6ea6484cf617e543a5d0f2c2a0c47b5e65dedfee489df1c0d1f2d8220a23": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+        "0x0": "0x77cb92c232137739452446c5712fb0055a344c3d",
+        "0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00": "0x1"
+      }
+    },
+    "0x77cb92c232137739452446c5712fb0055a344c3d": {
+      "balance": "0xa777cd07222d469",
+      "codeSha256": "a8a0fbd3cdf49e751346664e01b529a58322a814cf8df8d85deb20e63bd6415e",
+      "storage": {}
+    },
+    "0x8366a39cc670b4001a1121b8f6a443a643e40951": {
+      "balance": "0x50e6a7b7fafe5b29526",
+      "codeSha256": "6eb21c69298b064e37fcf8089a941ae096fe08c0f179b2d399567aef1b10585b",
+      "storage": {}
+    },
+    "0xfa31d04462746aaa24bc7e5626403e09e4b106ec": {
+      "balance": "0x0",
+      "codeSha256": "190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155",
+      "storage": {}
+    },
+    "0xbab7dbd758c8de7a28e315d3a88d68bb671acd3f": {
+      "balance": "0x0",
+      "codeSha256": "6124909bf743016481110e1b5a93c94113691150aa01a2bb01effb99a7bd544d",
+      "storage": {
+        "0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00": "0x1"
+      }
+    },
+    "0xe3dc0e862c4eff876a1c40b10205844111da6ee7": {
+      "balance": "0x0",
+      "codeSha256": "11573ee99f172b6112827b08850b40c5218e4205b06a04603c96f571c11204d0",
+      "storage": {}
+    }
+  },
+  "scope": "Partial snapshot of accessed code and storage, not a complete state dump or Merkle-proof verification."
+}

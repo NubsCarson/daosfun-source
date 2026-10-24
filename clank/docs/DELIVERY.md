@@ -25,3 +25,7 @@ The source, original artifacts, comparison binaries and audit were published to 
 - [Original Solana regression run](https://github.com/lalalune/daosfun-source/actions/runs/40085892651): passed on the same published source commit.
 
 The links above identify the exact tested source commit. Subsequent report-metadata and documentation edits do not change its recovered sources or binary bytes. Consult the linked run's terminal status for hosted completion; the local results above are separate evidence.
+
+## Additional critical-path pass
+
+Eleven additional tests pass against an offline replay of nine deployed accounts and ten captured storage slots. They check failed unauthorized/invalid-state actions, including recovery attempted by the owner after graduation and direct LP NFT theft. Storage-read checks reject uncaptured slots in the included accounts. The larger randomized fork run hit RPC rate limits and is not represented as a successful run. See [the critical-pass report](AUDIT.md#additional-critical-severity-review) and [results](../evidence/critical-pass-tests.txt). No additional critical vulnerability was confirmed.

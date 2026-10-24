@@ -50,3 +50,5 @@ The security review confirms no critical or high exploit in the selected token. 
 Public reads are pinned to block hash `0xd2254f48f5922f7ff13223026dabe708729ed9e187eaf852e3a1343303201c10`. The web configuration is a separate contemporaneous capture, not historical chain state. All runtime matches refer to this captured block; future configuration changes are outside the snapshot.
 
 `verified/` preserves contract-specific source inputs, including third-party SPDX notices. Repeated paths across those directories are intentional: different verification units and historical versions can have different contents. `evidence/contracts/` contains public RPC/source records and raw original bytecode; `binaries/` contains reconstructed comparison outputs. Downloaded compiler and intermediate build caches are ignored.
+
+The additional [critical-severity pass](docs/AUDIT.md#additional-critical-severity-review) adds 11 passing captured-state replay tests for unauthorized sweeps, owner recovery after graduation, helper bypasses, LP NFT theft and hook spoofing. No additional critical vulnerability was confirmed.

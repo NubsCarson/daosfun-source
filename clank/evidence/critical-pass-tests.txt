@@ -1,0 +1,19 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 327.38ms
+Compiler run successful!
+
+Ran 11 tests for CriticalPaths.t.sol:CriticalPathsTest
+[PASS] testCurveCannotBeDrainedOrReinitializedByOutsider() (gas: 75010)
+[PASS] testExecutorRejectsOutsiderBeforeMovingReserves() (gas: 38341)
+[PASS] testGraduatedCurveCannotReopenEvenFromFactory() (gas: 59236)
+[PASS] testLockerCannotBeReassignedOrApproveWithdrawal() (gas: 85448)
+[PASS] testOutsiderCannotRescueOrRedirectFees() (gas: 60885)
+[PASS] testOwnerCannotRescueGraduatedAGIEvenAfterDelay() (gas: 97037)
+[PASS] testPoolInitializationCannotSpoofFactory() (gas: 56194)
+[PASS] testProtocolRolesCannotSweepCurve() (gas: 166262)
+[PASS] testProtocolRolesCannotUseOwnerRescue() (gas: 216432)
+[PASS] testRepeatGraduationCannotCreateSecondClaimOnReserves() (gas: 91135)
+[PASS] testSelfCallHelpersCannotBypassAccessControl() (gas: 53100)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 8.39ms (2.61ms CPU time)
+
+Ran 1 test suite in 9.60ms (8.39ms CPU time): 11 tests passed, 0 failed, 0 skipped (11 total tests)

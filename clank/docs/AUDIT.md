@@ -22,6 +22,38 @@ Local tests execute the **actual supplied creation bytecode**, not a mocked toke
 
 No transactions were sent to Robinhood Chain. Public calls were read-only and pinned. Uniswap V4/Permit2 implementation security, the Safe implementation/modules, frontend signing flows, bridges, private backend code, oracle/market integrity, and all historical launches were not comprehensively audited. A byte-identical rebuild is an identity proof, not a security certification.
 
+## Additional critical-severity review
+
+**No additional critical vulnerability was confirmed.** This pass specifically examined loss of token balances, theft of the locked liquidity position, unauthorized reserve sweeps, post-graduation owner recovery, repeated graduation, and bypasses through externally callable helper functions. The earlier conditional risks remain conditional; they have not been promoted to critical findings without a working, applicable path to critical impact.
+
+Unlike the fresh-deployment tests above, the new [critical-path suite](../critical-tests/CriticalPaths.t.sol) uses an **offline replay of code and storage captured from a Robinhood Chain fork at block 96,709,714**. It checks the token, factory, curve, locker, graduation executor and hook runtime bytes against the captured artifacts before testing. Impersonation and the one-year time advance occur only inside the local EVM. No transaction is broadcast.
+
+| Critical hypothesis | Focused check | Outcome and scope |
+| --- | --- | --- |
+| An arbitrary caller sweeps curve reserves or rewires the curve | Direct `graduate`, `initialize`, `markRescued` calls plus seven explicit caller roles | Expected `NotFactory` authorization guard. |
+| An arbitrary caller uses delayed recovery or changes the fee recipient | Direct calls and eight explicit non-owner caller roles | Expected `OwnableUnauthorizedAccount` authorization guard. |
+| Even the legitimate owner can extract AGI's already-locked principal through recovery | Impersonate owner locally, advance one year, call both rescue and force-sweep | Both reject AGI's `PoolCreated` lifecycle state; elapsed time does not bypass the state check. |
+| Public retry helper functions bypass the outer authorization checks | Direct `attemptRescueMigration` and `attemptForceGraduation` calls | Expected `OnlySelf` guard. |
+| The existing curve can be reset or swept by replaying legitimate factory calls | Impersonate factory locally and repeat initialization/sweep | `AlreadyInitialized` or the expected lifecycle error. |
+| An outsider invokes the graduation executor to move balances | Direct `mintFullRangePosition` call | Expected `NotFactory` guard before reserve movement. |
+| An attacker reassigns the locker record, approves a spender, or transfers the LP NFT directly | Locker calls and direct PositionManager `transferFrom` | Locker authorization/no-entrypoint rejection and PositionManager `NOT_AUTHORIZED`; NFT ownership checked after each attempt. |
+| Repeated permissionless graduation creates a second claim | Repeat factory sweep and pool-creation calls | Both reject the completed lifecycle state. |
+| A forged hook callback authorizes pool initialization | Call hook as outsider, then as PoolManager with an unauthorized sender | Expected `NotPoolManager` / `NotFactory` guards. |
+
+The source trace also checked reserve changes before external transfers, reentrancy guards, the factory's scoped native receiver, fee-escrow beneficiary ownership, approval clearing after migration, and the separation between fee collection and LP principal. No new critical fund-loss path was established from these paths.
+
+These checks do **not** establish that the entire external swap system is free of critical bugs. PoolManager/PositionManager internals, post-graduation routing, bridges and frontend transaction construction have not received a complete implementation audit here. The direct NFT-transfer check covers only that tested authorization path in PositionManager. A compromised authorized signer set, future malicious quote asset, or the unresolved compiler advisory is a different threat model from the unauthorized attacks tested here.
+
+All **11 additional tests passed**. The broader randomized fork run was interrupted by public RPC HTTP 429 limits and is not counted as passing. The completed suite instead checks explicit caller roles.
+
+Reproduce the completed critical-path checks without RPC access:
+
+```sh
+forge test --root clank/critical-tests --use 0.8.26 -vv
+```
+
+The [snapshot](../evidence/critical-snapshot/snapshot.json) contains nine accounts and ten captured storage slots. After each tested action, storage-read instrumentation rejects reads of uncaptured slots in those accounts, rather than silently treating missing captured state as zero. This is a partial replay, not a full state dump or a Merkle-proof verification. External paths beyond the tested calls remain outside this evidence. Both the existing 17-test suite and the 11-test critical suite are included in CI. [Additional results](../evidence/critical-pass-tests.txt).
+
 ## Findings and protocol risks
 
 | ID | Classification | Observation | Applicability to selected AGI |
