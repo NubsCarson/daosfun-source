@@ -44,15 +44,17 @@ The original research files are in a compressed [evidence bundle](daosfun-lab-ev
 SHA-256, as well as the upstream lab commit. The bundle retains the complete
 daos.fun analysis, virtual-XYK analysis, five current-program disassemblies,
 current and reconstructed program binary captures, read-only RPC receipts,
-and local test scripts. It excludes
+local test scripts, and two narrow native Rust behavior models for PumpXYK
+`migrate_v2` and FeeShare payouts. The models are not original on-chain source
+or SBF rebuilds. The bundle excludes
 Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`0b063e05c425c3dc2f538ee3e3bd865b3f21ec4d`, contains **977** scoped
-files (116,444,723 uncompressed bytes), and has archive SHA-256
-`29fb4cbdee80294f370c9cccdea4c253f31561ba24145f6753f53ece64c49df3`.
-All **24** directly linked JSON receipts match bundled member size and
+`ed2357f44d9a25ea1f12783164c0c62d7f4f744b`, contains **991** scoped
+files (116,608,715 uncompressed bytes), and has archive SHA-256
+`d3e2b07d39f06935baee60acd7b25ead430280126361670c3d6ab0126a1b1a11`.
+All **26** directly linked JSON receipts match bundled member size and
 SHA-256. The daos.fun offline gate passed **111** commands; strict full
 behavior remains **0/52**.
 
@@ -66,9 +68,11 @@ A small selection of key JSON receipts is also available directly in
 - [`FOUNDER.md`](FOUNDER.md): exact tested presale-goal model, allocation and
   vesting controls.
 - [`FEE_SHARE.md`](FEE_SHARE.md): `Option<Pubkey>` decoding, fee conservation,
-  and legacy fee-authority CPI.
+  signed payout and legacy fee-authority CPI, plus a bounded native Rust
+  payout model with 96/96 local differential matches.
 - [`PUMP_XYK.md`](PUMP_XYK.md): source-era migration transfer formula and
-  failure rollback.
+  failure rollback, plus a distinct current `migrate_v2` native Rust data
+  model with 72 full-data matches and eight parser-rejection matches.
 - [`VIRTUAL_XYK_AND_TR2_TR3.md`](VIRTUAL_XYK_AND_TR2_TR3.md): swap/liquidity
   and fee-authority controls, current Curve census, and bounded exposure
   checks for the DAO cosigner and redemption findings.

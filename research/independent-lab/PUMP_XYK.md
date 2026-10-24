@@ -35,3 +35,17 @@ atomic rollback in these local routes, not a statement about all migration
 configurations or future upgrades. The current Pump binary and its nine
 entrypoints remain separately pinned from the historical source-era
 reconstruction.
+
+## Native source model of the current `migrate_v2` layout conversion
+
+The bundle now includes `reconstruction/pump-migrate-v2/` as a newly written
+native Rust behavioral model of the **current**
+PumpXYK handler's 203-byte legacy `PumpCurve` to 269-byte `CurveV2` data
+conversion. The [differential receipt](receipts/pump-migrate-v2-rust-differential.json)
+compares the native model with the unmodified current ELF on **72** freshly
+generated, validly signed local inputs: every resulting account-data byte
+matches. Eight malformed-layout parser rejections also agree. The inputs are
+synthetic, not recovered historical legacy accounts. The native crate does
+not model Solana owner, signer, rent, or CPI validation and cannot reproduce
+the full SBF handler or binary. This `migrate_v2` state-layout path is
+distinct from the source-era `migrate_to_daos` reserve transfer above.

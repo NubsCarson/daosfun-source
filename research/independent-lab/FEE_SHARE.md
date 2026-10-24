@@ -36,6 +36,17 @@ authorization branch and 50/100 cap path. The distinct referrer and fee
 accrual are local constructions; no real referrer entitlement, live payout,
 or fund-loss finding follows.
 
+The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
+**native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
+tested creator `redeem(entity=0)` and `collect_platform_fees` accounting
+branches. Its [differential receipt](receipts/fee-share-redeem-rust-differential.json)
+matches **96/96** validly signed local calls against the unmodified current
+FeeShare ELF: 59 successes and 37 expected failures across captured account
+layouts with explicit synthetic creator/referrer keys, ATAs, and positive
+accrual. The model omits Anchor account constraints, vault/ATA checks, SPL
+Token CPI, other entity semantics, and fee accrual. It is not original source,
+an SBF build, byte-identical reconstruction, or a full handler proof.
+
 The tested `redeem` creator cap is `floor(total_fees/2) −
 creator_distributed`. Cap+1 and altered owner/program/account cases reject.
 `collect_platform_fees`, `claim_meteora_fees`, `claim_raydium_fees`, and

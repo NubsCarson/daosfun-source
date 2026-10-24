@@ -26,7 +26,7 @@ import tarfile
 import tempfile
 from pathlib import Path
 
-from verify_bundle import (COMMON_HARNESS, FORMAT, MANIFEST_NAME,
+from verify_bundle import (COMMON_HARNESS, DAOS_SOURCE_MODEL_FILES, FORMAT, MANIFEST_NAME,
                            validate_member_path, verify_archive)
 
 
@@ -37,6 +37,7 @@ SELECTION = {
     "evidence_prefixes": ["daos", "ghidra-daos"],
     "script_globs": ["daos_*.py", "root_virtual_xyk_*.py"],
     "additional_scripts": sorted(EXTRA_DAOS_SCRIPTS),
+    "source_model_files": sorted(DAOS_SOURCE_MODEL_FILES),
 }
 
 
@@ -98,6 +99,11 @@ def select_files(lab_root: Path) -> list[tuple[str, Path]]:
         path = scripts / name
         if not path.exists():
             raise ValueError(f"necessary daos.fun harness missing: {name}")
+        add(path)
+    for relative in SELECTION["source_model_files"]:
+        path = lab_root / relative
+        if not path.is_file():
+            raise ValueError(f"required daos.fun source model file missing: {relative}")
         add(path)
 
     selected = {path.stem for path in paths if path.parent == scripts and path.suffix == ".py"}

@@ -28,6 +28,19 @@ COMMON_HARNESS = frozenset({
     "verify_daos_idls.py",
     "summarize_daos_wrappers.py",
 })
+DAOS_SOURCE_MODEL_FILES = frozenset({
+    "analysis/source_reconstruction/fee-share-redeem-rust-differential.json",
+    "reconstruction/fee-share-redeem/Cargo.lock",
+    "reconstruction/fee-share-redeem/Cargo.toml",
+    "reconstruction/fee-share-redeem/README.md",
+    "reconstruction/fee-share-redeem/src/lib.rs",
+    "reconstruction/fee-share-redeem/src/main.rs",
+    "reconstruction/pump-migrate-v2/Cargo.lock",
+    "reconstruction/pump-migrate-v2/Cargo.toml",
+    "reconstruction/pump-migrate-v2/README.md",
+    "reconstruction/pump-migrate-v2/src/lib.rs",
+    "reconstruction/pump-migrate-v2/src/main.rs",
+})
 HEX_SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 HEX_COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 MAX_MANIFEST_BYTES = 8 * 1024 * 1024
@@ -46,6 +59,8 @@ def validate_member_path(name: str) -> None:
     if any(part in ("", ".", "..") for part in parts):
         raise ValueError(f"unsafe archive path: {name!r}")
     if name == MANIFEST_NAME:
+        return
+    if name in DAOS_SOURCE_MODEL_FILES:
         return
     if len(parts) == 2 and parts[0] == "analysis" and (
         parts[1].startswith("daos_") and parts[1].endswith(".asm")
