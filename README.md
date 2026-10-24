@@ -7,6 +7,9 @@ byte-identical rebuilt binary, reproduction tooling and security findings.
 **This source preserves the original vulnerabilities. It is for recovery,
 comparison and review, not a remediated deployment.**
 
+See the [publication and hosted verification record](docs/DELIVERY.md) for the
+verified source commit, successful clean build, test results and security summary.
+
 ## Binary comparison
 
 | Artifact | Bytes | SHA-256 |

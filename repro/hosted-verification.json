@@ -1,0 +1,112 @@
+{
+  "commit": "9b654c4e94cbb92ac88ac6268431ab780964161c",
+  "run_url": "https://github.com/lalalune/daosfun-source/actions/runs/40084470193",
+  "runner": "ubuntu-24.04",
+  "conclusion": "success",
+  "differential": {
+    "binary": "binaries/dao_v1.deployed.so",
+    "sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "suites": [
+      {
+        "script": "differential.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_bonding_init.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_burn.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_claim_dbc.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_cosign.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_execute.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_finalize.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_init_curve.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_init_redemption.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_initialize.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_legacy_migration.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_sol.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_start_raise.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_tokens.py",
+        "exit_code": 0
+      },
+      {
+        "script": "differential_transfer_nft.py",
+        "exit_code": 0
+      }
+    ],
+    "passed": true,
+    "cases": 410,
+    "matched_cases": 410,
+    "duplicate_rejection_cases": 0
+  },
+  "security": {
+    "original_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "results": [
+      {
+        "test": "audit/poc_finalize_cross_pool.py",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "test": "audit/pocs/poc_second_redemption.py",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "test": "audit/pocs/poc_tr1_expiry.py",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "test": "audit/pocs/poc_tr2_cosigner_signer.py",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "test": "audit/pocs/poc_tr3_delegate_snapshot.py",
+        "passed": true,
+        "exit_code": 0
+      },
+      {
+        "test": "audit/pocs/poc_tr4_token2022_lock.py",
+        "passed": true,
+        "exit_code": 0
+      }
+    ],
+    "passed": true
+  }
+}

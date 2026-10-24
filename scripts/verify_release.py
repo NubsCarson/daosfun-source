@@ -23,15 +23,12 @@ def main():
     manifest = json.loads((ROOT/'repro/source-manifest.json').read_text())
     for row in manifest['files']:
         path = ROOT/row['path']
-        # Registry location is the only packaging change to the frozen workspace.
-        if row['path'] == '.cargo/config.toml':
-            continue
         assert hashlib.sha256(path.read_bytes()).hexdigest() == row['sha256'], row['path']
     for row in json.loads((ROOT/'repro/evidence-manifest.json').read_text())['files']:
         assert hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest() == row['sha256'], row['path']
     print(json.dumps(dict(full_byte_identical=True, elf_byte_identical=True,
                          sha256=EXPECTED, size=len(original), zero_padding=len(original)-extent,
-                         source_files_verified=len(manifest['files'])-1), indent=2))
+                         source_files_verified=len(manifest['files'])), indent=2))
     return 0
 
 

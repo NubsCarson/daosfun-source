@@ -1,0 +1,14 @@
+{
+  "meteora-damm-v2": {
+    "url": "https://github.com/MeteoraAg/damm-v2.git",
+    "commit": "5398b5c7c534de014091132da37c6478cce671a8"
+  },
+  "meteora-dbc": {
+    "url": "https://github.com/MeteoraAg/dynamic-bonding-curve.git",
+    "commit": "91e696eef6a3764157220f6c104f079b7830fc04"
+  },
+  "historical-damm-test-source": {
+    "commit": "e9ffd023db1974d7a91c24e3b1c58916397bf5ae",
+    "note": "Locally built compatibility test dependency; not claimed to be the historical deployed binary."
+  }
+}

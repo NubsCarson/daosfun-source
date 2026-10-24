@@ -1,0 +1,35 @@
+{
+  "validation_date": "2026-10-24",
+  "linux_execution": "x86_64 official toolchain under emulation",
+  "prior_vendor_clean_build": {
+    "elf_byte_identical": true,
+    "full_byte_identical": true,
+    "elf_size": 1041728,
+    "full_size": 1120784,
+    "zero_padding_size": 79056,
+    "elf_sha256": "145716b96a30edc81413a77caea1c06c8aaf6adf3ad65b1576d6b9469f226e07",
+    "full_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "target_initially_absent": true,
+    "toolchain_files_verified": 47
+  },
+  "downloaded_vendor_clean_build": {
+    "elf_byte_identical": true,
+    "full_byte_identical": true,
+    "elf_size": 1041728,
+    "full_size": 1120784,
+    "zero_padding_size": 79056,
+    "elf_sha256": "145716b96a30edc81413a77caea1c06c8aaf6adf3ad65b1576d6b9469f226e07",
+    "full_sha256": "5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d",
+    "target_initially_absent": true,
+    "toolchain_files_verified": 47,
+    "commit": "9b654c4e94cbb92ac88ac6268431ab780964161c",
+    "run_url": "https://github.com/lalalune/daosfun-source/actions/runs/40084472477",
+    "runner": "ubuntu-24.04",
+    "downloaded_artifacts_independently_compared": true,
+    "source_manifest_matches_repository": true
+  },
+  "bootstrap_vendor_files_compared": 12102,
+  "bootstrap_vendor_file_differences": 0,
+  "fresh_toolchain_download_verified_components": 47,
+  "redundant_local_downloaded_vendor_build": "Stopped after successful native hosted reproduction; not counted as a completed local check"
+}

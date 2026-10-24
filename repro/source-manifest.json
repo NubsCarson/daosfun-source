@@ -1,20 +1,19 @@
 {
+  "matches_clean_build_snapshot": true,
+  "origin": "Native Linux clean rebuild of commit 9b654c4e94cbb92ac88ac6268431ab780964161c",
+  "run_url": "https://github.com/lalalune/daosfun-source/actions/runs/40084472477",
   "files": [
     {
-      "path": ".cargo/config.toml",
-      "sha256": "0257610526125ce53f444fa3cd13a7cb5dcee347ae09652dec1c8fe5c422b501"
-    },
-    {
-      "path": "Anchor.toml",
-      "sha256": "b40192aad0cc29f859b171501d9d8d48b800c867f6c5be4d82ebc909d55a33fc"
+      "path": "Cargo.toml",
+      "sha256": "0a3f3ac96523ebd22f3db29a66a398c293ea30705da2d61f9fe9ea37347cb6b7"
     },
     {
       "path": "Cargo.lock",
       "sha256": "af8ce76c9dedcb16a3997ec06e728b8c01b946c38b78d37e8ea453bf1adbbd5e"
     },
     {
-      "path": "Cargo.toml",
-      "sha256": "0a3f3ac96523ebd22f3db29a66a398c293ea30705da2d61f9fe9ea37347cb6b7"
+      "path": "Anchor.toml",
+      "sha256": "b40192aad0cc29f859b171501d9d8d48b800c867f6c5be4d82ebc909d55a33fc"
     },
     {
       "path": "programs/dao-v1/Cargo.toml",
@@ -279,8 +278,10 @@
     {
       "path": "programs/hedgefun_curve/src/state/mod.rs",
       "sha256": "1496274c0a49c0a28ffda2738bf7f8524b329baf75eff21531057fb6a72d108a"
+    },
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "a01b87e607d6f4575906dde605ff16d4a9425389f78230f99f7a5af516637391"
     }
-  ],
-  "packaging_note": "All recovered source files match the exact-build snapshot. Only .cargo/config.toml changes the vendor directory to repo-relative vendor; verify_release.py separately checks 69 unchanged files.",
-  "matches_clean_build_snapshot_except_vendor_config": true
+  ]
 }

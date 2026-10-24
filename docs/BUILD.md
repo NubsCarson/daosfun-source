@@ -72,4 +72,11 @@ Run the **Rebuild exact source** workflow manually through GitHub Actions. It pr
 
 ## Validation record
 
-Two independent empty-cache validation builds are in progress: one from the relocated repository using the prior verified vendor tree, and one using the freshly downloaded, version-suffixed vendor tree. Final results will be recorded before publication. Bootstrap of all 264 crates passed: all 12,102 vendored files matched the prior independently hashed recovery inputs. The build script clears ambient Rust flags and compiler wrappers and explicitly selects the verified compiler.
+Both independent reproduction checks passed on 2026-10-24:
+
+- A clean build from the relocated repository under Linux x86-64 emulation reproduced both exact hashes, using the previously verified vendor tree. Compilation took 5 minutes 19 seconds.
+- A [native Ubuntu 24.04 GitHub Actions build](https://github.com/lalalune/daosfun-source/actions/runs/40084472477) at commit `9b654c4e94cbb92ac88ac6268431ab780964161c` downloaded the official compiler and all pinned crates from scratch, built with an empty target cache, and reproduced both exact hashes. Its downloaded ELF and account-padded binary were independently compared with the repository reference files. Its source manifest matched the repository. See [hosted rebuild evidence](../repro/hosted-rebuild.json).
+
+The separate local build using the freshly downloaded vendor tree was stopped once the native hosted build established that same check; it is not recorded as a completed local build. No further reproduction check remains pending.
+
+Bootstrap of all 264 crates passed: all 12,102 vendored files matched the prior independently hashed recovery inputs. A fresh local download of the official compiler also passed all 47 recorded component checks. The build script clears ambient Rust flags and compiler wrappers and explicitly selects the verified compiler. [The portable validation receipt](../repro/portable-build-verification.json) records these outcomes.
