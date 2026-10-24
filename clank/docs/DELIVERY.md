@@ -15,3 +15,12 @@ Local verification:
 The consolidated [audit](AUDIT.md) distinguishes a low-severity burn-interface inconsistency from conditional custody, integration, governance, quote-asset and compiler risks. No critical/high token exploit was confirmed. Compiler-advisory applicability is not fully resolved, and the external market/router/bridge/governance implementation scope is explicitly limited.
 
 No live transactions, wallet connections, deployment, or remediation were performed. The recovered source intentionally preserves deployed behavior.
+
+## Published source and hosted verification
+
+The source, original artifacts, comparison binaries and audit were published to [lalalune/daosfun-source](https://github.com/lalalune/daosfun-source) in commit [`d8a4dd5d144cc8c5c4bd20ae1a54e66525a50c5e`](https://github.com/lalalune/daosfun-source/commit/d8a4dd5d144cc8c5c4bd20ae1a54e66525a50c5e).
+
+- [Clank clean-build and runtime-test run](https://github.com/lalalune/daosfun-source/actions/runs/40085892678): reconstructs all 17 runtimes from archived sources, checks the full token creation payload, checks package integrity before and after compilation, and executes the original token bytecode locally.
+- [Original Solana regression run](https://github.com/lalalune/daosfun-source/actions/runs/40085892651): passed on the same published source commit.
+
+The links above identify the exact tested source commit. Subsequent documentation-only edits do not change its recovered sources or binary evidence. Consult the linked run's terminal status for hosted completion; the local results above are separate evidence.
