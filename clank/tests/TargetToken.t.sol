@@ -93,4 +93,46 @@ contract TargetTokenTest {
         require(token.balanceOf(curve)+token.balanceOf(ALICE)==SUPPLY,"conservation");
         require(token.totalSupply()==SUPPLY,"supply");
     }
+    function testFuzzDelegatedSpendCannotExceedAllowance(uint96 rawAllowance, uint96 rawSpend) public {
+        uint256 allowed=uint256(rawAllowance)%SUPPLY;
+        uint256 spent=uint256(rawSpend)%SUPPLY;
+        vm.prank(curve);token.approve(ALICE,allowed);
+        vm.prank(ALICE);(bool ok,)=address(token).call(abi.encodeCall(Token.transferFrom,(curve,BOB,spent)));
+        require(ok==(spent<=allowed),"allowance boundary");
+        require(token.allowance(curve,ALICE)==(ok?allowed-spent:allowed),"allowance rollback");
+        require(token.balanceOf(BOB)==(ok?spent:0),"recipient accounting");
+        require(token.totalSupply()==SUPPLY,"supply changed");
+    }
+    function testFuzzSelfTransferPreservesBalance(uint96 rawAmount) public {
+        uint256 amount=uint256(rawAmount)%SUPPLY;
+        vm.prank(curve);token.transfer(curve,amount);
+        require(token.balanceOf(curve)==SUPPLY && token.totalSupply()==SUPPLY,"self transfer changes supply");
+    }
+    function testMaxAllowanceStillRequiresBalance() public {
+        vm.prank(curve);token.approve(ALICE,type(uint256).max);
+        vm.prank(ALICE);(bool ok,)=address(token).call(abi.encodeCall(Token.transferFrom,(curve,BOB,SUPPLY+1)));
+        require(!ok,"overspend accepted");
+        require(token.allowance(curve,ALICE)==type(uint256).max,"failed spend changed allowance");
+        vm.prank(ALICE);token.transferFrom(curve,BOB,1 ether);
+        require(token.allowance(curve,ALICE)==type(uint256).max,"infinite allowance decremented");
+    }
+    function testZeroReceiverRestoresAllowance() public {
+        vm.prank(curve);token.approve(ALICE,1 ether);
+        vm.prank(ALICE);(bool ok,)=address(token).call(abi.encodeCall(Token.transferFrom,(curve,address(0),1 ether)));
+        require(!ok && token.allowance(curve,ALICE)==1 ether,"invalid receiver rollback");
+        require(token.balanceOf(curve)==SUPPLY && token.totalSupply()==SUPPLY,"invalid receiver accounting");
+    }
+    function testFuzzTransferSequenceConservesModel(uint256 seed) public {
+        address[3] memory actors=[curve,ALICE,BOB];
+        uint256[3] memory balances=[SUPPLY,uint256(0),uint256(0)];
+        for(uint256 i=0;i<32;++i){
+            seed=uint256(keccak256(abi.encode(seed,i)));
+            uint256 from=seed%3; uint256 to=(seed>>8)%3;
+            uint256 amount=(seed>>16)%(balances[from]+1);
+            vm.prank(actors[from]);token.transfer(actors[to],amount);
+            balances[from]-=amount;balances[to]+=amount;
+            for(uint256 j=0;j<3;++j)require(token.balanceOf(actors[j])==balances[j],"model mismatch");
+            require(token.totalSupply()==SUPPLY,"sequence changed supply");
+        }
+    }
 }

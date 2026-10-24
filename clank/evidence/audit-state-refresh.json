@@ -1,0 +1,64 @@
+{
+  "block": "0x5c3ac52",
+  "blockHash": "0x8544aa36fb7ae4fd24e8ba8257de59e66f4799fe81bc9621bd279581ac8b24d7",
+  "utc": "2026-10-24T10:52:53+00:00",
+  "codeChecks": [
+    {
+      "name": "target-token",
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "sha256": "190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155",
+      "matchesAuditedCapture": true
+    },
+    {
+      "name": "target-curve",
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "sha256": "aeab07d54092e288ba40023f0edba6c981250e65c4d805845f0102338ba9a860",
+      "matchesAuditedCapture": true
+    },
+    {
+      "name": "target-factory",
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "sha256": "5d8656bf73f4e4dbd656bdc9be353b6db6556acece4936dc5b42d5db9f941bfb",
+      "matchesAuditedCapture": true
+    }
+  ],
+  "calls": [
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "signature": "state()",
+      "args": [],
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "signature": "owner()",
+      "args": [],
+      "result": "0x00000000000000000000000077cb92c232137739452446c5712fb0055a344c3d"
+    },
+    {
+      "address": "0xe3dc0e862c4eff876a1c40b10205844111da6ee7",
+      "signature": "isLocked(address)",
+      "args": [
+        "0xfa31d04462746aaa24bc7e5626403e09e4b106ec"
+      ],
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x58daec3116aae6d93017baaea7749052e8a04fa7",
+      "signature": "ownerOf(uint256)",
+      "args": [
+        "3034864"
+      ],
+      "result": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "address": "0x77cb92c232137739452446c5712fb0055a344c3d",
+      "signature": "getModulesPaginated(address,uint256)",
+      "args": [
+        "0x0000000000000000000000000000000000000001",
+        "100"
+      ],
+      "result": "0x000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

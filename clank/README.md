@@ -43,7 +43,7 @@ python3 clank/scripts/rebuild_target.py
 
 The build uses the exact official Solidity **0.8.26+commit.8a97fa7a** compiler, original source-unit paths, optimizer/IR/EVM settings, and archived dependency source contents. This is an EVM/Solidity project; Anchor is used only for the unrelated Solana reconstruction at the repository root.
 
-The security review confirms no critical or high exploit in the selected token. It records a burn-interface inconsistency and conditional surrounding-protocol risks with explicit applicability limits. Eight local tests pass, including 256 transfer-conservation fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
+The security review confirms no critical or high exploit in the selected token. It records an intentional burn-interface limitation and conditional surrounding-protocol risks with explicit applicability limits. Seventeen local security tests pass, including 4,096 fuzz cases. No deployment, remediation, live trading, or on-chain exploit was performed.
 
 ## Evidence scope
 

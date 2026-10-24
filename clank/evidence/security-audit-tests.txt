@@ -1,0 +1,28 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 125.15ms
+Compiler run successful!
+
+Ran 4 tests for FeeEscrowAudit.t.sol:FeeEscrowAuditTest
+[PASS] testCallerCannotWithdrawAnotherBeneficiaryCredit() (gas: 72066)
+[PASS] testForcedSurplusDoesNotBecomeCredit() (gas: 79191)
+[PASS] testReentryCannotClaimTwice() (gas: 319181)
+[PASS] testRejectingRecipientRestoresCredit() (gas: 159956)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 117.21ms (1.03ms CPU time)
+
+Ran 13 tests for TargetToken.t.sol:TargetTokenTest
+[PASS] testCapturedCreate2AddressMatchesOriginalPayload() (gas: 10545)
+[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81432)
+[PASS] testFuzzDelegatedSpendCannotExceedAllowance(uint96,uint96) (runs: 1024, μ: 60098, ~: 52102)
+[PASS] testFuzzSelfTransferPreservesBalance(uint96) (runs: 1024, μ: 20917, ~: 20917)
+[PASS] testFuzzTransferConservesSupply(uint96) (runs: 1024, μ: 46600, ~: 47088)
+[PASS] testFuzzTransferSequenceConservesModel(uint256) (runs: 1024, μ: 442612, ~: 442651)
+[PASS] testInitialSupplyAndMetadata() (gas: 27744)
+[PASS] testMaxAllowanceStillRequiresBalance() (gas: 76181)
+[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16567)
+[PASS] testOriginalInitcodeProducesExactPastedRuntime() (gas: 12182)
+[PASS] testTransferHasNoTokenLevelTax() (gas: 73023)
+[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25371)
+[PASS] testZeroReceiverRestoresAllowance() (gas: 47059)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 121.98ms (388.39ms CPU time)
+
+Ran 2 test suites in 122.58ms (239.19ms CPU time): 17 tests passed, 0 failed, 0 skipped (17 total tests)

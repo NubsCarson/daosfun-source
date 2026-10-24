@@ -1,16 +1,21 @@
 Compiling 1 files with Solc 0.8.28
-Solc 0.8.28 finished in 234.27ms
+Solc 0.8.28 finished in 176.56ms
 Compiler run successful!
 
-Ran 8 tests for TargetToken.t.sol:TargetTokenTest
-[PASS] testCapturedCreate2AddressMatchesOriginalPayload() (gas: 10522)
-[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81498)
-[PASS] testFuzzTransferConservesSupply(uint96) (runs: 256, μ: 46466, ~: 47087)
-[PASS] testInitialSupplyAndMetadata() (gas: 27721)
-[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16566)
+Ran 13 tests for TargetToken.t.sol:TargetTokenTest
+[PASS] testCapturedCreate2AddressMatchesOriginalPayload() (gas: 10545)
+[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81432)
+[PASS] testFuzzDelegatedSpendCannotExceedAllowance(uint96,uint96) (runs: 1024, μ: 60129, ~: 52102)
+[PASS] testFuzzSelfTransferPreservesBalance(uint96) (runs: 1024, μ: 20917, ~: 20917)
+[PASS] testFuzzTransferConservesSupply(uint96) (runs: 1024, μ: 46445, ~: 47088)
+[PASS] testFuzzTransferSequenceConservesModel(uint256) (runs: 1024, μ: 442531, ~: 442651)
+[PASS] testInitialSupplyAndMetadata() (gas: 27744)
+[PASS] testMaxAllowanceStillRequiresBalance() (gas: 76181)
+[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16567)
 [PASS] testOriginalInitcodeProducesExactPastedRuntime() (gas: 12182)
-[PASS] testTransferHasNoTokenLevelTax() (gas: 72934)
-[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25370)
-Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 7.05ms (7.45ms CPU time)
+[PASS] testTransferHasNoTokenLevelTax() (gas: 73023)
+[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25371)
+[PASS] testZeroReceiverRestoresAllowance() (gas: 47059)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 120.56ms (454.56ms CPU time)
 
-Ran 1 test suite in 16.79ms (7.05ms CPU time): 8 tests passed, 0 failed, 0 skipped (8 total tests)
+Ran 1 test suite in 125.08ms (120.56ms CPU time): 13 tests passed, 0 failed, 0 skipped (13 total tests)

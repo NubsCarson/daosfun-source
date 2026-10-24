@@ -26,4 +26,4 @@ jobs:
         with:
           version: v1.7.1
       - name: Execute supplied original initcode and runtime locally
-        run: forge test --root clank/tests --use 0.8.26 -vv
+        run: forge test --root clank/tests --use 0.8.26 --fuzz-runs 1024 -vv
