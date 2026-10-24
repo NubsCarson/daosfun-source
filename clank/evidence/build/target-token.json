@@ -1,0 +1,63 @@
+{
+  "contract": "contracts/ClankLauncherToken.sol:ClankLauncherToken",
+  "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+  "chainId": 4663,
+  "block": "0x5c3696a",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "12c900ac7daaca988afb57d21a99ab1815b996fd4ff67df5ce6ee38ea8ac3984",
+  "runtimeBytes": 3139,
+  "capturedSha256": "190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155",
+  "rebuiltSha256": "190f2abee01041531efc2c2618d8f7f1b1ae8ba9bb183e42f786982b4e4bf155",
+  "rawCompilerSha256": "38cccd35349e58c8a25b4f66ddf13e9ded53f84de4ef6076b1c890ee2815f11d",
+  "byteIdentical": true,
+  "immutablePatches": [
+    {
+      "id": "8756",
+      "variable": "deployer",
+      "start": 379,
+      "length": 32,
+      "value": "0x000000000000000000000000e96be7b1fadedd2c4b6e151605423f5785ec66ba",
+      "origin": "constructor argument",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "8756",
+      "variable": "deployer",
+      "start": 529,
+      "length": 32,
+      "value": "0x000000000000000000000000e96be7b1fadedd2c4b6e151605423f5785ec66ba",
+      "origin": "constructor argument",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "8758",
+      "variable": "launchFactory",
+      "start": 1352,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "constructor argument",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "8760",
+      "variable": "curve",
+      "start": 1089,
+      "length": 32,
+      "value": "0x000000000000000000000000a042794f670cfe57209438cbe63dbdf4424b6dff",
+      "origin": "constructor argument",
+      "capturedGetterMatches": true
+    }
+  ],
+  "creation": {
+    "compiledInitcodeBytes": 7066,
+    "constructorArgumentsBytes": 992,
+    "completeCreationBytes": 8058,
+    "completeCreationSha256": "026c3bab7fa6a9fb3402af9874870114e9731fddee906289e08371e9cf9be577",
+    "compiledInitcodeSha256": "736d3eea0979894656016000d987aa6aadc5b6f24a483c106d5b8c912e202604",
+    "constructorArgumentsSha256": "80a3a7ad1069bcd5db1f71f7ffcd0e598a8d9cc33f00894a4965b848c2576208",
+    "byteIdentical": true,
+    "scope": "Locally compiled initcode plus the original ABI constructor argument suffix; token immutable addresses are decoded from this suffix and checked against captured getters."
+  },
+  "scope": "Complete runtime equality including metadata. Only compiler-declared immutable sites populated. Curve values are extracted from capture; available public getters corroborate those values. No constructor execution is claimed by this script."
+}

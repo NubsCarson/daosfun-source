@@ -1,0 +1,18 @@
+[
+  {
+    "name": "factory",
+    "address": "0x798daAa0707C1e538bB5Acf0867Ac0e1A84cccF2",
+    "bytes": 23095,
+    "sha256": "c3c622e4673f8f1598a3bc69b11e87d4188d0f9480bb86dedb792bf42fb145f8",
+    "solc_version": "0.8.26",
+    "metadata_cid": "QmTvEzKfFMSDYU9tLPV1CW5A97mLnjnwHXHjy4wsDaAfdn"
+  },
+  {
+    "name": "eth-router",
+    "address": "0xb4a4315abbbf9fcC71a6e48D604310D7A36A6378",
+    "bytes": 6893,
+    "sha256": "88837503c4a18e50a466cc2c9455a8f5a2f3471f5a246a3c22c273ac33de7d43",
+    "solc_version": "0.8.26",
+    "metadata_cid": "QmY2e59Y9nnvPXrDMoW2cm9bkzLrs2wkLKvTYzUvELTR8R"
+  }
+]

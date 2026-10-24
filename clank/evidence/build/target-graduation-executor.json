@@ -1,0 +1,270 @@
+{
+  "contract": "contracts/ClankGraduationExecutor.sol:ClankGraduationExecutor",
+  "address": "0xbAB7DbD758C8de7A28e315D3A88D68Bb671acd3f",
+  "chainId": "4663",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "862a33b4985f9bdfcd998577ddaf33b8c9c9ac271f9e79ab6f23965d1ec42d70",
+  "runtimeBytes": 9195,
+  "capturedSha256": "6124909bf743016481110e1b5a93c94113691150aa01a2bb01effb99a7bd544d",
+  "rebuiltSha256": "6124909bf743016481110e1b5a93c94113691150aa01a2bb01effb99a7bd544d",
+  "rawCompilerSha256": "879c9c6a57032d82698eda6e3cd2894aaac0f75a396d37075044ec23717f00e9",
+  "byteIdentical": true,
+  "rawCompilerEqualsSourcify": true,
+  "rpcEqualsSourcify": true,
+  "immutablePatches": [
+    {
+      "id": "499",
+      "start": 474,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "499",
+      "start": 957,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "503",
+      "start": 254,
+      "length": 32,
+      "value": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "id": "503",
+      "start": 1486,
+      "length": 32,
+      "value": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "id": "507",
+      "start": 29,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 609,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 1206,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 1915,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 2088,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 2788,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 2892,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 2979,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 3176,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 4933,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "507",
+      "start": 5712,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "511",
+      "start": 1776,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 1831,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 2006,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 3091,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 3241,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 3304,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 4851,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 4998,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 5057,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 5582,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 5630,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 5797,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "511",
+      "start": 6902,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "515",
+      "start": 1381,
+      "length": 32,
+      "value": "0x000000000000000000000000d405e0dff2d0cc7eaa48b3aec2e3f2456c072000"
+    },
+    {
+      "id": "515",
+      "start": 6967,
+      "length": 32,
+      "value": "0x000000000000000000000000d405e0dff2d0cc7eaa48b3aec2e3f2456c072000"
+    },
+    {
+      "id": "518",
+      "start": 332,
+      "length": 32,
+      "value": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "id": "518",
+      "start": 2507,
+      "length": 32,
+      "value": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "id": "518",
+      "start": 3049,
+      "length": 32,
+      "value": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "id": "518",
+      "start": 4463,
+      "length": 32,
+      "value": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "id": "522",
+      "start": 403,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6"
+    },
+    {
+      "id": "522",
+      "start": 3961,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6"
+    },
+    {
+      "id": "522",
+      "start": 4207,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6"
+    },
+    {
+      "id": "522",
+      "start": 6599,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6"
+    },
+    {
+      "id": "525",
+      "start": 680,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "525",
+      "start": 4024,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "525",
+      "start": 4269,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "525",
+      "start": 6673,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    }
+  ],
+  "scope": "Runtime bytes only; deployment-specific immutables supplied by the published verification record and checked against RPC bytes. No other substitutions, metadata removal, or ignored ranges."
+}

@@ -1,0 +1,29 @@
+name: Verify Clank recovery
+on:
+  push:
+    paths: ['clank/**', '.github/workflows/clank.yml']
+  pull_request:
+    paths: ['clank/**', '.github/workflows/clank.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 clank/scripts/verify_package.py
+      - run: python3 clank/scripts/rebuild_target.py
+      - run: python3 clank/scripts/rebuild.py target-factory target-fee-escrow target-locker target-graduation-executor target-graduation-guard target-initialization-hook target-launch-deployer target-launch-forwarder factory fee-escrow locker graduation-executor graduation-guard initialization-hook launch-deployer
+      - run: python3 clank/scripts/verify_package.py
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.7.1
+      - name: Execute supplied original initcode and runtime locally
+        run: forge test --root clank/tests --use 0.8.26 -vv

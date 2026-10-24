@@ -1,0 +1,169 @@
+{
+  "chainId": 4663,
+  "block": "0x5c3696a",
+  "token": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+  "factory": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+  "curve": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+  "calls": [
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "name()",
+      "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000224172746966696369616c204769726c667269656e6420496e74656c6c6967656e6365000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "symbol()",
+      "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000034147490000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "totalSupply()",
+      "result": "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000"
+    },
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "deployer()",
+      "result": "0x000000000000000000000000e96be7b1fadedd2c4b6e151605423f5785ec66ba"
+    },
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "launchFactory()",
+      "result": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "address": "0xfa31d04462746aaa24bc7e5626403e09e4b106ec",
+      "function": "curve()",
+      "result": "0x000000000000000000000000a042794f670cfe57209438cbe63dbdf4424b6dff"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "owner()",
+      "result": "0x00000000000000000000000077cb92c232137739452446c5712fb0055a344c3d"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "pendingOwner()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "pairTokenAuthority()",
+      "result": "0x00000000000000000000000077cb92c232137739452446c5712fb0055a344c3d"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "launchDeployer()",
+      "result": "0x0000000000000000000000005748de42dd639919550523d7ffd52589f02727bf"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "launchForwarder()",
+      "result": "0x0000000000000000000000008489456eee74e44333c6bce7b1c29b5277d36831"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "feeEscrow()",
+      "result": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "locker()",
+      "result": "0x000000000000000000000000e3dc0e862c4eff876a1c40b10205844111da6ee7"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "graduationExecutor()",
+      "result": "0x000000000000000000000000bab7dbd758c8de7a28e315d3a88d68bb671acd3f"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "graduationGuard()",
+      "result": "0x0000000000000000000000008986b9bba4601df78f5fc2d5db9beeffec779d35"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "initializationHook()",
+      "result": "0x000000000000000000000000d405e0dff2d0cc7eaa48b3aec2e3f2456c072000"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "poolManager()",
+      "result": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "positionManager()",
+      "result": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "permit2()",
+      "result": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "feeDestination()",
+      "result": "0x00000000000000000000000077cb92c232137739452446c5712fb0055a344c3d"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "snipeTaxStartBps()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xb45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "function": "snipeTaxSeconds()",
+      "result": "0x000000000000000000000000000000000000000000000000000000000000000f"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "state()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "pairToken()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "factory()",
+      "result": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "token()",
+      "result": "0x000000000000000000000000fa31d04462746aaa24bc7e5626403e09e4b106ec"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "feeBps()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000064"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "launchedAt()",
+      "result": "0x000000000000000000000000000000000000000000000000000000006aaa2104"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "snipeTaxStartBps()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "snipeTaxSeconds()",
+      "result": "0x000000000000000000000000000000000000000000000000000000000000000f"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "realQuoteReserve()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+      "function": "realTokenReserve()",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

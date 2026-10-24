@@ -7,3 +7,7 @@ __pycache__/
 vendor/
 target/
 evidence/differential*.json*
+
+# Downloaded web bundles are discovery inputs, not recovered contract source.
+clank/evidence/web/*.js
+clank/evidence/web/index.html

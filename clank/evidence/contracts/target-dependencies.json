@@ -1,0 +1,68 @@
+{
+  "block": "0x5c3696a",
+  "contracts": [
+    {
+      "name": "target-fee-escrow",
+      "address": "0x013aa3485dcbbf60a72129e64b16d6290f4905b6",
+      "runtimeBytes": 1969,
+      "runtimeSha256": "ecfda94a9a6445f932bdc2774f689c676be80a6fb4d5f490c0b07ddb54d27ac2",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0x013aa3485dcbbf60a72129e64b16d6290f4905b6?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-locker",
+      "address": "0xe3dc0e862c4eff876a1c40b10205844111da6ee7",
+      "runtimeBytes": 2570,
+      "runtimeSha256": "11573ee99f172b6112827b08850b40c5218e4205b06a04603c96f571c11204d0",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0xe3dc0e862c4eff876a1c40b10205844111da6ee7?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-graduation-executor",
+      "address": "0xbab7dbd758c8de7a28e315d3a88d68bb671acd3f",
+      "runtimeBytes": 9195,
+      "runtimeSha256": "6124909bf743016481110e1b5a93c94113691150aa01a2bb01effb99a7bd544d",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0xbab7dbd758c8de7a28e315d3a88d68bb671acd3f?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-graduation-guard",
+      "address": "0x8986b9bba4601df78f5fc2d5db9beeffec779d35",
+      "runtimeBytes": 3086,
+      "runtimeSha256": "3f44dbebfd8f43951aad4b438adc331ba5347f7bd6a7c235f065ea85d890bdb6",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0x8986b9bba4601df78f5fc2d5db9beeffec779d35?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-initialization-hook",
+      "address": "0xd405e0dff2d0cc7eaa48b3aec2e3f2456c072000",
+      "runtimeBytes": 1438,
+      "runtimeSha256": "51be7d04e8cf575afb0a26e029edd6059705ef9df24ac40c77c84c95515dc178",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0xd405e0dff2d0cc7eaa48b3aec2e3f2456c072000?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-launch-deployer",
+      "address": "0x5748de42dd639919550523d7ffd52589f02727bf",
+      "runtimeBytes": 19483,
+      "runtimeSha256": "0eeb9abfd979356ab80411eb9bec108c8cfff89879a8495b2fc58cb490ee45a2",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0x5748de42dd639919550523d7ffd52589f02727bf?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    },
+    {
+      "name": "target-launch-forwarder",
+      "address": "0x8489456eee74e44333c6bce7b1c29b5277d36831",
+      "runtimeBytes": 3574,
+      "runtimeSha256": "d30325110a0ddc34d427ec5b598831165a04ef9ebea2edf41d08ea29db6b5146",
+      "sourceStatus": "retrieved",
+      "sourcifyUrl": "https://sourcify.dev/server/v2/contract/4663/0x8489456eee74e44333c6bce7b1c29b5277d36831?fields=all",
+      "sourcifyMatchesPinnedCode": true
+    }
+  ]
+}

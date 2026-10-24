@@ -1,0 +1,36 @@
+{
+  "contract": "contracts/ClankLaunchDeployer.sol:ClankLaunchDeployer",
+  "address": "0x5748De42DD639919550523D7fFD52589F02727BF",
+  "chainId": "4663",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "b59f5474615eb34eea093b0ea835123590bd57af7b9c7402371f349b214ae3e6",
+  "runtimeBytes": 19483,
+  "capturedSha256": "0eeb9abfd979356ab80411eb9bec108c8cfff89879a8495b2fc58cb490ee45a2",
+  "rebuiltSha256": "0eeb9abfd979356ab80411eb9bec108c8cfff89879a8495b2fc58cb490ee45a2",
+  "rawCompilerSha256": "dc05404ea6935afa038355070167b99033c02ba3ee7daa05cf37ac7f0b87b436",
+  "byteIdentical": true,
+  "rawCompilerEqualsSourcify": true,
+  "rpcEqualsSourcify": true,
+  "immutablePatches": [
+    {
+      "id": "2602",
+      "start": 101,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "2602",
+      "start": 206,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "2602",
+      "start": 1925,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    }
+  ],
+  "scope": "Runtime bytes only; deployment-specific immutables supplied by the published verification record and checked against RPC bytes. No other substitutions, metadata removal, or ignored ranges."
+}

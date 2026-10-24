@@ -1,0 +1,15 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 128.06ms
+Compiler run successful!
+
+Ran 7 tests for TargetToken.t.sol:TargetTokenTest
+[PASS] testFixedSupplyRejectsEvenAuthorizedBurn() (gas: 81476)
+[PASS] testFuzzTransferConservesSupply(uint96) (runs: 256, μ: 46621, ~: 47065)
+[PASS] testInitialSupplyAndMetadata() (gas: 27699)
+[PASS] testNoMintOrUpgradeSelectorAvailableToDeployer() (gas: 16544)
+[PASS] testOriginalInitcodeProducesExactPastedRuntime() (gas: 12160)
+[PASS] testTransferHasNoTokenLevelTax() (gas: 73001)
+[PASS] testUnauthorizedTransferAndBurnFail() (gas: 25348)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 4.26ms (4.80ms CPU time)
+
+Ran 1 test suite in 4.63ms (4.26ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)

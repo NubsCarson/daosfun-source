@@ -1,0 +1,7 @@
+[profile.default]
+src = "src"
+test = "."
+out = "../.build/test-out"
+cache_path = "../.build/test-cache"
+evm_version = "cancun"
+fs_permissions = [{ access = "read", path = "../evidence/contracts" }]

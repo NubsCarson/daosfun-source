@@ -1,0 +1,17 @@
+[
+  {
+    "case": "runtime-byte-change",
+    "rejected": true,
+    "reason": "Captured RPC runtime differs from Sourcify on-chain runtime"
+  },
+  {
+    "case": "compiled-byte-change",
+    "rejected": true,
+    "reason": "Local raw runtime differs from Sourcify recompiled runtime"
+  },
+  {
+    "case": "undeclared-immutable",
+    "rejected": true,
+    "reason": "Missing or extra deployment immutable values"
+  }
+]

@@ -1,0 +1,378 @@
+{
+  "contract": "contracts/ClankBondingCurve.sol:ClankBondingCurve",
+  "address": "0xa042794f670cfe57209438cbe63dbdf4424b6dff",
+  "chainId": 4663,
+  "block": "0x5c3696a",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "ab3cf654fdb9852c59f756f956c47cf4645cb953663f6f20aaa7add614662ce4",
+  "runtimeBytes": 8639,
+  "capturedSha256": "aeab07d54092e288ba40023f0edba6c981250e65c4d805845f0102338ba9a860",
+  "rebuiltSha256": "aeab07d54092e288ba40023f0edba6c981250e65c4d805845f0102338ba9a860",
+  "rawCompilerSha256": "7c612c83884c268ab0aa9e3b9463c5e503fd4f95017d2033893e7eefaf7c6227",
+  "byteIdentical": true,
+  "immutablePatches": [
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 483,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 1806,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 2250,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 2461,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 3542,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 4312,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "134",
+      "variable": "factory",
+      "start": 4482,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "138",
+      "variable": "feeEscrow",
+      "start": 2181,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "138",
+      "variable": "feeEscrow",
+      "start": 7650,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "138",
+      "variable": "feeEscrow",
+      "start": 7834,
+      "length": 32,
+      "value": "0x000000000000000000000000013aa3485dcbbf60a72129e64b16d6290f4905b6",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "141",
+      "variable": "protocolFeeRecipient",
+      "start": 2911,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "141",
+      "variable": "protocolFeeRecipient",
+      "start": 7712,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "141",
+      "variable": "protocolFeeRecipient",
+      "start": 7914,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "144",
+      "variable": "creator",
+      "start": 4815,
+      "length": 32,
+      "value": "0x000000000000000000000000e96be7b1fadedd2c4b6e151605423f5785ec66ba",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 1031,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 3161,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 4200,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 6626,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 6957,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 7215,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "147",
+      "variable": "pairToken",
+      "start": 7602,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "150",
+      "variable": "feeBps",
+      "start": 4662,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000064",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "150",
+      "variable": "feeBps",
+      "start": 5022,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000064",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "150",
+      "variable": "feeBps",
+      "start": 5419,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000064",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "150",
+      "variable": "feeBps",
+      "start": 6139,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000064",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "153",
+      "variable": "snipeTaxStartBps",
+      "start": 4056,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "153",
+      "variable": "snipeTaxStartBps",
+      "start": 5058,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "156",
+      "variable": "snipeTaxSeconds",
+      "start": 2853,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000000000000000000000000000000000f",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "156",
+      "variable": "snipeTaxSeconds",
+      "start": 5167,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000000000000000000000000000000000f",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "159",
+      "variable": "launchedAt",
+      "start": 2376,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000000000000000000000000006aaa2104",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "159",
+      "variable": "launchedAt",
+      "start": 5122,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000000000000000000000000006aaa2104",
+      "origin": "captured runtime",
+      "capturedGetterMatches": true
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 1743,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 2729,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 4721,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 5521,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 6015,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "162",
+      "variable": "phantomQuote",
+      "start": 6791,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000017508f1956a80000",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "165",
+      "variable": "graduationThreshold",
+      "start": 2789,
+      "length": 32,
+      "value": "0x0000000000000000000000000000000000000000000000003b58b211f3da2e8b",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "168",
+      "variable": "_graduationGuard",
+      "start": 7081,
+      "length": 32,
+      "value": "0x0000000000000000000000008986b9bba4601df78f5fc2d5db9beeffec779d35",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    },
+    {
+      "id": "170",
+      "variable": "_tickSpacing",
+      "start": 6997,
+      "length": 32,
+      "value": "0x00000000000000000000000000000000000000000000000000000000000000c8",
+      "origin": "captured runtime",
+      "capturedGetterMatches": false
+    }
+  ],
+  "creation": null,
+  "scope": "Complete runtime equality including metadata. Only compiler-declared immutable sites populated. Curve values are extracted from capture; available public getters corroborate those values. No constructor execution is claimed by this script."
+}

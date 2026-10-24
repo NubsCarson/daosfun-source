@@ -1,0 +1,168 @@
+{
+  "contract": "contracts/ClankLaunchFactory.sol:ClankLaunchFactory",
+  "address": "0x798daAa0707C1e538bB5Acf0867Ac0e1A84cccF2",
+  "chainId": "4663",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "f224b1a26fe4b8e1ac5ffb9f5a3cbd095b8d39890301068ceb1dc3e8a3b15b45",
+  "runtimeBytes": 23095,
+  "capturedSha256": "c3c622e4673f8f1598a3bc69b11e87d4188d0f9480bb86dedb792bf42fb145f8",
+  "rebuiltSha256": "c3c622e4673f8f1598a3bc69b11e87d4188d0f9480bb86dedb792bf42fb145f8",
+  "rawCompilerSha256": "6b65aef2be3a5f8efe111c28d1e9d712ea11b3c1df988cd7c12daba7affb1c70",
+  "byteIdentical": true,
+  "rawCompilerEqualsSourcify": true,
+  "rpcEqualsSourcify": true,
+  "immutablePatches": [
+    {
+      "id": "4575",
+      "start": 2084,
+      "length": 32,
+      "value": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "id": "4575",
+      "start": 11395,
+      "length": 32,
+      "value": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "id": "4575",
+      "start": 13717,
+      "length": 32,
+      "value": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+    },
+    {
+      "id": "4578",
+      "start": 5889,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "4578",
+      "start": 11477,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "4581",
+      "start": 8464,
+      "length": 32,
+      "value": "0x000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    {
+      "id": "4585",
+      "start": 6256,
+      "length": 32,
+      "value": "0x00000000000000000000000018bff70216af1b93f3552016dec742c5d78ee000"
+    },
+    {
+      "id": "4585",
+      "start": 9788,
+      "length": 32,
+      "value": "0x00000000000000000000000018bff70216af1b93f3552016dec742c5d78ee000"
+    },
+    {
+      "id": "4585",
+      "start": 13496,
+      "length": 32,
+      "value": "0x00000000000000000000000018bff70216af1b93f3552016dec742c5d78ee000"
+    },
+    {
+      "id": "4585",
+      "start": 20619,
+      "length": 32,
+      "value": "0x00000000000000000000000018bff70216af1b93f3552016dec742c5d78ee000"
+    },
+    {
+      "id": "4589",
+      "start": 2706,
+      "length": 32,
+      "value": "0x00000000000000000000000012991cb3fda9b3bfd6d4b897e8c5233439b3429b"
+    },
+    {
+      "id": "4589",
+      "start": 4094,
+      "length": 32,
+      "value": "0x00000000000000000000000012991cb3fda9b3bfd6d4b897e8c5233439b3429b"
+    },
+    {
+      "id": "4589",
+      "start": 4334,
+      "length": 32,
+      "value": "0x00000000000000000000000012991cb3fda9b3bfd6d4b897e8c5233439b3429b"
+    },
+    {
+      "id": "4589",
+      "start": 22691,
+      "length": 32,
+      "value": "0x00000000000000000000000012991cb3fda9b3bfd6d4b897e8c5233439b3429b"
+    },
+    {
+      "id": "4593",
+      "start": 2210,
+      "length": 32,
+      "value": "0x00000000000000000000000059a53910a01ad3fe08783bf99a06c1134046ef48"
+    },
+    {
+      "id": "4593",
+      "start": 14048,
+      "length": 32,
+      "value": "0x00000000000000000000000059a53910a01ad3fe08783bf99a06c1134046ef48"
+    },
+    {
+      "id": "4597",
+      "start": 2633,
+      "length": 32,
+      "value": "0x00000000000000000000000006091f715e710d19bce4b633536a1e0dd391419d"
+    },
+    {
+      "id": "4597",
+      "start": 13775,
+      "length": 32,
+      "value": "0x00000000000000000000000006091f715e710d19bce4b633536a1e0dd391419d"
+    },
+    {
+      "id": "4611",
+      "start": 6747,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 9122,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 12832,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 13567,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 15121,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 17494,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    },
+    {
+      "id": "4611",
+      "start": 22822,
+      "length": 32,
+      "value": "0x0000000000000000000000005c8dc63bdada83fbebc5b29678988d462bf72363"
+    }
+  ],
+  "scope": "Runtime bytes only; deployment-specific immutables supplied by the published verification record and checked against RPC bytes. No other substitutions, metadata removal, or ignored ranges."
+}

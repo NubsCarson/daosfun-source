@@ -67,3 +67,13 @@ python scripts/test_variant.py binaries/dao_v1.deployed.so .build/differential
 The differential output directory must be new. Tests use local LiteSVM only;
 no mainnet transactions are required. See [SECURITY.md](SECURITY.md) for reporting
 additional findings without posting sensitive live-exploitation details publicly.
+
+## Clank / AGI on Robinhood Chain
+
+The separate [Clank recovery](clank/README.md) covers AGI token
+`0xfa31d04462746aaa24bc7e5626403e09e4b106ec` on Robinhood Chain (4663), its
+historical factory and surrounding contracts. Its Solidity source reproduces
+both the supplied creation payload and deployed runtime byte for byte. It is a
+different program from this repository's Solana DAO, and its historical factory
+also differs from the current Clank website factory. See the
+[Clank security review](clank/docs/AUDIT.md) and [build proof](clank/docs/BUILD.md).

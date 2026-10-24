@@ -1,0 +1,60 @@
+{
+  "contract": "contracts/ClankLaunchLocker.sol:ClankLaunchLocker",
+  "address": "0xE3dc0E862c4eFf876A1c40b10205844111da6Ee7",
+  "chainId": "4663",
+  "compilerVersion": "0.8.26+commit.8a97fa7a.Emscripten.clang",
+  "compilerSha256": "db85e5396f523cc1a53c4c4d742e204f6dcba1a05842623d73be946809e11cd6",
+  "inputSha256": "6018e1e94e5695fda55f747a0f6b76a8d16de2552dee5e8726e330e080813b58",
+  "runtimeBytes": 2570,
+  "capturedSha256": "11573ee99f172b6112827b08850b40c5218e4205b06a04603c96f571c11204d0",
+  "rebuiltSha256": "11573ee99f172b6112827b08850b40c5218e4205b06a04603c96f571c11204d0",
+  "rawCompilerSha256": "d5276309ac114cfdf6774d746389f41988652523a0b7530d977e718b6794c418",
+  "byteIdentical": true,
+  "rawCompilerEqualsSourcify": true,
+  "rpcEqualsSourcify": true,
+  "immutablePatches": [
+    {
+      "id": "47",
+      "start": 209,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "47",
+      "start": 380,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "47",
+      "start": 1468,
+      "length": 32,
+      "value": "0x000000000000000000000000b45beb38f21be1d29e6b9c6e9dc4222d1c12f1f1"
+    },
+    {
+      "id": "50",
+      "start": 805,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "50",
+      "start": 1325,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "50",
+      "start": 1592,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    },
+    {
+      "id": "50",
+      "start": 2063,
+      "length": 32,
+      "value": "0x00000000000000000000000058daec3116aae6d93017baaea7749052e8a04fa7"
+    }
+  ],
+  "scope": "Runtime bytes only; deployment-specific immutables supplied by the published verification record and checked against RPC bytes. No other substitutions, metadata removal, or ignored ranges."
+}
