@@ -42,16 +42,18 @@ Raydium Lock fee claim also matches 31/31 cases and 25 tracked account
 post-states. The positive DBC fee accrual is a synthetic local fixture;
 `sell_token` now matches 32/32 signed local claim-to-sell cases with a
 synthetic local creator substitution. All nine selectors have non-stub
-candidate bodies; six have fresh direct target/candidate comparisons, while
-the three Shaw-derived setup handlers do not. No handler has a full behavior
+candidate bodies and fresh local comparisons. The 49 setup cases include 37
+validly signed calls and 12 explicitly unsigned fixed-operator simulations.
+No handler has a full behavior
 proof.
 The other three standalone candidates expose their listed selectors but
 leave most or all on-chain bodies incomplete. Their source and non-secret
 receipts are in the four explicitly selected `reconstruction/*-candidate/`
 archive trees. **Do not deploy them as replacements.**
-Founder now has one bounded `start_presale` path with 162/162 signed local
-target/candidate matches; five Founder bodies remain incomplete and its
-375,040-byte candidate differs from the 574,360-byte deployed capture.
+Founder now has bounded `start_presale` and `start_curve` paths with 162/162
+and 66/66 signed local target/candidate matches. Five positive curve cases
+need synthetic presale finalization; four Founder bodies remain incomplete.
+Its 389,376-byte candidate differs from the 574,360-byte deployed capture.
 Our [FeeShare payout Rust slice](FEE_SHARE.md)
 models only two accounting branches and omits Anchor account validation and
 SPL Token CPI failures. The [Founder](FOUNDER.md)

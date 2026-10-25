@@ -52,13 +52,17 @@ original source nor an SBF build and omits negative-slope, decimal overflow,
 account validation, downstream CPI errors, and other handler branches.
 
 The separate incomplete [Founder Anchor/SBF candidate](receipts/daos-full-candidate-status.json)
-now implements one bounded `start_presale` body. Its [162-case signed offline
+now implements bounded `start_presale` and `start_curve` bodies. Its [162-case signed offline
 target/candidate differential](receipts/start-presale-differential.json)
 matches every tested outcome and watched post-state across two local layouts:
 142 successes and 20 failures, including 120 independent quote holdouts.
 Fresh local Init creates State and vaults before the test; the Fundraise CPI
-uses the pinned external ELF. The other five Founder handler bodies remain
-incomplete. Its 375,040-byte candidate differs from the 574,360-byte deployed
+uses the pinned external ELF. A separate [66-case signed `start_curve`
+differential](receipts/start-curve-differential.json) matches target/candidate
+outcomes, exact Pump Init CPI data and watched post-states: 50 successes and
+16 failures. Five positive presale-curve cases require synthetic Fundraise
+finalization and funding. The other four Founder handler bodies remain
+incomplete. Its 389,376-byte candidate differs from the 574,360-byte deployed
 capture. These cases do not prove full handler behavior or original source.
 
 `claim_team_allo` moves `3e15` raw DAO-token units to a vest schedule ATA

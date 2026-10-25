@@ -53,8 +53,9 @@ CP 28/28, nested DAO v1/DBC 22/22, and payout 27/27 target-versus-candidate
 cases, with synthetic local positive DBC accrual. The Raydium claim uses a
 later captured pool; `sell_token` now matches 32/32 signed local claim-to-sell
 cases with a synthetic creator substitution. All nine FeeShare handlers have
-candidate bodies; six have fresh direct target/candidate comparisons, while
-the three Shaw-derived setup handlers still need them. None is fully reversed.
+candidate bodies and fresh local comparisons. The [49 setup cases](receipts/daos-fee-share-setup-candidate-differential.json)
+include 37 validly signed calls and 12 explicitly unsigned fixed-operator
+simulations; no signed positive operator case is claimed. None is fully reversed.
 Neither those SBF
 candidates nor the native Rust behavior slices match a deployed whole-program
 binary. The
@@ -65,9 +66,11 @@ none of the four has a source-built byte match. The
 [FeeShare v1.41 compiler-format probe](receipts/daos-fee-share-v141-toolchain-probe.json)
 is a toolchain hypothesis, not an exact FeeShare rebuild.
 
-The incomplete Founder candidate now has a bounded `start_presale` body with
-[162/162 signed offline target/candidate matches](receipts/start-presale-differential.json)
-across two local layouts. Five other Founder handler bodies remain incomplete;
+The incomplete Founder candidate now has bounded `start_presale` and
+`start_curve` bodies with [162/162 signed presale matches](receipts/start-presale-differential.json)
+and [66/66 signed curve matches](receipts/start-curve-differential.json).
+Five positive curve cases use synthetic presale finalization and funding.
+Four other Founder handler bodies remain incomplete;
 the candidate does not match the deployed ELF.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
@@ -86,10 +89,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`3bfeecb2990a01ffd5aea2e957b1b210db20a05f`, contains **1,147** scoped
-files (120,560,963 uncompressed bytes), and has archive SHA-256
-`1cff52f546a0ca68bf6b428cc39c8db0c41932f9c61bffb45cd4e203451cf0e4`.
-All **79** direct JSON receipts match bundled member size and
+`e0a2d5d513703e11da83fc61e4c7a44cca8da57d`, contains **1,151** scoped
+files (121,336,076 uncompressed bytes), and has archive SHA-256
+`c555c1d5730af2aad219b924d8799676953382a2f15481cc26ca5db1ee5dc024`.
+All **81** direct JSON receipts match bundled member size and
 SHA-256. The prior daos.fun offline gate's saved receipt records **113**
 commands; the refreshed FeeShare four-candidate integrity gate passes
 separately. Strict full behavior remains **0/52**.

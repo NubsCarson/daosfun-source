@@ -11,6 +11,9 @@
       "signed_raydium_cpi_cases_matched": 31,
       "raydium_positive_fee_fixture_captured_later_state": true,
       "signed_sell_cases_matched": 32,
+      "setup_cases_matched": 49,
+      "setup_signed_cases_matched": 37,
+      "setup_unsigned_operator_simulations_matched": 12,
       "sell_creator_substitution_synthetic": true,
       "external_cpi_handlers_stubbed": 0,
       "complete_handlers": 0,
@@ -19,10 +22,11 @@
     },
     "founder_dao": {
       "deployed_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
-      "candidate_sha256": "c77c8ec4caa1e890b4153a348e9b09a0742683627b9ab6d1b85439d560d57681",
+      "candidate_sha256": "48ba0b1bb3a068fa72ccc4ae30ec239c2876f8b7dfc881a84a4b3bde3215dfdf",
       "selectors_verified": 6,
       "signed_start_presale_cases_matched": 162,
-      "bounded_candidate_handlers": 1,
+      "signed_start_curve_cases_matched": 66,
+      "bounded_candidate_handlers": 2,
       "complete_handlers": 0,
       "whole_file_equal": false
     },

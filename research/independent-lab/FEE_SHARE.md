@@ -95,9 +95,13 @@ also match. A synthetic local creator substitution enables signed positive
 tests; separate unsigned local authority simulations are **not** counted
 among the 32 signed cases. Raydium **31/31**, DBC **22/22**, CP **28/28**, and
 payout **27/27** regressions pass on this final candidate. All nine declared
-handlers have source bodies; six have fresh direct target/candidate comparisons.
-The Shaw-derived `initialize`, `init_with_legacy`, and `change_creator` bodies
-still need fresh differential tests. Full behavior remains unrecovered.
+handlers now have source bodies and fresh local comparisons. The [49-case
+setup differential](receipts/daos-fee-share-setup-candidate-differential.json)
+matches `initialize` 12/12, `init_with_legacy` 13/13, and `change_creator`
+24/24 on tested outcomes and watched post-states. **37 cases have verified
+signatures.** The 12 fixed-operator ChangeCreator cases, including its six
+positive calls, are explicitly unsigned local simulations because the
+operator private key is unavailable. Full behavior remains unrecovered.
 An isolated v1.41 build is **442,232 bytes** against the **522,216-byte**
 deployed ELF, with **0/9** selected wrapper regions equal. These bounded
 matches do not establish a live sale, fee diversion, vulnerability, or

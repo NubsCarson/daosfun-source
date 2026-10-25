@@ -2,8 +2,8 @@
   "scope": "Founder StartPresale, fresh signed target Init then current-ELF versus source-candidate StartPresale",
   "target_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
   "fundraise_sha256": "00bdbee1546f2087bfa845cb4144561ebaaf00a2af231399fa3269d82c30af28",
-  "candidate_sha256": "c77c8ec4caa1e890b4153a348e9b09a0742683627b9ab6d1b85439d560d57681",
-  "candidate_source_sha256": "2b9477ceea40ad48a5aba908462f5ff3f8d7b2da8a2c85b362119b1ae4cb765f",
+  "candidate_sha256": "48ba0b1bb3a068fa72ccc4ae30ec239c2876f8b7dfc881a84a4b3bde3215dfdf",
+  "candidate_source_sha256": "03fbdc1b5d1a28ce2d3ba1325cbdd4c7bafe1fc76383651a7404b09e54217dbc",
   "rent_reference_sha256": "b22f9e4bf37fca7daf824d330eb397e06d39f7446ab898732b73c22395ce5431",
   "native_model_receipt_sha256": "5dae38ce2d219d45d89cb1533c01c1dfa94634357ebec3c8ab48ea7f47a7a830",
   "sampled_cpi_receipt_sha256": "69e232f3c356769fbee7432d619c3c0be59dc023111ec5497f3bf84f1fe11fac",
@@ -110,7 +110,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84352,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -208,7 +208,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 80762,
-      "candidate_compute_units": 65849,
+      "candidate_compute_units": 65969,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00000000000000000000000000000000803a0900",
@@ -308,7 +308,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83219,
-      "candidate_compute_units": 67301,
+      "candidate_compute_units": 67421,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed01000000000000000100000000000000803a0900",
@@ -408,7 +408,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84132,
-      "candidate_compute_units": 68459,
+      "candidate_compute_units": 68579,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0010a5d4e800000037d8b01000000000803a0900",
@@ -508,7 +508,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84817,
-      "candidate_compute_units": 68787,
+      "candidate_compute_units": 68907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0080c6a47e8d0300b77dee0b47000000803a0900",
@@ -608,7 +608,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84876,
-      "candidate_compute_units": 68786,
+      "candidate_compute_units": 68906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed008053ee7ba80a006ecb9443f8000000803a0900",
@@ -708,7 +708,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84500,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e006e9b4c6f62010000803a0900",
@@ -800,7 +800,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 18136,
-      "candidate_compute_units": 9930,
+      "candidate_compute_units": 9989,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -811,7 +811,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:221. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -850,7 +850,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12554,
-      "candidate_compute_units": 10447,
+      "candidate_compute_units": 10507,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 15000,
@@ -861,7 +861,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:203. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
+        "Program log: AnchorError thrown in src/lib.rs:272. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1772"
       ],
       "repeat_target_error": null,
@@ -1008,7 +1008,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84352,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1100,7 +1100,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12549,
-      "candidate_compute_units": 10193,
+      "candidate_compute_units": 10255,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -1111,7 +1111,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:205. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
+        "Program log: AnchorError thrown in src/lib.rs:274. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1771"
       ],
       "repeat_target_error": null,
@@ -1208,7 +1208,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84354,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1308,7 +1308,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84354,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1400,7 +1400,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12469,
-      "candidate_compute_units": 9931,
+      "candidate_compute_units": 9990,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -1411,7 +1411,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:217. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
+        "Program log: AnchorError thrown in src/lib.rs:286. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1776"
       ],
       "repeat_target_error": null,
@@ -1500,7 +1500,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 80118,
-      "candidate_compute_units": 64957,
+      "candidate_compute_units": 65077,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1608,7 +1608,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84352,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1708,7 +1708,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84352,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -1806,7 +1806,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 80762,
-      "candidate_compute_units": 65849,
+      "candidate_compute_units": 65969,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00000000000000000000000000000000803a0900",
@@ -1906,7 +1906,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83219,
-      "candidate_compute_units": 67301,
+      "candidate_compute_units": 67421,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed01000000000000000100000000000000803a0900",
@@ -2006,7 +2006,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83318,
-      "candidate_compute_units": 67560,
+      "candidate_compute_units": 67680,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed02000000000000000100000000000000803a0900",
@@ -2106,7 +2106,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83457,
-      "candidate_compute_units": 68314,
+      "candidate_compute_units": 68434,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed63000000000000000100000000000000803a0900",
@@ -2206,7 +2206,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84817,
-      "candidate_compute_units": 68787,
+      "candidate_compute_units": 68907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff7fc6a47e8d0300b77dee0b47000000803a0900",
@@ -2306,7 +2306,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84817,
-      "candidate_compute_units": 68786,
+      "candidate_compute_units": 68906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0180c6a47e8d0300b77dee0b47000000803a0900",
@@ -2406,7 +2406,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84876,
-      "candidate_compute_units": 68786,
+      "candidate_compute_units": 68906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff7f53ee7ba80a006ecb9443f8000000803a0900",
@@ -2506,7 +2506,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84500,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e006e9b4c6f62010000803a0900",
@@ -2598,7 +2598,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 18136,
-      "candidate_compute_units": 9930,
+      "candidate_compute_units": 9989,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -2609,7 +2609,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:221. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -2656,7 +2656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84994,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed8c7e53ee7ba80a00862d66e24d797802803a0900",
@@ -2756,7 +2756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84733,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedc0ba8a3cd562040096ad2c2f02cb4b00803a0900",
@@ -2856,7 +2856,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84730,
-      "candidate_compute_units": 68784,
+      "candidate_compute_units": 68904,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e00b6ed8e981b18b702803a0900",
@@ -2956,7 +2956,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84757,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed97208baa28f50400934306f27d000000803a0900",
@@ -3056,7 +3056,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84869,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedbea29242c7530d0068bc5ae0f9010000803a0900",
@@ -3156,7 +3156,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84931,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda12f38c287f40600c7eff742bf000000803a0900",
@@ -3256,7 +3256,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84829,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed76a55092e1cb0d00fb91cb8710010000803a0900",
@@ -3356,7 +3356,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85284,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed705174afde6a0300fa1d3b1b3e000000803a0900",
@@ -3456,7 +3456,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85243,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed884b45edb5730a00e713b86597000000803a0900",
@@ -3556,7 +3556,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85293,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed2749581f21d301003431d6c023000000803a0900",
@@ -3656,7 +3656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85116,
-      "candidate_compute_units": 68793,
+      "candidate_compute_units": 68913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed6015b966e2c80b0028bf61e6c0000000803a0900",
@@ -3756,7 +3756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84863,
-      "candidate_compute_units": 68786,
+      "candidate_compute_units": 68906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed54c9c3177dbd06007f2fc10c6a000000803a0900",
@@ -3856,7 +3856,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85061,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed60da574c3db90b009da7e0ff54000000803a0900",
@@ -3956,7 +3956,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85055,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed167960259d2e0e00da05511f5b000000803a0900",
@@ -4056,7 +4056,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84977,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed52799df7e0cd0500d44101dc11000000803a0900",
@@ -4156,7 +4156,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85127,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedcb7baa6fd2030100dbdaf0e103000000803a0900",
@@ -4256,7 +4256,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85280,
-      "candidate_compute_units": 68794,
+      "candidate_compute_units": 68914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed770071fd977606002c71ce9807000000803a0900",
@@ -4356,7 +4356,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85132,
-      "candidate_compute_units": 68794,
+      "candidate_compute_units": 68914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed56191203712908008a0bea0d29000000803a0900",
@@ -4456,7 +4456,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84814,
-      "candidate_compute_units": 68796,
+      "candidate_compute_units": 68916,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1df8c30ff9f40400766fdbf246000000803a0900",
@@ -4556,7 +4556,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85226,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedfc06c94cd5550c00f159c5f6a5000000803a0900",
@@ -4656,7 +4656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85168,
-      "candidate_compute_units": 68787,
+      "candidate_compute_units": 68907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedeb5de187f341040026968fc732000000803a0900",
@@ -4756,7 +4756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84947,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb9b5d646d27c0600b80cbccfbd000000803a0900",
@@ -4856,7 +4856,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85219,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda4afcedf05590c0081902de44b000000803a0900",
@@ -4956,7 +4956,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85255,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5b11137d99e50700d9bbf7f871000000803a0900",
@@ -5056,7 +5056,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85343,
-      "candidate_compute_units": 68793,
+      "candidate_compute_units": 68913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed6eb5ceed42070300199caadb11000000803a0900",
@@ -5156,7 +5156,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85008,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed4a91f493c26c0c00e13565dec6000000803a0900",
@@ -5256,7 +5256,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85350,
-      "candidate_compute_units": 68794,
+      "candidate_compute_units": 68914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedac563a7f9b3e010084e166f201000000803a0900",
@@ -5356,7 +5356,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84842,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedac377fee35030100cfe6ca9f0d000000803a0900",
@@ -5456,7 +5456,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85096,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed100ce39f6e5005003db6cbec0e000000803a0900",
@@ -5556,7 +5556,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84901,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5929777665aa0700edd6910a85000000803a0900",
@@ -5656,7 +5656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84853,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb092008fea8d06009fb0364c64000000803a0900",
@@ -5756,7 +5756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85017,
-      "candidate_compute_units": 68785,
+      "candidate_compute_units": 68905,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedfe9727cd514c0700f7bd07526e000000803a0900",
@@ -5856,7 +5856,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85200,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1546edb04fe20b00e699be1712010000803a0900",
@@ -5956,7 +5956,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85116,
-      "candidate_compute_units": 68792,
+      "candidate_compute_units": 68912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed7e57019c405303007e969b4534000000803a0900",
@@ -6056,7 +6056,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84913,
-      "candidate_compute_units": 68793,
+      "candidate_compute_units": 68913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5805599a50160200ddd9274e34000000803a0900",
@@ -6156,7 +6156,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85548,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed216cb6b11443010006d360480a000000803a0900",
@@ -6256,7 +6256,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85257,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda31081a386a10700c2ee7ef505000000803a0900",
@@ -6356,7 +6356,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85506,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed066cb2ad30870300787a6ca201000000803a0900",
@@ -6456,7 +6456,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84717,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda8b78b3259de0700f9cdb801e6000000803a0900",
@@ -6556,7 +6556,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84646,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb2a1ab2290820800f5edc1dc1f010000803a0900",
@@ -6656,7 +6656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84987,
-      "candidate_compute_units": 68793,
+      "candidate_compute_units": 68913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1bf0e249db100100d5aedf610d000000803a0900",
@@ -6756,7 +6756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84655,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beddcd352219d060a0010c2c16c01010000803a0900",
@@ -6856,7 +6856,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85215,
-      "candidate_compute_units": 68796,
+      "candidate_compute_units": 68916,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5a9e092019530100ce43dccd10000000803a0900",
@@ -6956,7 +6956,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85182,
-      "candidate_compute_units": 68791,
+      "candidate_compute_units": 68911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed27bafcae57bf080009debf7b4e000000803a0900",
@@ -7056,7 +7056,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84735,
-      "candidate_compute_units": 68794,
+      "candidate_compute_units": 68914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedd833d02969e70d00e42a1f81fb000000803a0900",
@@ -7156,7 +7156,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85399,
-      "candidate_compute_units": 68789,
+      "candidate_compute_units": 68909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedd988bde1b2cb0d00f8d5892519000000803a0900",
@@ -7256,7 +7256,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85148,
-      "candidate_compute_units": 68795,
+      "candidate_compute_units": 68915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed2159a143dd6301000b05444609000000803a0900",
@@ -7356,7 +7356,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84925,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff72f6efa19a0600c9e6cf2e8a000000803a0900",
@@ -7456,7 +7456,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85178,
-      "candidate_compute_units": 68790,
+      "candidate_compute_units": 68910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed4a75e886161303008054e7e80d000000803a0900",
@@ -7556,7 +7556,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 85143,
-      "candidate_compute_units": 68788,
+      "candidate_compute_units": 68908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed46d78ec5da8c030035052f2035000000803a0900",
@@ -7656,7 +7656,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 84863,
-      "candidate_compute_units": 68794,
+      "candidate_compute_units": 68914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed78c2fe8a8f470300a68d60555a000000803a0900",
@@ -7756,7 +7756,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87352,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -7854,7 +7854,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83762,
-      "candidate_compute_units": 68849,
+      "candidate_compute_units": 68969,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00000000000000000000000000000000803a0900",
@@ -7954,7 +7954,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 86219,
-      "candidate_compute_units": 70301,
+      "candidate_compute_units": 70421,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed01000000000000000100000000000000803a0900",
@@ -8054,7 +8054,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87132,
-      "candidate_compute_units": 71459,
+      "candidate_compute_units": 71579,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0010a5d4e800000037d8b01000000000803a0900",
@@ -8154,7 +8154,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87817,
-      "candidate_compute_units": 71787,
+      "candidate_compute_units": 71907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0080c6a47e8d0300b77dee0b47000000803a0900",
@@ -8254,7 +8254,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87876,
-      "candidate_compute_units": 71786,
+      "candidate_compute_units": 71906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed008053ee7ba80a006ecb9443f8000000803a0900",
@@ -8354,7 +8354,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87500,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e006e9b4c6f62010000803a0900",
@@ -8446,7 +8446,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 19636,
-      "candidate_compute_units": 11430,
+      "candidate_compute_units": 11489,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -8457,7 +8457,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:221. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -8496,7 +8496,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12554,
-      "candidate_compute_units": 11947,
+      "candidate_compute_units": 12007,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 15000,
@@ -8507,7 +8507,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:203. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
+        "Program log: AnchorError thrown in src/lib.rs:272. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1772"
       ],
       "repeat_target_error": null,
@@ -8654,7 +8654,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87352,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -8746,7 +8746,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12549,
-      "candidate_compute_units": 11693,
+      "candidate_compute_units": 11755,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -8757,7 +8757,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:205. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
+        "Program log: AnchorError thrown in src/lib.rs:274. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1771"
       ],
       "repeat_target_error": null,
@@ -8854,7 +8854,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87354,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -8954,7 +8954,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87354,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -9046,7 +9046,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 12469,
-      "candidate_compute_units": 11431,
+      "candidate_compute_units": 11490,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -9057,7 +9057,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:217. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
+        "Program log: AnchorError thrown in src/lib.rs:286. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1776"
       ],
       "repeat_target_error": null,
@@ -9146,7 +9146,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 83118,
-      "candidate_compute_units": 67957,
+      "candidate_compute_units": 68077,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -9254,7 +9254,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87352,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -9354,7 +9354,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87352,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00008d49fd1a0700dc1620cd99000000803a0900",
@@ -9452,7 +9452,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 83762,
-      "candidate_compute_units": 68849,
+      "candidate_compute_units": 68969,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00000000000000000000000000000000803a0900",
@@ -9552,7 +9552,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 86219,
-      "candidate_compute_units": 70301,
+      "candidate_compute_units": 70421,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed01000000000000000100000000000000803a0900",
@@ -9652,7 +9652,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 86318,
-      "candidate_compute_units": 70560,
+      "candidate_compute_units": 70680,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed02000000000000000100000000000000803a0900",
@@ -9752,7 +9752,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 86457,
-      "candidate_compute_units": 71314,
+      "candidate_compute_units": 71434,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed63000000000000000100000000000000803a0900",
@@ -9852,7 +9852,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87817,
-      "candidate_compute_units": 71787,
+      "candidate_compute_units": 71907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff7fc6a47e8d0300b77dee0b47000000803a0900",
@@ -9952,7 +9952,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87817,
-      "candidate_compute_units": 71786,
+      "candidate_compute_units": 71906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed0180c6a47e8d0300b77dee0b47000000803a0900",
@@ -10052,7 +10052,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87876,
-      "candidate_compute_units": 71786,
+      "candidate_compute_units": 71906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff7f53ee7ba80a006ecb9443f8000000803a0900",
@@ -10152,7 +10152,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87500,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e006e9b4c6f62010000803a0900",
@@ -10244,7 +10244,7 @@
       "target_fundraise_duration_after": null,
       "candidate_fundraise_duration_after": null,
       "target_compute_units": 19636,
-      "candidate_compute_units": 11430,
+      "candidate_compute_units": 11489,
       "target_fundraise_cpis": [],
       "candidate_fundraise_cpis": [],
       "watched_lamport_fee": 10000,
@@ -10255,7 +10255,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:221. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -10302,7 +10302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87994,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed8c7e53ee7ba80a00862d66e24d797802803a0900",
@@ -10402,7 +10402,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87733,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedc0ba8a3cd562040096ad2c2f02cb4b00803a0900",
@@ -10502,7 +10502,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87730,
-      "candidate_compute_units": 71784,
+      "candidate_compute_units": 71904,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed00001a93fa350e00b6ed8e981b18b702803a0900",
@@ -10602,7 +10602,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87757,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed97208baa28f50400934306f27d000000803a0900",
@@ -10702,7 +10702,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87869,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedbea29242c7530d0068bc5ae0f9010000803a0900",
@@ -10802,7 +10802,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87931,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda12f38c287f40600c7eff742bf000000803a0900",
@@ -10902,7 +10902,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87829,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed76a55092e1cb0d00fb91cb8710010000803a0900",
@@ -11002,7 +11002,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88284,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed705174afde6a0300fa1d3b1b3e000000803a0900",
@@ -11102,7 +11102,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88243,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed884b45edb5730a00e713b86597000000803a0900",
@@ -11202,7 +11202,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88293,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed2749581f21d301003431d6c023000000803a0900",
@@ -11302,7 +11302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88116,
-      "candidate_compute_units": 71793,
+      "candidate_compute_units": 71913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed6015b966e2c80b0028bf61e6c0000000803a0900",
@@ -11402,7 +11402,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87863,
-      "candidate_compute_units": 71786,
+      "candidate_compute_units": 71906,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed54c9c3177dbd06007f2fc10c6a000000803a0900",
@@ -11502,7 +11502,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88061,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed60da574c3db90b009da7e0ff54000000803a0900",
@@ -11602,7 +11602,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88055,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed167960259d2e0e00da05511f5b000000803a0900",
@@ -11702,7 +11702,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87977,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed52799df7e0cd0500d44101dc11000000803a0900",
@@ -11802,7 +11802,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88127,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedcb7baa6fd2030100dbdaf0e103000000803a0900",
@@ -11902,7 +11902,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88280,
-      "candidate_compute_units": 71794,
+      "candidate_compute_units": 71914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed770071fd977606002c71ce9807000000803a0900",
@@ -12002,7 +12002,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88132,
-      "candidate_compute_units": 71794,
+      "candidate_compute_units": 71914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed56191203712908008a0bea0d29000000803a0900",
@@ -12102,7 +12102,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87814,
-      "candidate_compute_units": 71796,
+      "candidate_compute_units": 71916,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1df8c30ff9f40400766fdbf246000000803a0900",
@@ -12202,7 +12202,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88226,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedfc06c94cd5550c00f159c5f6a5000000803a0900",
@@ -12302,7 +12302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88168,
-      "candidate_compute_units": 71787,
+      "candidate_compute_units": 71907,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedeb5de187f341040026968fc732000000803a0900",
@@ -12402,7 +12402,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87947,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb9b5d646d27c0600b80cbccfbd000000803a0900",
@@ -12502,7 +12502,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88219,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda4afcedf05590c0081902de44b000000803a0900",
@@ -12602,7 +12602,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88255,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5b11137d99e50700d9bbf7f871000000803a0900",
@@ -12702,7 +12702,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88343,
-      "candidate_compute_units": 71793,
+      "candidate_compute_units": 71913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed6eb5ceed42070300199caadb11000000803a0900",
@@ -12802,7 +12802,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88008,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed4a91f493c26c0c00e13565dec6000000803a0900",
@@ -12902,7 +12902,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88350,
-      "candidate_compute_units": 71794,
+      "candidate_compute_units": 71914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedac563a7f9b3e010084e166f201000000803a0900",
@@ -13002,7 +13002,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87842,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedac377fee35030100cfe6ca9f0d000000803a0900",
@@ -13102,7 +13102,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88096,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed100ce39f6e5005003db6cbec0e000000803a0900",
@@ -13202,7 +13202,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87901,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5929777665aa0700edd6910a85000000803a0900",
@@ -13302,7 +13302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87853,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb092008fea8d06009fb0364c64000000803a0900",
@@ -13402,7 +13402,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88017,
-      "candidate_compute_units": 71785,
+      "candidate_compute_units": 71905,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedfe9727cd514c0700f7bd07526e000000803a0900",
@@ -13502,7 +13502,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88200,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1546edb04fe20b00e699be1712010000803a0900",
@@ -13602,7 +13602,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88116,
-      "candidate_compute_units": 71792,
+      "candidate_compute_units": 71912,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed7e57019c405303007e969b4534000000803a0900",
@@ -13702,7 +13702,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87913,
-      "candidate_compute_units": 71793,
+      "candidate_compute_units": 71913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5805599a50160200ddd9274e34000000803a0900",
@@ -13802,7 +13802,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88548,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed216cb6b11443010006d360480a000000803a0900",
@@ -13902,7 +13902,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88257,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda31081a386a10700c2ee7ef505000000803a0900",
@@ -14002,7 +14002,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88506,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed066cb2ad30870300787a6ca201000000803a0900",
@@ -14102,7 +14102,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87717,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beda8b78b3259de0700f9cdb801e6000000803a0900",
@@ -14202,7 +14202,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87646,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedb2a1ab2290820800f5edc1dc1f010000803a0900",
@@ -14302,7 +14302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87987,
-      "candidate_compute_units": 71793,
+      "candidate_compute_units": 71913,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed1bf0e249db100100d5aedf610d000000803a0900",
@@ -14402,7 +14402,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87655,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989beddcd352219d060a0010c2c16c01010000803a0900",
@@ -14502,7 +14502,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88215,
-      "candidate_compute_units": 71796,
+      "candidate_compute_units": 71916,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed5a9e092019530100ce43dccd10000000803a0900",
@@ -14602,7 +14602,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88182,
-      "candidate_compute_units": 71791,
+      "candidate_compute_units": 71911,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed27bafcae57bf080009debf7b4e000000803a0900",
@@ -14702,7 +14702,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87735,
-      "candidate_compute_units": 71794,
+      "candidate_compute_units": 71914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedd833d02969e70d00e42a1f81fb000000803a0900",
@@ -14802,7 +14802,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88399,
-      "candidate_compute_units": 71789,
+      "candidate_compute_units": 71909,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedd988bde1b2cb0d00f8d5892519000000803a0900",
@@ -14902,7 +14902,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88148,
-      "candidate_compute_units": 71795,
+      "candidate_compute_units": 71915,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed2159a143dd6301000b05444609000000803a0900",
@@ -15002,7 +15002,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87925,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bedff72f6efa19a0600c9e6cf2e8a000000803a0900",
@@ -15102,7 +15102,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88178,
-      "candidate_compute_units": 71790,
+      "candidate_compute_units": 71910,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed4a75e886161303008054e7e80d000000803a0900",
@@ -15202,7 +15202,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 88143,
-      "candidate_compute_units": 71788,
+      "candidate_compute_units": 71908,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed46d78ec5da8c030035052f2035000000803a0900",
@@ -15302,7 +15302,7 @@
       "target_fundraise_duration_after": 604800,
       "candidate_fundraise_duration_after": 604800,
       "target_compute_units": 87863,
-      "candidate_compute_units": 71794,
+      "candidate_compute_units": 71914,
       "target_fundraise_cpis": [
         {
           "data_hex": "afaf6d1f0d989bed78c2fe8a8f470300a68d60555a000000803a0900",
