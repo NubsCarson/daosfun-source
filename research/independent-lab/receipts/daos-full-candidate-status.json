@@ -22,11 +22,14 @@
     },
     "founder_dao": {
       "deployed_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
-      "candidate_sha256": "48ba0b1bb3a068fa72ccc4ae30ec239c2876f8b7dfc881a84a4b3bde3215dfdf",
+      "candidate_sha256": "55020d6a4815ff2d4d19b8b626b174603a4bb1766334e894e583f14661af5036",
       "selectors_verified": 6,
       "signed_start_presale_cases_matched": 162,
       "signed_start_curve_cases_matched": 66,
-      "bounded_candidate_handlers": 2,
+      "signed_start_vest_cases_matched": 64,
+      "signed_start_vest_positive_cases_matched": 20,
+      "start_vest_positive_prestates_synthetic": true,
+      "bounded_candidate_handlers": 3,
       "complete_handlers": 0,
       "whole_file_equal": false
     },
@@ -36,12 +39,17 @@
       "signed_migrate_cases_matched": 80,
       "signed_collect_fee_cases_matched": 45,
       "handlers_stubbed": 7,
+      "complete_handlers": 0,
       "whole_file_equal": false
     },
     "virtual_xyk": {
       "deployed_sha256": "c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377",
-      "candidate_sha256": "55b6ffc69b76a7c7facdebeaabf4e2dbc79604792755d2b7323401a21a16d690",
+      "candidate_sha256": "7277c5030d488ff5ec1bb01cd8e3625d4833bd752499c8d207aa9a169a0eed08",
       "selectors_verified": 10,
+      "signed_buy_token_cases_matched": 14,
+      "signed_buy_token_positive_cases_matched": 9,
+      "buy_token_lp_enabled_fixture_synthetic": true,
+      "bounded_candidate_handlers": 1,
       "complete_handlers": 0,
       "whole_file_equal": false
     }

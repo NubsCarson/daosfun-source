@@ -66,12 +66,17 @@ none of the four has a source-built byte match. The
 [FeeShare v1.41 compiler-format probe](receipts/daos-fee-share-v141-toolchain-probe.json)
 is a toolchain hypothesis, not an exact FeeShare rebuild.
 
-The incomplete Founder candidate now has bounded `start_presale` and
-`start_curve` bodies with [162/162 signed presale matches](receipts/start-presale-differential.json)
-and [66/66 signed curve matches](receipts/start-curve-differential.json).
-Five positive curve cases use synthetic presale finalization and funding.
-Four other Founder handler bodies remain incomplete;
-the candidate does not match the deployed ELF.
+The incomplete Founder candidate now has bounded `start_presale`,
+`start_curve`, and `start_vest` bodies with
+[162/162 signed presale matches](receipts/start-presale-differential.json),
+[66/66 signed curve matches](receipts/start-curve-differential.json), and
+[64/64 signed Vest matches](receipts/start-vest-differential.json).
+Five positive curve cases use synthetic presale finalization and funding;
+successful Vest cases locally reset an already-started tag in later captures.
+Three other Founder handler bodies remain incomplete. The VirtualXYK candidate
+also has a bounded [`buy_token` body](receipts/daos-virtual-buy-candidate-differential.json)
+matching 14/14 signed local cases; its LP cases use a synthetic Curve Option.
+Neither candidate matches its deployed ELF.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and
@@ -89,10 +94,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`e0a2d5d513703e11da83fc61e4c7a44cca8da57d`, contains **1,151** scoped
-files (121,336,076 uncompressed bytes), and has archive SHA-256
-`c555c1d5730af2aad219b924d8799676953382a2f15481cc26ca5db1ee5dc024`.
-All **81** direct JSON receipts match bundled member size and
+`1b62e923d7c0825fb7e6a53c269ba06a27ff891e`, contains **1,156** scoped
+files (121,942,492 uncompressed bytes), and has archive SHA-256
+`850f008b69196e827d97f5baaabb590f1aa8bd6972c4e8ca85c154323d49208d`.
+All **83** direct JSON receipts match bundled member size and
 SHA-256. The prior daos.fun offline gate's saved receipt records **113**
 commands; the refreshed FeeShare four-candidate integrity gate passes
 separately. Strict full behavior remains **0/52**.

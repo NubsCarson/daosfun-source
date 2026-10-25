@@ -3,8 +3,8 @@
   "target_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
   "pump_sha256": "2238aa5b96fc29e7693174b20d75063df2e1dfba28c26c5346338c23732e2fb9",
   "fundraise_sha256": "00bdbee1546f2087bfa845cb4144561ebaaf00a2af231399fa3269d82c30af28",
-  "candidate_sha256": "48ba0b1bb3a068fa72ccc4ae30ec239c2876f8b7dfc881a84a4b3bde3215dfdf",
-  "candidate_source_sha256": "03fbdc1b5d1a28ce2d3ba1325cbdd4c7bafe1fc76383651a7404b09e54217dbc",
+  "candidate_sha256": "55020d6a4815ff2d4d19b8b626b174603a4bb1766334e894e583f14661af5036",
+  "candidate_source_sha256": "844bc41ee142a6a15a529334d5ab249bbd6688de36e827197486e1d08537170d",
   "historical_signature": "WUNXtMZZS4hhqkCY6oG9upfy8QXrrFbXcZyC3aFRr5nN5LHodgSbLtrejVTmtGphwFQXixJikx8SHGzpsGe6MyC",
   "historical_slot": 331875236,
   "historical_snapshot_sha256": "8b7c82a4e4cf9b2060d81ddeffbebbfa37cd3d14152c4cf1376fc10e810bf963",
@@ -322,7 +322,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartCurve",
-        "Program log: AnchorError thrown in src/lib.rs:274. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
+        "Program log: AnchorError thrown in src/lib.rs:322. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1771"
       ],
       "repeat_target_error": null,
@@ -1019,7 +1019,7 @@
       "target_pump_cpis": [],
       "candidate_pump_cpis": [],
       "target_compute_units": 16147,
-      "candidate_compute_units": 9590,
+      "candidate_compute_units": 9592,
       "target_relevant_logs": [
         "Program log: Instruction: StartCurve",
         "Program log: AnchorError caused by account: presale. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.",

@@ -2,8 +2,8 @@
   "scope": "Founder StartPresale, fresh signed target Init then current-ELF versus source-candidate StartPresale",
   "target_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
   "fundraise_sha256": "00bdbee1546f2087bfa845cb4144561ebaaf00a2af231399fa3269d82c30af28",
-  "candidate_sha256": "48ba0b1bb3a068fa72ccc4ae30ec239c2876f8b7dfc881a84a4b3bde3215dfdf",
-  "candidate_source_sha256": "03fbdc1b5d1a28ce2d3ba1325cbdd4c7bafe1fc76383651a7404b09e54217dbc",
+  "candidate_sha256": "55020d6a4815ff2d4d19b8b626b174603a4bb1766334e894e583f14661af5036",
+  "candidate_source_sha256": "844bc41ee142a6a15a529334d5ab249bbd6688de36e827197486e1d08537170d",
   "rent_reference_sha256": "b22f9e4bf37fca7daf824d330eb397e06d39f7446ab898732b73c22395ce5431",
   "native_model_receipt_sha256": "5dae38ce2d219d45d89cb1533c01c1dfa94634357ebec3c8ab48ea7f47a7a830",
   "sampled_cpi_receipt_sha256": "69e232f3c356769fbee7432d619c3c0be59dc023111ec5497f3bf84f1fe11fac",
@@ -811,7 +811,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:338. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -861,7 +861,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:272. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
+        "Program log: AnchorError thrown in src/lib.rs:320. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1772"
       ],
       "repeat_target_error": null,
@@ -1111,7 +1111,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:274. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
+        "Program log: AnchorError thrown in src/lib.rs:322. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1771"
       ],
       "repeat_target_error": null,
@@ -1411,7 +1411,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:286. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
+        "Program log: AnchorError thrown in src/lib.rs:334. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1776"
       ],
       "repeat_target_error": null,
@@ -2609,7 +2609,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:338. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -8457,7 +8457,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:338. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
@@ -8507,7 +8507,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:272. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
+        "Program log: AnchorError thrown in src/lib.rs:320. Error Code: Unauthorized. Error Number: 6002. Error Message: Unauthorized.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1772"
       ],
       "repeat_target_error": null,
@@ -8757,7 +8757,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:274. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
+        "Program log: AnchorError thrown in src/lib.rs:322. Error Code: InvalidMint. Error Number: 6001. Error Message: Invalid mint.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1771"
       ],
       "repeat_target_error": null,
@@ -9057,7 +9057,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:286. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
+        "Program log: AnchorError thrown in src/lib.rs:334. Error Code: PreSaleAlreadyStarted. Error Number: 6006. Error Message: Pre-sale already started.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1776"
       ],
       "repeat_target_error": null,
@@ -10255,7 +10255,7 @@
       ],
       "candidate_relevant_logs": [
         "Program log: Instruction: StartPresale",
-        "Program log: AnchorError thrown in src/lib.rs:290. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
+        "Program log: AnchorError thrown in src/lib.rs:338. Error Code: PreSaleMaxPresaleExceeded. Error Number: 6007. Error Message: Presale amount exceeded.",
         "Program Daosz93P15uZ1aTFTrBUAJyU1KERmZm3XQ5u4hbfHVQS failed: custom program error: 0x1777"
       ],
       "repeat_target_error": null,
