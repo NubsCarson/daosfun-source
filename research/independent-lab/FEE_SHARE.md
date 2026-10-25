@@ -85,11 +85,21 @@ the [Raydium differential](receipts/daos-fee-share-raydium-candidate-differentia
 [CP regression](receipts/daos-fee-share-raydium-candidate-cp-regression.json),
 [DBC regression](receipts/daos-fee-share-raydium-candidate-dbc-regression.json),
 and [payout regression](receipts/daos-fee-share-raydium-candidate-payout-regression.json).
-The `sell_token` handler still fails closed. An isolated v1.41 build of the
-current candidate is **432,104 bytes** against the **522,216-byte** deployed
-ELF, with **0/9** selected wrapper regions equal. These bounded matches do
-not establish a live fee diversion, a vulnerability, or whole-program source
-equivalence.
+The candidate now also maps `sell_token` to a sampled Raydium CPMM
+`SwapBaseInput` CPI. Its [32-case signed offline claim-to-sell differential](receipts/daos-fee-share-sell-candidate-differential.json)
+matches outcomes and all 27 tracked post-states. In one positive local
+fixture, 1,761,233,394,246 raw DAO-token units sell for 5,686,649 raw
+wrapped-SOL units; exact minimum output succeeds and minimum+1 rejects.
+Half/double input, clock, owner, overflow, signer and paired-fault controls
+also match. A synthetic local creator substitution enables signed positive
+tests; separate unsigned local authority simulations are **not** counted
+among the 32 signed cases. Raydium **31/31**, DBC **22/22**, CP **28/28**, and
+payout **27/27** regressions pass on this final candidate. All nine declared
+handlers now have a bounded path, while full behavior remains unrecovered.
+An isolated v1.41 build is **442,232 bytes** against the **522,216-byte**
+deployed ELF, with **0/9** selected wrapper regions equal. These bounded
+matches do not establish a live sale, fee diversion, vulnerability, or
+whole-program source equivalence.
 
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
