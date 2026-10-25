@@ -51,6 +51,16 @@ simulated with signature verification disabled. The Rust model is neither
 original source nor an SBF build and omits negative-slope, decimal overflow,
 account validation, downstream CPI errors, and other handler branches.
 
+The separate incomplete [Founder Anchor/SBF candidate](receipts/daos-full-candidate-status.json)
+now implements one bounded `start_presale` body. Its [162-case signed offline
+target/candidate differential](receipts/start-presale-differential.json)
+matches every tested outcome and watched post-state across two local layouts:
+142 successes and 20 failures, including 120 independent quote holdouts.
+Fresh local Init creates State and vaults before the test; the Fundraise CPI
+uses the pinned external ELF. The other five Founder handler bodies remain
+incomplete. Its 375,040-byte candidate differs from the 574,360-byte deployed
+capture. These cases do not prove full handler behavior or original source.
+
 `claim_team_allo` moves `3e15` raw DAO-token units to a vest schedule ATA
 and flips a one-time flag in a restored local prestate. An underfunded vault
 fails and all five watched protocol accounts roll back. Four `start_vest`

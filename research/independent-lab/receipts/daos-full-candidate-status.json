@@ -19,8 +19,10 @@
     },
     "founder_dao": {
       "deployed_sha256": "816bc6d42ffea7d63bd7b1287589413aef04d8f7dceb34dd274a0f7872d40aa2",
-      "candidate_sha256": "6c008d06fedc68b605b02d38e506886d11188cf8ab7258289f9f592c2223f912",
+      "candidate_sha256": "c77c8ec4caa1e890b4153a348e9b09a0742683627b9ab6d1b85439d560d57681",
       "selectors_verified": 6,
+      "signed_start_presale_cases_matched": 162,
+      "bounded_candidate_handlers": 1,
       "complete_handlers": 0,
       "whole_file_equal": false
     },

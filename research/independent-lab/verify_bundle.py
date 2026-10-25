@@ -86,6 +86,8 @@ DAOS_SOURCE_MODEL_FILES = frozenset({
     "reconstruction/founder-dao-anchor-candidate/Cargo.toml",
     "reconstruction/founder-dao-anchor-candidate/README.md",
     "reconstruction/founder-dao-anchor-candidate/elf-comparison.json",
+    "reconstruction/founder-dao-anchor-candidate/start-presale-differential.json",
+    "reconstruction/founder-dao-anchor-candidate/start_presale_differential.py",
     "reconstruction/founder-dao-anchor-candidate/src/lib.rs",
     "reconstruction/founder-dao-anchor-candidate/verification.json",
     "reconstruction/founder-dao-anchor-candidate/verify_candidate.py",
