@@ -98,13 +98,13 @@
   "source_reconstruction_status": "candidate byte comparison only; build provenance must be verified separately",
   "candidate": {
     "path": "reconstruction/fee-share-full-candidate/out/fee_share_trader_dao.so",
-    "whole_sha256": "fc10f3a92541eb4c4510bd16bcdda30c4e4084abac53556f7944fd420b2ac71c",
-    "whole_bytes": 332744,
+    "whole_sha256": "3c6a79867e21599a5a42d91509e39c24fbae44ea4c8af04a522a4007de3b0331",
+    "whole_bytes": 362000,
     "machine": "263",
     "elf_flags": 0,
-    "entry_point": 158960,
-    "elf_bytes": 332744,
-    "elf_sha256": "fc10f3a92541eb4c4510bd16bcdda30c4e4084abac53556f7944fd420b2ac71c",
+    "entry_point": 187760,
+    "elf_bytes": 362000,
+    "elf_sha256": "3c6a79867e21599a5a42d91509e39c24fbae44ea4c8af04a522a4007de3b0331",
     "allocation_padding_bytes": 0,
     "allocation_padding_all_zero": true,
     "sections": [
@@ -122,51 +122,51 @@
         "type": "SHT_PROGBITS",
         "file_offset": 288,
         "virtual_address": 288,
-        "size": 286424,
+        "size": 315224,
         "alignment": 8,
-        "sha256": "5fdada662cc585d3f923890d04cb8f1565ef1f6cc96106fadc63b6a4114e59d0"
+        "sha256": "f20491e8d14cfb30284295bd505509f192abe52d04dd8775e13e13450404bef5"
       },
       {
         "name": ".rodata",
         "type": "SHT_PROGBITS",
-        "file_offset": 286712,
-        "virtual_address": 286712,
-        "size": 15808,
+        "file_offset": 315512,
+        "virtual_address": 315512,
+        "size": 15936,
         "alignment": 8,
-        "sha256": "4b6b49d47059224ccb4e392e85f54eaa36220451d087f8c05452ac879a8daaed"
+        "sha256": "044a0958825f6e5fe67adcc0924f42b434f386aff8d4f55eda6603390de157f2"
       },
       {
         "name": ".data.rel.ro",
         "type": "SHT_PROGBITS",
-        "file_offset": 302520,
-        "virtual_address": 302520,
-        "size": 5920,
+        "file_offset": 331448,
+        "virtual_address": 331448,
+        "size": 6040,
         "alignment": 8,
-        "sha256": "f9febcf04893e2d32ed56d253253fe90a13cc88db3ee61e410a0b66bf638a2b3"
+        "sha256": "245d90a65a821e60fca42262720490650cf2cb6bccc55304eb2568535a3532e6"
       },
       {
         "name": ".dynamic",
         "type": "SHT_DYNAMIC",
-        "file_offset": 308440,
-        "virtual_address": 308440,
+        "file_offset": 337488,
+        "virtual_address": 337488,
         "size": 176,
         "alignment": 8,
-        "sha256": "fce0dbd24e496f89cc341d960e357a3fecb09d98f70730ac808e1a4314a3a418"
+        "sha256": "583818a439e01c988a8eda39d8ed221c6551f7a40621079ac86cb09f22c4bb8c"
       },
       {
         "name": ".dynsym",
         "type": "SHT_DYNSYM",
-        "file_offset": 308616,
-        "virtual_address": 308616,
+        "file_offset": 337664,
+        "virtual_address": 337664,
         "size": 312,
         "alignment": 8,
-        "sha256": "4baf15606f83f5b7dd804460b4176c3debe5cddf185c925f4e207cc38cd6080e"
+        "sha256": "60d1e00081dca93027bf66dfaf38545fbaef3b982267d5c2795f030b9cb0bff0"
       },
       {
         "name": ".dynstr",
         "type": "SHT_STRTAB",
-        "file_offset": 308928,
-        "virtual_address": 308928,
+        "file_offset": 337976,
+        "virtual_address": 337976,
         "size": 174,
         "alignment": 1,
         "sha256": "3f3955ffe345ecfae0a2c76f95ec047193566f928f75f896e04e92f25a22da0a"
@@ -174,16 +174,16 @@
       {
         "name": ".rel.dyn",
         "type": "SHT_REL",
-        "file_offset": 309104,
-        "virtual_address": 309104,
-        "size": 22992,
+        "file_offset": 338152,
+        "virtual_address": 338152,
+        "size": 23200,
         "alignment": 8,
-        "sha256": "629ca151482b1a76645c8916be545ce828ff2acfe2947fc6f98b3c94342af5c7"
+        "sha256": "2e4efdd9bbf04c55d0257c99ef38682314de2b56896f31d64cc9ac6b114fbce5"
       },
       {
         "name": ".shstrtab",
         "type": "SHT_STRTAB",
-        "file_offset": 332096,
+        "file_offset": 361352,
         "virtual_address": 0,
         "size": 72,
         "alignment": 1,

@@ -1,6 +1,6 @@
 {
   "reference_binary_sha256": "88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8",
-  "candidate_binary_sha256": "fc10f3a92541eb4c4510bd16bcdda30c4e4084abac53556f7944fd420b2ac71c",
+  "candidate_binary_sha256": "0a1feb292e9a76d73def90db4daf0edfd9f628878717ad028b9a70a96ed17bf8",
   "signature_verification_enabled": true,
   "cases": [
     {
@@ -12,7 +12,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19154,
-      "candidate_cu": 12497
+      "candidate_cu": 12556
     },
     {
       "fixture": "no_referrer",
@@ -23,7 +23,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22154,
-      "candidate_cu": 15497
+      "candidate_cu": 15556
     },
     {
       "fixture": "no_referrer",
@@ -34,7 +34,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22138,
-      "candidate_cu": 15492
+      "candidate_cu": 15551
     },
     {
       "fixture": "no_referrer",
@@ -45,7 +45,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19138,
-      "candidate_cu": 12492
+      "candidate_cu": 12551
     },
     {
       "fixture": "no_referrer",
@@ -56,7 +56,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19138,
-      "candidate_cu": 12492
+      "candidate_cu": 12551
     },
     {
       "fixture": "no_referrer",
@@ -67,7 +67,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19304,
-      "candidate_cu": 12867
+      "candidate_cu": 12985
     },
     {
       "fixture": "no_referrer",
@@ -78,7 +78,7 @@
       "reference_error": null,
       "candidate_error": null,
       "reference_cu": 20641,
-      "candidate_cu": 14440
+      "candidate_cu": 14558
     },
     {
       "fixture": "no_referrer",
@@ -89,7 +89,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19304,
-      "candidate_cu": 12867
+      "candidate_cu": 12985
     },
     {
       "fixture": "no_referrer",
@@ -100,7 +100,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 20558,
-      "candidate_cu": 13963
+      "candidate_cu": 14081
     },
     {
       "fixture": "no_referrer",
@@ -111,7 +111,7 @@
       "reference_error": null,
       "candidate_error": null,
       "reference_cu": 21810,
-      "candidate_cu": 15525
+      "candidate_cu": 15643
     },
     {
       "fixture": "no_referrer",
@@ -122,7 +122,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 20558,
-      "candidate_cu": 13963
+      "candidate_cu": 14081
     },
     {
       "fixture": "self_referrer",
@@ -133,7 +133,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19429,
-      "candidate_cu": 12531
+      "candidate_cu": 12590
     },
     {
       "fixture": "self_referrer",
@@ -144,7 +144,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22429,
-      "candidate_cu": 15531
+      "candidate_cu": 15590
     },
     {
       "fixture": "self_referrer",
@@ -155,7 +155,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22413,
-      "candidate_cu": 15526
+      "candidate_cu": 15585
     },
     {
       "fixture": "self_referrer",
@@ -166,7 +166,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19413,
-      "candidate_cu": 12526
+      "candidate_cu": 12585
     },
     {
       "fixture": "self_referrer",
@@ -177,7 +177,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19413,
-      "candidate_cu": 12526
+      "candidate_cu": 12585
     },
     {
       "fixture": "self_referrer",
@@ -188,7 +188,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19579,
-      "candidate_cu": 12901
+      "candidate_cu": 13019
     },
     {
       "fixture": "self_referrer",
@@ -199,7 +199,7 @@
       "reference_error": null,
       "candidate_error": null,
       "reference_cu": 20964,
-      "candidate_cu": 14517
+      "candidate_cu": 14635
     },
     {
       "fixture": "self_referrer",
@@ -210,7 +210,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19579,
-      "candidate_cu": 12901
+      "candidate_cu": 13019
     },
     {
       "fixture": "distinct_referrer",
@@ -221,7 +221,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19429,
-      "candidate_cu": 12531
+      "candidate_cu": 12590
     },
     {
       "fixture": "distinct_referrer",
@@ -232,7 +232,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22429,
-      "candidate_cu": 15531
+      "candidate_cu": 15590
     },
     {
       "fixture": "distinct_referrer",
@@ -243,7 +243,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 22413,
-      "candidate_cu": 15526
+      "candidate_cu": 15585
     },
     {
       "fixture": "distinct_referrer",
@@ -254,7 +254,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19413,
-      "candidate_cu": 12526
+      "candidate_cu": 12585
     },
     {
       "fixture": "distinct_referrer",
@@ -265,7 +265,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6001))))",
       "reference_cu": 19413,
-      "candidate_cu": 12526
+      "candidate_cu": 12585
     },
     {
       "fixture": "distinct_referrer",
@@ -276,7 +276,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19579,
-      "candidate_cu": 12901
+      "candidate_cu": 13019
     },
     {
       "fixture": "distinct_referrer",
@@ -287,7 +287,7 @@
       "reference_error": null,
       "candidate_error": null,
       "reference_cu": 20964,
-      "candidate_cu": 14517
+      "candidate_cu": 14635
     },
     {
       "fixture": "distinct_referrer",
@@ -298,7 +298,7 @@
       "reference_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "candidate_error": "TransactionErrorInstructionError((0, Tagged(InstructionErrorCustom(6002))))",
       "reference_cu": 19579,
-      "candidate_cu": 12901
+      "candidate_cu": 13019
     }
   ],
   "same_selected_outputs": 27,

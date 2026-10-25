@@ -2,10 +2,14 @@
   "targets": {
     "fee_share_trader_dao": {
       "deployed_sha256": "88df1b4ddb152d4159b41b9eba68ab74e6f0e14c1930bad5828c44a14a3ca4f8",
-      "current_toolchain_candidate_sha256": "fc10f3a92541eb4c4510bd16bcdda30c4e4084abac53556f7944fd420b2ac71c",
-      "v1_41_candidate_sha256": "b3428ac9e54dacc3ec6ae9bf1c24f18d14e4858d6b1cc46c91c1e8de43f0b854",
+      "current_toolchain_candidate_sha256": "3c6a79867e21599a5a42d91509e39c24fbae44ea4c8af04a522a4007de3b0331",
+      "v1_41_candidate_sha256": "d504dce809f1cf8d971677c2e436a7b8235baf215dbab7bf37bd7ee01a0127cd",
       "signed_payout_cases_matched": 27,
-      "external_cpi_handlers_stubbed": 4,
+      "signed_meteora_cpi_cases_matched": 28,
+      "signed_meteora_dbc_cpi_cases_matched": 22,
+      "dbc_positive_fee_fixture_synthetic": true,
+      "external_cpi_handlers_stubbed": 2,
+      "v1_41_exact_wrapper_regions": 0,
       "whole_file_equal": false
     },
     "founder_dao": {

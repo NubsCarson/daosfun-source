@@ -68,6 +68,25 @@ synthetic near-`u64` addition overflow rolls back in the current ELF; it is
 not evidence of a reachable live-account overflow. The native source and
 test instructions are bundled in `reconstruction/fee-share-meteora-claim/`.
 
+The separate incomplete [FeeShare Anchor/SBF candidate](receipts/daos-full-candidate-status.json)
+now implements `claim_meteora_fees` through current CP AMM and
+`claim_meteora_dbc_fees` through current DAO v1 and DBC executables. In
+fresh signed offline target-versus-candidate runs, the CP path matched
+**28/28** outcomes and tracked account post-states; the DBC path matched
+**22/22**, including seven successful calls, rollback controls, and
+locally constructed 1,000-unit fee accrual. The previously implemented
+creator/platform payout path still matched **27/27** after this source
+change. The DBC pool's captured claimable fees were zero; positive fees
+were added only to disposable local fixtures. See the direct
+[DBC differential](receipts/daos-fee-share-dbc-candidate-differential.json),
+[CP regression](receipts/daos-fee-share-dbc-candidate-cp-regression.json),
+and [payout regression](receipts/daos-fee-share-dbc-candidate-payout-regression.json).
+Two external handlers still fail closed. An isolated v1.41 build of the
+current candidate is **419,304 bytes** against the **522,216-byte**
+deployed ELF, with **0/9** selected wrapper regions equal. These bounded
+matches do not establish a live fee opportunity, a vulnerability, or
+whole-program source equivalence.
+
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
 tested creator `redeem(entity=0)` and `collect_platform_fees` accounting

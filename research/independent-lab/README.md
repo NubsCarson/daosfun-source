@@ -48,8 +48,10 @@ padding. They explicitly record **no source-built candidate** for those
 programs at their capture checkpoint. Later
 [incomplete full-interface candidates](receipts/daos-full-candidate-status.json)
 expose the current selector surfaces but retain missing or failing handler
-bodies. Neither those SBF candidates nor the native Rust behavior slices
-match a deployed whole-program binary. The
+bodies. The FeeShare candidate now matches signed offline CP 28/28, nested
+DAO v1/DBC 22/22, and payout 27/27 target-versus-candidate cases, with
+synthetic local positive DBC accrual. Neither those SBF candidates nor the
+native Rust behavior slices match a deployed whole-program binary. The
 [exact-build feasibility checkpoint](DAOS_EXACT_BUILD_FEASIBILITY.md) compares
 all four current ELF layouts with Shaw's `dao_v1` recipe and identifies
 FeeShare as the smallest next whole-program candidate, while recording that
@@ -73,12 +75,13 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`57653544af2a5164ec72ee6c26aa937ab2cd1be4`, contains **1,115** scoped
-files (118,848,292 uncompressed bytes), and has archive SHA-256
-`3708d44b394f3998eb273ea0fa2ccb900438a4746ca960d07490cbee0ef145ae`.
-All **56** direct JSON receipts match bundled member size and
-SHA-256. The daos.fun offline gate passed **113** commands; strict full
-behavior remains **0/52**.
+`f0d42cf2e54403108778499265bc1a98cbed9f45`, contains **1,128** scoped
+files (119,239,063 uncompressed bytes), and has archive SHA-256
+`88a094625006287dd3554cfec082fae92b0c000fe02c57f3bf29e88f56f871b4`.
+All **63** direct JSON receipts match bundled member size and
+SHA-256. The prior daos.fun offline gate's saved receipt records **113**
+commands; the refreshed FeeShare four-candidate integrity gate passes
+separately. Strict full behavior remains **0/52**.
 
 The most reviewable distinct results are summarized in the adjacent notes.
 A small selection of key JSON receipts is also available directly in
