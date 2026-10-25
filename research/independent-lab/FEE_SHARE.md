@@ -95,7 +95,9 @@ also match. A synthetic local creator substitution enables signed positive
 tests; separate unsigned local authority simulations are **not** counted
 among the 32 signed cases. Raydium **31/31**, DBC **22/22**, CP **28/28**, and
 payout **27/27** regressions pass on this final candidate. All nine declared
-handlers now have a bounded path, while full behavior remains unrecovered.
+handlers have source bodies; six have fresh direct target/candidate comparisons.
+The Shaw-derived `initialize`, `init_with_legacy`, and `change_creator` bodies
+still need fresh differential tests. Full behavior remains unrecovered.
 An isolated v1.41 build is **442,232 bytes** against the **522,216-byte**
 deployed ELF, with **0/9** selected wrapper regions equal. These bounded
 matches do not establish a live sale, fee diversion, vulnerability, or

@@ -53,7 +53,9 @@ CP 28/28, nested DAO v1/DBC 22/22, and payout 27/27 target-versus-candidate
 cases, with synthetic local positive DBC accrual. The Raydium claim uses a
 later captured pool; `sell_token` now matches 32/32 signed local claim-to-sell
 cases with a synthetic creator substitution. All nine FeeShare handlers have
-bounded candidate paths, but none is fully reversed. Neither those SBF
+candidate bodies; six have fresh direct target/candidate comparisons, while
+the three Shaw-derived setup handlers still need them. None is fully reversed.
+Neither those SBF
 candidates nor the native Rust behavior slices match a deployed whole-program
 binary. The
 [exact-build feasibility checkpoint](DAOS_EXACT_BUILD_FEASIBILITY.md) compares
@@ -79,9 +81,9 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`7df26da5757179c5aa1a08cbb26741f3ed9a735a`, contains **1,145** scoped
-files (119,898,569 uncompressed bytes), and has archive SHA-256
-`af4d486cad6c4f152bd4f8ffcd9c6325c503223846112b58aec1cf37bb65de47`.
+`80a198e6b16257ad4ef8a18b267b4c6151f64646`, contains **1,145** scoped
+files (119,902,646 uncompressed bytes), and has archive SHA-256
+`5a7cf14543c4f988efb297b1d9c5b1c0ecbcc6bae08b898f13d250ec9e8952bc`.
 All **78** direct JSON receipts match bundled member size and
 SHA-256. The prior daos.fun offline gate's saved receipt records **113**
 commands; the refreshed FeeShare four-candidate integrity gate passes

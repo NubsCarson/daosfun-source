@@ -41,8 +41,10 @@ claim 22/22 target/candidate outcomes and tracked post-states. A sampled
 Raydium Lock fee claim also matches 31/31 cases and 25 tracked account
 post-states. The positive DBC fee accrual is a synthetic local fixture;
 `sell_token` now matches 32/32 signed local claim-to-sell cases with a
-synthetic local creator substitution. All nine selectors have bounded
-candidate paths, but no handler has a full behavior proof.
+synthetic local creator substitution. All nine selectors have non-stub
+candidate bodies; six have fresh direct target/candidate comparisons, while
+the three Shaw-derived setup handlers do not. No handler has a full behavior
+proof.
 The other three standalone candidates expose their listed selectors but
 leave most or all on-chain bodies incomplete. Their source and non-secret
 receipts are in the four explicitly selected `reconstruction/*-candidate/`
