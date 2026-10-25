@@ -97,10 +97,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`9176d4f2abd82fef2bab7491ad35e83694d50103`, contains **1,159** scoped
-files (122,452,149 uncompressed bytes), and has archive SHA-256
-`4a66f9a9db216ef95ade51a9d0d2b2730f107760e77afa7788f5f7945323590f`.
-All **84** direct JSON receipts match bundled member size and
+`4ca86bef866cacd725c1ab7f5ed483b4db332766`, contains **1,171** scoped
+files (123,018,587 uncompressed bytes), and has archive SHA-256
+`f4b96e52d8ce867d9c93ff4c5a09614d34059ae0bb722885b197401e127e3877`.
+All **87** direct JSON receipts match bundled member size and
 SHA-256. The prior daos.fun offline gate's saved receipt records **113**
 commands; the refreshed FeeShare four-candidate integrity gate passes
 separately. Strict full behavior remains **0/52**.
@@ -110,8 +110,11 @@ A small selection of key JSON receipts is also available directly in
 [`receipts/`](receipts/), without unpacking the full bundle:
 
 - [`DAO_V1.md`](DAO_V1.md): source-era replays, DAO/DBC migration, issuance,
-  delegation and redemption paths, and signed offline checks of BM-1,
-  TR-1 expiry, TR-5 redemption timing, and six current-CP variants.
+  delegation and redemption paths, signed offline checks of BM-1,
+  TR-1 expiry, TR-5 redemption timing, six current-CP variants, and a
+  conditional Token-2022 transfer-hook redemption failure against the
+  captured original ELF. The ten-wallet finalized sample found no
+  TransferHook mint in its bounded set; current live user loss is unproved.
 - [`FOUNDER.md`](FOUNDER.md): tested presale-goal model, allocation and vesting
   controls, a native Rust goal/amount slice with 120/120 local differential
   matches, and a fresh signed Founder-to-Pump lifecycle.

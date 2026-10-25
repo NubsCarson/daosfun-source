@@ -167,6 +167,9 @@ MAX_MANIFEST_BYTES = 8 * 1024 * 1024
 MAX_MEMBER_BYTES = 2 * 1024 * 1024 * 1024
 MAX_TOTAL_BYTES = 8 * 1024 * 1024 * 1024
 MAX_FILES = 20_000
+DIRECT_RECEIPT_ALIASES = {
+    "dao-hook-redemption-receipt.json": "analysis/daos_fun/dao-hook-redemption/receipt.json",
+}
 
 
 def validate_member_path(name: str) -> None:
@@ -178,6 +181,8 @@ def validate_member_path(name: str) -> None:
     parts = name.split("/")
     if any(part in ("", ".", "..") for part in parts):
         raise ValueError(f"unsafe archive path: {name!r}")
+    if "__pycache__" in parts or name.endswith(".pyc"):
+        raise ValueError(f"generated Python bytecode is not research evidence: {name!r}")
     if name == MANIFEST_NAME:
         return
     if name in DAOS_SOURCE_MODEL_FILES:
@@ -238,6 +243,30 @@ def _validate_manifest(raw: bytes) -> tuple[dict, list[dict]]:
     if total > MAX_TOTAL_BYTES or manifest.get("total_bytes") != total:
         raise ValueError("manifest total_bytes mismatch or size limit exceeded")
     return manifest, files
+
+
+def _verify_direct_receipts(directory: Path, rows: list[dict]) -> int:
+    """Check optional review copies against the hash-pinned archive members."""
+    receipts = directory / "receipts"
+    if not receipts.is_dir():
+        return 0
+    by_name: dict[str, list[dict]] = {}
+    by_path = {row["path"]: row for row in rows}
+    for row in rows:
+        by_name.setdefault(Path(row["path"]).name, []).append(row)
+    count = 0
+    for path in sorted(receipts.glob("*.json")):
+        if path.is_symlink():
+            raise ValueError(f"direct receipt must be a regular file: {path}")
+        raw = path.read_bytes()
+        alias = DIRECT_RECEIPT_ALIASES.get(path.name)
+        candidates = [by_path[alias]] if alias in by_path else by_name.get(path.name, [])
+        if not any(row["size"] == len(raw) and
+                   row["sha256"] == hashlib.sha256(raw).hexdigest()
+                   for row in candidates):
+            raise ValueError(f"direct receipt differs from bundled member: {path}")
+        count += 1
+    return count
 
 
 def verify_archive(path: Path, *, check_external: bool = True,
@@ -353,6 +382,8 @@ def verify_archive(path: Path, *, check_external: bool = True,
         raise ValueError("adjacent MANIFEST.json is required")
     else:
         result["external_manifest_verified"] = False
+    if check_external:
+        result["direct_receipts_verified"] = _verify_direct_receipts(path.parent, rows)
     return result
 
 

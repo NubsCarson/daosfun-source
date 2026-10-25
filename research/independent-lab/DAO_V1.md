@@ -87,6 +87,45 @@ byte **10**; one absent base-vault PDA is supplied only as a synthetic local
 placeholder. These receipts strengthen current-version mechanism evidence
 without proving a broadcastable outsider transaction or current token theft.
 
+## Conditional transfer-hook redemption failure
+
+A [22-transaction signed offline control](receipts/dao-hook-redemption-receipt.json)
+loads the captured original DAO ELF into LiteSVM. In a closed, redeeming DAO
+fixture, a hook-free Token-2022 treasury asset pays **90,939,343 raw units**
+to the holder. An otherwise equivalent asset with an active, immutable
+TransferHook reaches Token-2022 `TransferChecked` but fails `MissingAccount`;
+token balances and the attempted redemption records roll back, apart from
+the local transaction fee. Supplying the hook validation PDA and hook program
+as extra *outer* DAO account metas does not change that result. A direct
+transfer with those accounts succeeds and invokes the allow-all hook, so the
+control distinguishes the nested DAO transfer from a broken hook fixture.
+An open-fund `execute_invoke` control can transfer the hooked asset after
+synthetic admin/cosigner substitution; the equivalent wallet-signed exit
+after closure stops at DAO error 6013 before Token-2022 CPI.
+
+The DAO State, DAO mint, and State token vault were restored from a later
+finalized capture. The hook and hook-free treasury mints, allow-all hook,
+mint authority, and burn credit are **local synthetic fixtures**. Token-2022,
+System, and ATA execute through LiteSVM's native defaults. The reviewed hook
+has no update authority, but another mint could have one; a delegate, other
+exit, or upgrade might also change reachability. This is a bounded
+compatibility failure against the captured original, **not** proof of an
+affected live treasury, user loss, or an irreversible lock. The complete
+[source, fixture binary, verifier, and receipt](daosfun-lab-evidence.tar.zst)
+are under `analysis/daos_fun/dao-hook-redemption/` in the bundle. The saved
+verifier checks the 22 signatures and recorded account/error controls; the
+local runner with fixed disposable signing vectors is intentionally omitted.
+
+A [finalized read-only ten-wallet sample](receipts/dao-transfer-hook-mainnet-sample.json)
+covered eight previously observed closed/redeeming DAO wallets and two
+nonredemption controls. Their 32 Token-2022 accounts held 23 nonzero
+balances over 19 mints; **none** of those sampled mints had a TransferHook
+extension at the recorded slots. The sample neither covers every DAO nor
+proves absence later. A separate [ProgramData header check](receipts/programdata-head-check.json)
+at RPC slot **461,128,520** found the pinned last-deploy slot **370,107,442**.
+It supports version continuity but did **not** rehash the current full
+ProgramData payload. No public transaction was submitted.
+
 ## Signed offline expiry and redemption timing
 
 The [TR-1 Surfpool receipt](receipts/dao-tr1-expiry-signed-surfpool.json)

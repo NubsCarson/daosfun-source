@@ -65,6 +65,8 @@ def select_files(lab_root: Path) -> list[tuple[str, Path]]:
         if not tree.is_dir() or tree.is_symlink():
             raise ValueError(f"required input tree unavailable: {tree}")
         for path in tree.rglob("*"):
+            if "__pycache__" in path.parts or path.suffix == ".pyc":
+                continue
             if path.is_symlink():
                 raise ValueError(f"symlink in input tree: {path}")
             if path.is_file():
