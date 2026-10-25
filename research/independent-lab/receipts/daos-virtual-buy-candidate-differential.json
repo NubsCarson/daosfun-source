@@ -1,12 +1,12 @@
 {
   "scope": "VirtualXYK buy_token classic funding and Token-2022 output route; current target vs source candidate, signed isolated LiteSVM",
   "target_sha256": "c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377",
-  "candidate_sha256": "7277c5030d488ff5ec1bb01cd8e3625d4833bd752499c8d207aa9a169a0eed08",
+  "candidate_sha256": "9ac219670c8323dd3016e78d23634ddfa53fd62ba24f7a82dd832aaca89cc7b6",
   "source_sha256": {
-    "reconstruction/virtual-xyk-anchor-candidate/src/buy.rs": "b8863da64ffe1012ee683d02a7663a90e0ef6a976a8ea9cb56a1ee57c3f4cf22",
+    "reconstruction/virtual-xyk-anchor-candidate/src/buy.rs": "0b6a97272a260b211f1dcf91667fbf75a75e672bd879a0558acc56887acbfa08",
     "reconstruction/virtual-xyk-anchor-candidate/src/model.rs": "f6e4b17e6fe3636da514f4d68950caa646853f30113f226a3d8807c933964da0",
     "reconstruction/virtual-xyk-anchor-candidate/src/contexts.rs": "c4e6a681f50e18793463baf499bd204ea6a767dc5ad42648374677c197aadef2",
-    "reconstruction/virtual-xyk-anchor-candidate/src/lib.rs": "8f81341c2a46494245ec6b0e57b2b5f8c5fc403aca6f567d7f2f11bb033cc43e"
+    "reconstruction/virtual-xyk-anchor-candidate/src/lib.rs": "6381a7daaf2f132b0b594615eb397099473bf13dee12ec4ab44ae02f29b312db"
   },
   "snapshot_sha256": "90626dcc35dbf23bec2fa7753c446a176ead43ae02f679ecf703eaed3dd600c1",
   "snapshot_slot": 460725997,
@@ -319,7 +319,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20556,
+          "compute_units": 20559,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -709,7 +709,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20556,
+          "compute_units": 20559,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -1491,7 +1491,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20300,
+          "compute_units": 20303,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -1881,7 +1881,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20300,
+          "compute_units": 20303,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -2271,7 +2271,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20300,
+          "compute_units": 20303,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -2661,7 +2661,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20556,
+          "compute_units": 20559,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -3051,7 +3051,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20312,
+          "compute_units": 20315,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -4230,7 +4230,7 @@
           "success": false,
           "error": "TransactionErrorInstructionError((1, Tagged(InstructionErrorCustom(1))))",
           "error_code": 1,
-          "compute_units": 17547,
+          "compute_units": 17550,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked",
@@ -4623,7 +4623,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20770,
+          "compute_units": 20773,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"
@@ -5013,7 +5013,7 @@
           "success": true,
           "error": null,
           "error_code": null,
-          "compute_units": 20770,
+          "compute_units": 20773,
           "relevant_logs": [
             "Program log: Instruction: BuyToken",
             "Program log: Instruction: TransferChecked"

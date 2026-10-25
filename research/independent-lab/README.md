@@ -74,9 +74,12 @@ The incomplete Founder candidate now has bounded `start_presale`,
 Five positive curve cases use synthetic presale finalization and funding;
 successful Vest cases locally reset an already-started tag in later captures.
 Three other Founder handler bodies remain incomplete. The VirtualXYK candidate
-also has a bounded [`buy_token` body](receipts/daos-virtual-buy-candidate-differential.json)
-matching 14/14 signed local cases; its LP cases use a synthetic Curve Option.
-Neither candidate matches its deployed ELF.
+has bounded [`buy_token`](receipts/daos-virtual-buy-candidate-differential.json)
+and [`sell_token`](receipts/daos-virtual-sell-candidate-differential.json) bodies
+matching 14/14 and 16/16 signed local target/candidate cases, respectively.
+The trade fixtures use a later captured Curve, synthetic signer ATAs, and
+locally rewritten LP Option states. Eight VirtualXYK bodies still fail closed;
+neither candidate matches its deployed ELF.
 
 The original research files are in a compressed [evidence bundle](daosfun-lab-evidence.tar.zst).
 [`MANIFEST.json`](MANIFEST.json) lists each bundled path, byte length, and
@@ -94,10 +97,10 @@ Meteora DLMM/HumidiFi research except where those external programs are
 explicit CPI dependencies of a daos.fun test.
 
 The refreshed bundle pins private lab commit
-`1b62e923d7c0825fb7e6a53c269ba06a27ff891e`, contains **1,156** scoped
-files (121,942,492 uncompressed bytes), and has archive SHA-256
-`850f008b69196e827d97f5baaabb590f1aa8bd6972c4e8ca85c154323d49208d`.
-All **83** direct JSON receipts match bundled member size and
+`9176d4f2abd82fef2bab7491ad35e83694d50103`, contains **1,159** scoped
+files (122,452,149 uncompressed bytes), and has archive SHA-256
+`4a66f9a9db216ef95ade51a9d0d2b2730f107760e77afa7788f5f7945323590f`.
+All **84** direct JSON receipts match bundled member size and
 SHA-256. The prior daos.fun offline gate's saved receipt records **113**
 commands; the refreshed FeeShare four-candidate integrity gate passes
 separately. Strict full behavior remains **0/52**.

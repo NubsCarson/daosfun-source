@@ -244,8 +244,8 @@ def package(lab_root: Path, output: Path, *, force: bool = False,
             "format": FORMAT,
             "source_lab_commit": commit,
             "source_lab_commit_note": (
-                "This is lab HEAD, not proof all bundle members were committed; "
-                "per-file SHA-256 values define the packaged working-tree bytes."
+                "The selected lab commit identifies a revision; per-file SHA-256 "
+                "values define the packaged working-tree bytes."
             ),
             "archive_filename": output.name,
             "archive_sha256": result["archive_sha256"],

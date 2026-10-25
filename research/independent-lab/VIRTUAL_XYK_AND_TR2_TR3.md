@@ -4,15 +4,21 @@ This note records separate, bounded tests against pinned daos.fun Solana binarie
 
 The tested `virtual_xyk` ProgramData binary is SHA-256 `c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377`. The current DAO-v1 binary is SHA-256 `5020271255ea678fc110fed4671a86b1b7268acad04f990c590decd92091143d`, matching this repository's byte-identical reconstruction. The lab's combined offline verifier passed after these receipts were integrated. All **10/10** listed virtual-XYK handlers have at least one bounded local path; **0/10** are marked fully reversed (`analysis/root_virtual_xyk/behavior-coverage.json`).
 
-The incomplete VirtualXYK Anchor/SBF candidate now implements a bounded
-`buy_token` body. Its [14-case signed offline differential](receipts/daos-virtual-buy-candidate-differential.json)
-matches the pinned executable's outcomes and complete watched account
-post-states in nine successes and five rejection or rollback controls. The
-LP-enabled cases toggle the copied Curve's LP Option locally; they do not
-establish a real LP initialization. Other pools, token-program combinations,
-transfer-fee modes, and full error ordering remain open. The candidate's
-ELF is not byte-identical to the deployed program, and nine handlers still
-fail closed.
+The incomplete VirtualXYK Anchor/SBF candidate now implements bounded
+`buy_token` and `sell_token` bodies. The [14-case buy](receipts/daos-virtual-buy-candidate-differential.json)
+and [16-case sell](receipts/daos-virtual-sell-candidate-differential.json)
+signed offline differentials match the pinned executable's error outcomes
+and complete watched account post-states: nine and ten successes, respectively.
+The sell controls cover exact slippage, an unfunded user ATA, an empty funding
+vault, deactivation, and a sale whose gross output exceeds the Curve's recorded
+funding reserve. That last call traps and rolls back in both programs on the
+sampled state; it does not establish a current live funds issue. The signer
+ATAs are synthetic, and LP-enabled cases toggle a copied Curve's LP Option
+locally rather than demonstrate real LP initialization. Other pools,
+token-program combinations, transfer-fee modes, full error ordering,
+compute units, and source-location logs remain unmatched or untested.
+The candidate ELF is not byte-identical to deployment, and eight other
+handlers still fail closed.
 
 A [custom-stack version audit](receipts/custom-stack-version-audit.json)
 finds current virtual-XYK ELF for ten selected signed local paths, including

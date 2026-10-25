@@ -55,10 +55,11 @@ with 162/162, 66/66, and 64/64 signed local target/candidate matches.
 Five positive curve cases need synthetic presale finalization; successful
 Vest cases reset an already-started tag in later captured accounts. Three
 Founder bodies remain incomplete. Its 400,112-byte candidate differs from the
-574,360-byte deployed capture. VirtualXYK has a bounded `buy_token` path matching 14/14
-signed local cases, including synthetic LP Option variants; nine of its ten
-handlers remain incomplete. Its 269,464-byte candidate differs from the
-645,800-byte deployed capture.
+574,360-byte deployed capture. VirtualXYK has bounded `buy_token` and
+`sell_token` paths matching 14/14 and 16/16 signed local cases, respectively,
+including synthetic LP Option variants; eight of its ten handlers remain
+incomplete. Its 285,240-byte candidate differs from the 645,800-byte
+deployed capture.
 Our [FeeShare payout Rust slice](FEE_SHARE.md)
 models only two accounting branches and omits Anchor account validation and
 SPL Token CPI failures. The [Founder](FOUNDER.md)

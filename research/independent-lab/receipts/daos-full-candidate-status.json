@@ -44,12 +44,15 @@
     },
     "virtual_xyk": {
       "deployed_sha256": "c151c6b15b84d8bfc47a5f2e0e5b9e04babff0263a1125a9e8dcb07df6144377",
-      "candidate_sha256": "7277c5030d488ff5ec1bb01cd8e3625d4833bd752499c8d207aa9a169a0eed08",
+      "candidate_sha256": "9ac219670c8323dd3016e78d23634ddfa53fd62ba24f7a82dd832aaca89cc7b6",
       "selectors_verified": 10,
       "signed_buy_token_cases_matched": 14,
       "signed_buy_token_positive_cases_matched": 9,
       "buy_token_lp_enabled_fixture_synthetic": true,
-      "bounded_candidate_handlers": 1,
+      "signed_sell_token_cases_matched": 16,
+      "signed_sell_token_positive_cases_matched": 10,
+      "sell_token_lp_enabled_fixture_synthetic": true,
+      "bounded_candidate_handlers": 2,
       "complete_handlers": 0,
       "whole_file_equal": false
     }
