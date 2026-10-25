@@ -37,9 +37,10 @@ deployed FeeShare ELF. It is not a deployable FeeShare source reconstruction.
 The newer standalone [candidate status receipt](receipts/daos-full-candidate-status.json)
 records all nine FeeShare selectors. Creator/platform payouts match 27/27
 signed local cases, the CP fee claim 28/28, and the nested DAO v1/DBC fee
-claim 22/22 target/candidate outcomes and tracked post-states. The positive
-DBC fee accrual is a synthetic local fixture; two external CPI/sell handlers
-remain failing stubs.
+claim 22/22 target/candidate outcomes and tracked post-states. A sampled
+Raydium Lock fee claim also matches 31/31 cases and 25 tracked account
+post-states. The positive DBC fee accrual is a synthetic local fixture;
+`sell_token` is the one remaining failing stub.
 The other three standalone candidates expose their listed selectors but
 leave most or all on-chain bodies incomplete. Their source and non-secret
 receipts are in the four explicitly selected `reconstruction/*-candidate/`
@@ -58,11 +59,11 @@ one DAO binary. These are hypotheses for the other programs, not
 proven original settings. An isolated [FeeShare v1.41 toolchain probe](receipts/daos-fee-share-v141-toolchain-probe.json)
 checked 47 official components and used a temporary v3 dependency lock
 drawn from Shaw-versioned crates. It corrected the newer candidate's ELF
-machine-format mismatch. The [current-source DBC-era probe](receipts/daos-fee-share-dbc-v141-toolchain-probe.json)
-produced **419,304** bytes versus the deployed **522,216**, with **0/9**
+machine-format mismatch. The [current-source Raydium-stage probe](receipts/daos-fee-share-raydium-v141-toolchain-probe.json)
+produced **432,104** bytes versus the deployed **522,216**, with **0/9**
 compared wrapper regions equal. This is a
 compiler-format clue, not a proven original recipe or matching source.
-Next, the missing FeeShare CPI handlers, account/error order, state changes
+Next, the missing FeeShare sell CPI handler, account/error order, state changes
 and dependency versions need reconstruction and differential testing,
 followed by linker-order recovery and whole-file SHA comparison.
 Even a byte-identical result would establish an equivalent build artifact,

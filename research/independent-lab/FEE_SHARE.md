@@ -69,23 +69,27 @@ not evidence of a reachable live-account overflow. The native source and
 test instructions are bundled in `reconstruction/fee-share-meteora-claim/`.
 
 The separate incomplete [FeeShare Anchor/SBF candidate](receipts/daos-full-candidate-status.json)
-now implements `claim_meteora_fees` through current CP AMM and
-`claim_meteora_dbc_fees` through current DAO v1 and DBC executables. In
-fresh signed offline target-versus-candidate runs, the CP path matched
-**28/28** outcomes and tracked account post-states; the DBC path matched
-**22/22**, including seven successful calls, rollback controls, and
-locally constructed 1,000-unit fee accrual. The previously implemented
-creator/platform payout path still matched **27/27** after this source
-change. The DBC pool's captured claimable fees were zero; positive fees
-were added only to disposable local fixtures. See the direct
-[DBC differential](receipts/daos-fee-share-dbc-candidate-differential.json),
-[CP regression](receipts/daos-fee-share-dbc-candidate-cp-regression.json),
-and [payout regression](receipts/daos-fee-share-dbc-candidate-payout-regression.json).
-Two external handlers still fail closed. An isolated v1.41 build of the
-current candidate is **419,304 bytes** against the **522,216-byte**
-deployed ELF, with **0/9** selected wrapper regions equal. These bounded
-matches do not establish a live fee opportunity, a vulnerability, or
-whole-program source equivalence.
+now implements `claim_meteora_fees` through current CP AMM,
+`claim_meteora_dbc_fees` through current DAO v1 and DBC executables, and
+`claim_raydium_fees` through pinned Raydium Lock/CPMM dependencies. In fresh
+signed offline target-versus-candidate runs, the sampled Raydium path
+matches **31/31** outcomes and all 25 tracked account post-states. Its
+positive claim from one later captured Lock/pool state moves 5,701,049 raw
+wrapped-SOL units and 1,761,233,394,246 raw DAO-token units into FeeShare;
+repeat and rollback controls match. The inner CPI bytes and 18 account keys
+are checked against a saved transaction. On this current candidate, CP
+**28/28**, DBC **22/22**, and creator/platform payout **27/27** regressions
+also match. The DBC pool's captured claimable fees were zero; its 1,000-unit
+positive-fee cases were constructed only in disposable local fixtures. See
+the [Raydium differential](receipts/daos-fee-share-raydium-candidate-differential.json),
+[CP regression](receipts/daos-fee-share-raydium-candidate-cp-regression.json),
+[DBC regression](receipts/daos-fee-share-raydium-candidate-dbc-regression.json),
+and [payout regression](receipts/daos-fee-share-raydium-candidate-payout-regression.json).
+The `sell_token` handler still fails closed. An isolated v1.41 build of the
+current candidate is **432,104 bytes** against the **522,216-byte** deployed
+ELF, with **0/9** selected wrapper regions equal. These bounded matches do
+not establish a live fee diversion, a vulnerability, or whole-program source
+equivalence.
 
 The bundle also includes `reconstruction/fee-share-redeem/`, a newly written
 **native Rust model** of the 169-byte State `Option<Pubkey>` layout and the
